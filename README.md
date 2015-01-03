@@ -18,7 +18,11 @@ Please readSummary of guidelines:
 * Include tests and documentation;
 * Clean up "oops" commits before submitting;
 * Follow the coding style guide.
+<<<<<<< HEAD
 
 
 aaaaaaaaaa
 aaaaaaaaaa
+=======
+a
+>>>>>>> b781c4f26a14a4fa0b9cfda03d436629f3907d7c

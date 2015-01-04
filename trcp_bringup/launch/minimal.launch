@@ -4,6 +4,7 @@
   <arg name="stacks"     default="$(optenv TURTLEBOT_STACKS hexagons)"/>  <!-- circles, hexagons -->
   <arg name="3d_sensor"  default="$(optenv TURTLEBOT_3D_SENSOR kinect)"/>  <!-- kinect, asus_xtion_pro -->
   <arg name="simulation" default="$(optenv TURTLEBOT_SIMULATION false)"/>
+ <remap from="mobile_base/commands/velocity" to="cmd_vel" />
 
   <param name="/use_sim_time" value="$(arg simulation)"/>
   

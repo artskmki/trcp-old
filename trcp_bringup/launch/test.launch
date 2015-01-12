@@ -1,0 +1,6 @@
+<launch>
+
+<!-- load the URDF/Xacro model of our robot -->
+  <arg name="urdf_file" default="$(find xacro)/xacro.py '$(find kobuki_description)/urdf/kobuki_standalone.urdf.xacro'" />
+
+</launch>

@@ -2,7 +2,7 @@
   <param name="/use_sim_time" value="false" />
 
   <!-- Load the URDF/Xacro model of our robot -->
-  <arg name="urdf_file" default="$(find xacro)/xacro.py '$(find turtlebot_description)/robots/kobuki_hexagons_kinect.urdf.xacro'" />
+  <arg name="urdf_file" default="$(find xacro)/xacro.py '$(find trcp_description)/robots/kobuki_hexagons_kinect.urdf.xacro'" />
    
   <param name="robot_description" command="$(arg urdf_file)" />
     

@@ -15,7 +15,7 @@
   </include>
 
   <!-- Convenience only until https://github.com/robotics-in-concert/rocon_app_platform/issues/64 -->
-  <include file="$(find turtlebot_bringup)/launch/includes/description.launch.xml">
+  <include file="$(find trcp_bringup)/launch/includes/description.launch.xml">
     <arg name="base" value="$(arg base)" />
     <arg name="stacks" value="$(arg stacks)" />
     <arg name="3d_sensor" value="$(arg 3d_sensor)" />

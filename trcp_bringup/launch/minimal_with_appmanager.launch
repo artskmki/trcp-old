@@ -14,10 +14,10 @@
   <!-- For concert mode, you should also disable the auto_invite in paired public.launch -->
   <arg name="hub_whitelist" default="$(optenv ROBOT_HUB_WHITELIST Internal Hub)"/>
   <arg name="rapp_lists" default="$(optenv RAPP_LIST rocon_apps/rocon.rapps;turtlebot_bringup/turtlebot.rapps)"/>
-  <arg name="robot_icon" default="turtlebot_bringup/turtlebot2.png"/>
+  <arg name="robot_icon" default="trcp_bringup/turtlebot2.png"/>
   <arg name="gateway_watch_loop_period" default="10"/> <!-- Polling period for multimaster advertising/flipping -->
 
-  <include file="$(find turtlebot_bringup)/launch/minimal.launch">
+  <include file="$(find trcp_bringup)/launch/minimal.launch">
     <arg name="base" value="$(arg base)"/>
     <arg name="battery" value="$(arg battery)"/>
     <arg name="stacks" value="$(arg stacks)"/>

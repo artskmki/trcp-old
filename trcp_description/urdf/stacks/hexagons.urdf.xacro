@@ -141,7 +141,10 @@
     <stack_bottom_pole parent="${parent}" number="5" x_loc="-0.055" y_loc="-0.120" z_loc="0.1028"/>
     
     <joint name="plate_bottom_joint" type="fixed">
-      <origin xyz="0.02364 0.0 0.1306" rpy="0 0 0"/>
+<!--
+      <origin xyz="0.02364 0.0 0.1307" rpy="0 0 0"/>
+-->
+      <origin xyz="0.02364 0.0 0.1507" rpy="0 0 0"/>
       <parent link="${parent}"/>
       <child link="plate_bottom_link"/>
     </joint>  

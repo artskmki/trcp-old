@@ -1,0 +1,114 @@
+joints: ['steering_lf', 'steering_lr', 'steering_rr', 'steering_rf', 'wheel_lf', 'wheel_lr', 'wheel_rr', 'wheel_rf']
+
+# Steering for Left_Front
+steering_lf:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: steering_lf
+    joint_speed: 2.0
+    motor:
+        id: 1 
+        init: 2048
+        min: 0
+        max: 4095
+
+# Steering for Left_Rear
+steering_lr:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: steering_lr
+    joint_speed: 2.0
+    motor:
+        id: 2 
+        init: 2048
+        min: 0
+        max: 4095
+
+# Steering for Right_Rear
+steering_rr:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: steering_rr
+    joint_speed: 2.0
+    motor:
+        id: 3 
+        init: 2048
+        min: 0
+        max: 4095
+
+# Steering for Right_Front
+steering_rf:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: steering_rf
+    joint_speed: 2.0
+    motor:
+        id: 4 
+        init: 2048
+        min: 0
+        max: 4095
+
+# Wheel for Left_Front
+wheel_lf:
+    controller:
+        package: dynamixel_controllers
+        module: joint_torque_controller
+        type: JointTorqueController
+    joint_name: wheel_lf
+    joint_speed: 2.0
+    motor:
+        id: 5
+        init: 0 
+        min: -1024 
+        max: 1024 
+
+# Wheel for Left_Rear
+wheel_lr:
+    controller:
+        package: dynamixel_controllers
+        module: joint_torque_controller
+        type: JointTorqueController
+    joint_name: wheel_lr
+    joint_speed: 2.0
+    motor:
+        id: 6
+        init: 0 
+        min: -1024 
+        max: 1024 
+
+# Wheel for Right_Rear
+wheel_rr:
+    controller:
+        package: dynamixel_controllers
+        module: joint_torque_controller
+        type: JointTorqueController
+    joint_name: wheel_rr
+    joint_speed: 2.0
+    motor:
+        id: 7
+        init: 0 
+        min: -1024 
+        max: 1024 
+
+# Wheel for Right_Front
+wheel_rf:
+    controller:
+        package: dynamixel_controllers
+        module: joint_torque_controller
+        type: JointTorqueController
+    joint_name: wheel_rf
+    joint_speed: 2.0
+    motor:
+        id: 8
+        init: 0 
+        min: -1024 
+        max: 1024 
+

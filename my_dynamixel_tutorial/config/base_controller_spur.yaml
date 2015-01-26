@@ -1,0 +1,114 @@
+joints: ['fl_caster_rotation_joint', 'fl_caster_r_wheel_joint', 'br_caster_rotation_joint', 'br_caster_r_wheel_joint', 'bl_caster_rotation_joint', 'bl_caster_r_wheel_joint', 'fr_caster_rotation_joint', 'fr_caster_r_wheel_joint']
+
+# caster rotation for Left_Front
+fl_caster_rotation_joint:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: fl_caster_rotation_joint
+    joint_speed: 2.0
+    motor:
+        id: 1 
+        init: 2048
+        min: 0
+        max: 4095
+
+# caster rotation for Left_Back
+bl_caster_rotation_joint:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: bl_caster_rotation_joint
+    joint_speed: 2.0
+    motor:
+        id: 2 
+        init: 2048
+        min: 0
+        max: 4095
+
+# caster rotation for Right_Back
+br_caster_rotation_joint:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: br_caster_rotation_joint
+    joint_speed: 2.0
+    motor:
+        id: 3 
+        init: 2048
+        min: 0
+        max: 4095
+
+# caster rotation for Right_Front
+fr_caster_rotation_joint:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: fr_caster_rotation_joint
+    joint_speed: 2.0
+    motor:
+        id: 4 
+        init: 2048
+        min: 0
+        max: 4095
+
+# Wheel for Left_Front
+fl_caster_r_wheel_joint:
+    controller:
+        package: dynamixel_controllers
+        module: joint_torque_controller
+        type: JointTorqueController
+    joint_name: fl_caster_r_wheel_joint
+    joint_speed: 2.0
+    motor:
+        id: 5
+        init: 0 
+        min: -1024 
+        max: 1024 
+
+# Wheel for Left_Rear
+bl_caster_r_wheel_joint:
+    controller:
+        package: dynamixel_controllers
+        module: joint_torque_controller
+        type: JointTorqueController
+    joint_name: bl_caster_r_wheel_joint
+    joint_speed: 2.0
+    motor:
+        id: 6
+        init: 0 
+        min: -1024 
+        max: 1024 
+
+# Wheel for Right_Rear
+br_caster_r_wheel_joint:
+    controller:
+        package: dynamixel_controllers
+        module: joint_torque_controller
+        type: JointTorqueController
+    joint_name: br_caster_r_wheel_joint
+    joint_speed: 2.0
+    motor:
+        id: 7
+        init: 0 
+        min: -1024 
+        max: 1024 
+
+# Wheel for Right_Front
+fr_caster_r_wheel_joint:
+    controller:
+        package: dynamixel_controllers
+        module: joint_torque_controller
+        type: JointTorqueController
+    joint_name: fr_caster_r_wheel_joint
+    joint_speed: 2.0
+    motor:
+        id: 8
+        init: 0 
+        min: -1024 
+        max: 1024 
+

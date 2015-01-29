@@ -1,0 +1,111 @@
+sudo apt-get install open-jtalk open-jtalk-mecab-naist-jdic hts-voice-nitech-jp-atr503-m001
+これでいいのかも?
+
+
+OpenJtlak で日本語の音声出力
+
+インストール
+http://www.geocities.jp/humanrace96/OpenJTalk.html
+ここを参考にした。
+
+sudo apt-get install checkinstall
+
+hts_engine API のインストール
+http://hts-engine.sourceforge.net/ から、hts_engine_API-1.09.tar.gz（HTSランタイムエンジン）を入手
+$ tar zxvf hts_engine_API-1.09.tar.gz
+$ cd ./hts_engine_API-1.09
+$ ./configure
+$ make
+$ sudo checkinstall
+
+OpenJTalkのインストール
+http://open-jtalk.sourceforge.net/ から、
+open_jtalk-1.08.tar.gz（本体） 、 
+open_jtalk_dic_utf_8-1.08.tar.gz（Open JTalk用辞書）、
+hts_voice_nitech_jp_atr503_m001-1.05.tar.gz（Open JTalk用HTSボイス） を入手。
+
+$ cd ../
+$ ./configure --with-charset=UTF-8
+$ make
+$ sudo checkinstall
+
+MMDAgent - Toolkit for Building Voice Interaction Systemsのインストール
+http://www.mmdagent.jp/から、MMDAgent_Example-1.4.zip（MMDAgent のサンプルスクリプト） をゲット。
+
+
+必要なファイルのコピー
+辞書ファイル
+$ tar zxvf open_jtalk_dic_utf_8-1.08.tar.gz
+$ sudo mkdir /usr/local/share/open_jtalk
+$ sudo mv ./open_jtalk_dic_utf_8-1.08 /usr/local/share/open_jtalk/
+
+hts音声ファイル
+$ tar zxvf hts_voice_nitech_jp_atr503_m001-1.05.tar.gz
+$ sudo mkdir /usr/local/share/hts_voice
+$ sudo mv ./hts_voice_nitech_jp_atr503_m001-1.05 /usr/local/share/hts_voice/
+
+
+MMDAgentサンプル音声
+$ unzip MMDAgent_Example-1.4.zip
+$ sudo mv ./MMDAgent_Example-1.4/Voice/mei_normal /usr/local/share/hts_voice/
+
+
+音声合成のテスト
+$ echo 今日の天気は晴れです。 | open_jtalk -x /var/lib/mecab/dic/open-jtalk/naist-jdic -m /usr/local/share/hts_voice/mei/mei_happy.htsvoice -ow ~/open_jtalk.wav
+
+open_jtalk.wav ができるので、ファイルマネージャーからダブルクリックして再生してみる。
+
+Python スクリプト
+Pyaudioのインストール
+http://people.csail.mit.edu/hubert/pyaudio/
+ここからPyAudio for Python 2 (amd64) をダウンロードする。
+
+$ dpkg -i python-pyaudio_0.2.8-1_amd64.deb -d
+
+
+# -*- coding: utf-8 -*- 
+import wave
+import os
+import pyaudio
+
+if __name__ == "__main__":
+
+    voice = '/usr/local/share/hts_voice/mei/'
+    dic   = '/var/lib/mecab/dic/open-jtalk/'    
+    text = "皆さんこんにちはー。私の名前はイレイサーです。"
+ 
+    opts = [
+            "-x  " + dic + "naist-jdic",
+            "-m  " + voice + "mei_happy.htsvoice",
+            "-ow " + "out.wav",
+            ]
+
+    cmd = "open_jtalk "
+    for row in opts:
+        cmd += row + " "
+    cmd += "in.txt"
+
+    f = open("in.txt",'w')
+    f.write(text)
+    f.close()
+
+    os.system(cmd)
+
+    wf = wave.open("out.wav", "r")
+
+    # ストリームを開く
+    p = pyaudio.PyAudio()
+    stream = p.open(format=p.get_format_from_width(wf.getsampwidth()),
+                    channels=wf.getnchannels(),
+                    rate=wf.getframerate(),
+                    output=True)
+
+    # チャンク単位でストリームに出力し音声を再生
+    chunk = 1024
+    data = wf.readframes(chunk)
+    while data != '':
+        stream.write(data)
+        data = wf.readframes(chunk)
+    stream.close()
+    p.terminate()
+    

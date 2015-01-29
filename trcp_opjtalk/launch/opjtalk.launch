@@ -1,0 +1,15 @@
+<!--
+This launch file runs the opjtalk node and a test script that excersises
+most of its functionality.
+-->
+
+<launch>
+  <arg name="voice" default="/usr/local/share/hts_voice/mei/mei_happy.htsvoice"/>
+  <arg name="dic" default="/var/lib/mecab/dic/open-jtalk/naist-jdic"/>
+  <node pkg="trcp_opjtalk" name="opjtalk" type="opjtalk.py" output="screen" clear_params="true">
+     <param name="voice" value="$(arg voice)" />
+     <param name="dic" value="$(arg dic)" />
+   </node>
+
+</launch>
+

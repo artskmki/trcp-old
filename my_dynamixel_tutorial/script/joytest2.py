@@ -18,26 +18,26 @@ def callback(data):
 
 
     pub5.publish(data.axes[3]*50)
-    pub6.publish(data.axes[3]*-50)
-    pub7.publish(data.axes[3]*-50)
-    pub8.publish(data.axes[3]*50)
+    pub6.publish(data.axes[3]*50)
+    pub7.publish(data.axes[3]*(-50))
+    pub8.publish(data.axes[3]*(-50))
 
 def listener():
     global pub1
     pub1 = rospy.Publisher('/fl_caster_rotation_joint/command',Float64)
     global pub2
-    pub2 = rospy.Publisher('/fl_caster_rotation_joint/command',Float64)
+    pub2 = rospy.Publisher('/bl_caster_rotation_joint/command',Float64)
     global pub3
-    pub3 = rospy.Publisher('/fl_caster_rotation_joint/command',Float64)
+    pub3 = rospy.Publisher('/br_caster_rotation_joint/command',Float64)
     global pub4
-    pub4 = rospy.Publisher('/fl_caster_rotation_joint/command',Float64)
+    pub4 = rospy.Publisher('/fr_caster_rotation_joint/command',Float64)
 
     global pub5
     pub5 = rospy.Publisher('/fl_caster_r_wheel_joint/command',Float64)
     global pub6
-    pub6 = rospy.Publisher('/br_caster_r_wheel_joint/command',Float64)
+    pub6 = rospy.Publisher('/bl_caster_r_wheel_joint/command',Float64)
     global pub7
-    pub7 = rospy.Publisher('/bl_caster_r_wheel_joint/command',Float64)
+    pub7 = rospy.Publisher('/br_caster_r_wheel_joint/command',Float64)
     global pub8
     pub8 = rospy.Publisher('/fr_caster_r_wheel_joint/command',Float64)
 

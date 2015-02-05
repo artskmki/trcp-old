@@ -1,0 +1,28 @@
+2014-10-21 17:39:41,576 manager INFO 1.1.0
+2014-10-21 17:39:41,576 manager INFO Copyright (C) 2003-2010
+2014-10-21 17:39:41,576 manager INFO   Noriaki Ando
+2014-10-21 17:39:41,576 manager INFO   Intelligent Systems Research Institute, AIST
+2014-10-21 17:39:41,576 manager INFO Manager starting.
+2014-10-21 17:39:41,576 manager INFO Starting local logging.
+2014-10-21 17:39:41,578 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2014-10-21 17:39:41,580 ManagerServant INFO Master manager not found
+2014-10-21 17:39:41,581 manager ERROR Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/OpenRTM_aist/Manager.py", line 1751, in initManagerServant
+    reffile = file(self._config.getProperty("manager.refstring_path"),'w')
+IOError: [Errno 13] Permission denied: '/var/log/rtcmanager.ref'
+
+2014-10-21 17:39:41,585 eSEAT0 INFO eSEAT (Extended Simple Event Action Transfer) version 0.2
+2014-10-21 17:39:41,585 eSEAT0 INFO Copyright (C) 2009-2014 Yosuke Matsusaka and Isao Hara
+2014-10-21 17:39:41,585 eSEAT0 INFO Start loadSEATML:./SimpleIO.seatml
+2014-10-21 17:39:41,585 eSEAT0 INFO load script file: ./SimpleIO.seatml
+2014-10-21 17:39:41,586 eSEAT0 INFO create adaptor: rtcout: str_out
+2014-10-21 17:39:41,586 eSEAT0 INFO create outport: str_out
+2014-10-21 17:39:41,587 eSEAT0 INFO create adaptor: rtcin: str_in
+2014-10-21 17:39:41,587 eSEAT0 INFO create inport: str_in
+2014-10-21 17:39:41,588 eSEAT0 INFO register key=main_mode:gui:textIn
+2014-10-21 17:39:41,588 eSEAT0 INFO register key=main_mode:gui:Send
+2014-10-21 17:39:41,588 eSEAT0 INFO register key=main_mode:gui:textOut
+2014-10-21 17:39:41,588 eSEAT0 INFO register key=main_mode:str_in:ondata
+2014-10-21 17:39:41,588 eSEAT0 INFO current state main_mode
+2014-10-21 17:39:41,588 eSEAT0 INFO loaded successfully
+2014-10-21 17:39:41,634 eSEAT0 INFO Register Entry callback

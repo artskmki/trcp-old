@@ -1,0 +1,575 @@
+2015-02-09 21:20:44,350 manager INFO 1.1.0
+2015-02-09 21:20:44,350 manager INFO Copyright (C) 2003-2010
+2015-02-09 21:20:44,350 manager INFO   Noriaki Ando
+2015-02-09 21:20:44,350 manager INFO   Intelligent Systems Research Institute, AIST
+2015-02-09 21:20:44,351 manager INFO Manager starting.
+2015-02-09 21:20:44,351 manager INFO Starting local logging.
+2015-02-09 21:20:44,354 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2015-02-09 21:20:44,358 ManagerServant INFO Master manager not found
+2015-02-09 21:20:44,358 manager WARNING Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/Manager.py", line 1900, in initManagerServant
+    reffile = file(self._config.getProperty("manager.refstring_path"),'w')
+IOError: [Errno 13] Permission denied: '/var/log/rtcmanager.ref'
+
+2015-02-09 21:20:44,359 LocalServiceAdmin INFO All the local services are enabled.
+2015-02-09 21:20:44,367 ec_base INFO setRate(1000000.000000) done
+2015-02-09 21:20:44,368 ec_base INFO setRate(1.000000) done
+2015-02-09 21:20:44,368 rtobject INFO 1 execution context was created.
+2015-02-09 21:20:44,368 SEAT0 INFO SEAT (Speech Event Action Transfer) version 2.00
+2015-02-09 21:20:44,368 SEAT0 INFO Copyright (C) 2009-2010 Yosuke Matsusaka and Isao Hara
+2015-02-09 21:20:44,369 rtobject INFO Initial active configuration set is default.
+2015-02-09 21:20:44,370 SEAT0 INFO load script file: sample.seatml
+2015-02-09 21:20:44,370 SEAT0 INFO create inport: speechin
+2015-02-09 21:20:44,372 SEAT0 INFO create outport: speechout
+2015-02-09 21:20:44,375 SEAT0 INFO register OPEN:default:こんにちは
+2015-02-09 21:20:44,375 SEAT0 INFO register OPEN:default:さようなら
+2015-02-09 21:20:44,376 SEAT0 INFO current state OPEN
+2015-02-09 21:20:44,376 SEAT0 INFO loaded successfully
+2015-02-09 21:21:36,086 SdoServiceAdmin WARNING No available SDO service in the factory: 
+2015-02-09 21:21:36,086 SdoServiceAdmin ERROR type  already exists.
+2015-02-09 21:21:36,088 SdoServiceAdmin WARNING No available SDO service in the factory: IDL:OpenRTM/ComponentObserver:1.0
+2015-02-09 21:21:36,088 SdoServiceAdmin ERROR type 5341f726-0439-4e7d-bd8c-cad0c2cd5a8f already exists.
+2015-02-09 21:22:04,031 ec_base WARNING The component is not responding.
+2015-02-09 21:22:13,501 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2515.206787" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:22:13,502 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:22:13,502 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:22:13,503 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:22:16,166 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1831.107544" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:22:16,166 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:22:16,166 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:22:16,167 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:22:18,665 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-3052.976318" rank="1" score="1.0" text="さようなら"><word score="1.000" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:22:18,666 SEAT0 INFO #1: さようなら (1.000000)
+2015-02-09 21:22:18,666 SEAT0 INFO looking up... さようなら
+2015-02-09 21:22:18,666 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 21:22:21,337 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1962.843994" rank="1" score="0.727" text="こんにちは"><word score="0.727" text="こんにちは"/></data><data likelihood="-1971.341675" rank="2" score="0.273" text="さようなら"><word score="0.273" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:22:21,337 SEAT0 INFO #1: こんにちは (0.727000)
+2015-02-09 21:22:21,338 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:22:21,338 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:22:23,803 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1781.955078" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:22:23,803 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:22:23,803 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:22:23,803 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:22:26,265 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1803.047241" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:22:26,266 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:22:26,266 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:22:26,266 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:22:28,742 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1893.378906" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:22:28,742 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:22:28,743 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:22:28,743 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:22:31,207 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1803.173828" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:22:31,207 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:22:31,207 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:22:31,208 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:22:33,664 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1838.754150" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:22:33,665 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:22:33,665 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:22:33,665 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:22:36,144 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1850.635254" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:22:36,145 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:22:36,145 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:22:36,145 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:22:38,601 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1892.051880" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:22:38,601 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:22:38,601 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:22:38,602 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:22:41,060 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1863.493164" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:22:41,060 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:22:41,061 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:22:41,061 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:22:44,112 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-3578.239014" rank="1" score="0.974" text="こんにちは"><word score="0.974" text="こんにちは"/></data><data likelihood="-3609.656250" rank="2" score="0.026" text="さようなら"><word score="0.026" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:22:44,113 SEAT0 INFO #1: こんにちは (0.974000)
+2015-02-09 21:22:44,113 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:22:44,113 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:22:48,511 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-6897.590332" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:22:48,512 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:22:48,512 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:22:48,512 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:22:51,204 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2498.416992" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data><data likelihood="-2566.389893" rank="2" score="0.0" text="さようなら"><word score="0.000" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:22:51,205 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:22:51,205 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:22:51,205 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:22:53,036 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-3275.095947" rank="1" score="0.627" text="さようなら"><word score="0.627" text="さようなら"/></data><data likelihood="-3279.621338" rank="2" score="0.373" text="こんにちは"><word score="0.373" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:22:53,036 SEAT0 INFO #1: さようなら (0.627000)
+2015-02-09 21:22:53,037 SEAT0 INFO looking up... さようなら
+2015-02-09 21:22:53,037 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 21:22:53,900 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2596.571289" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:22:53,901 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:22:53,901 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:22:53,901 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:22:54,592 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2217.784180" rank="1" score="0.998" text="さようなら"><word score="0.998" text="さようなら"/></data><data likelihood="-2271.086426" rank="2" score="0.002" text="こんにちは"><word score="0.002" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:22:54,593 SEAT0 INFO #1: さようなら (0.998000)
+2015-02-09 21:22:54,593 SEAT0 INFO looking up... さようなら
+2015-02-09 21:22:54,593 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 21:22:55,620 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2185.331299" rank="1" score="0.951" text="こんにちは"><word score="0.951" text="こんにちは"/></data><data likelihood="-2211.048828" rank="2" score="0.049" text="さようなら"><word score="0.049" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:22:55,621 SEAT0 INFO #1: こんにちは (0.951000)
+2015-02-09 21:22:55,621 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:22:55,621 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:22:57,466 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-4570.401855" rank="1" score="0.87" text="さようなら"><word score="0.870" text="さようなら"/></data><data likelihood="-4586.947754" rank="2" score="0.13" text="こんにちは"><word score="0.130" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:22:57,466 SEAT0 INFO #1: さようなら (0.870000)
+2015-02-09 21:22:57,466 SEAT0 INFO looking up... さようなら
+2015-02-09 21:22:57,467 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 21:22:58,616 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-3809.720703" rank="1" score="0.824" text="さようなら"><word score="0.824" text="さようなら"/></data><data likelihood="-3823.148438" rank="2" score="0.176" text="こんにちは"><word score="0.176" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:22:58,617 SEAT0 INFO #1: さようなら (0.824000)
+2015-02-09 21:22:58,617 SEAT0 INFO looking up... さようなら
+2015-02-09 21:22:58,617 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 21:23:00,229 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2420.099121" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:00,230 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:00,230 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:00,230 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:00,791 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1709.782715" rank="1" score="0.999" text="さようなら"><word score="0.999" text="さようなら"/></data><data likelihood="-1772.642822" rank="2" score="0.001" text="こんにちは"><word score="0.001" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:00,791 SEAT0 INFO #1: さようなら (0.999000)
+2015-02-09 21:23:00,792 SEAT0 INFO looking up... さようなら
+2015-02-09 21:23:00,792 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 21:23:01,671 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2533.046631" rank="1" score="0.543" text="こんにちは"><word score="0.543" text="こんにちは"/></data><data likelihood="-2534.535889" rank="2" score="0.457" text="さようなら"><word score="0.457" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:23:01,672 SEAT0 INFO #1: こんにちは (0.543000)
+2015-02-09 21:23:01,672 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:01,672 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:03,098 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2053.966064" rank="1" score="0.615" text="こんにちは"><word score="0.615" text="こんにちは"/></data><data likelihood="-2058.052490" rank="2" score="0.385" text="さようなら"><word score="0.385" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:23:03,099 SEAT0 INFO #1: こんにちは (0.615000)
+2015-02-09 21:23:03,099 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:03,099 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:04,427 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1749.569824" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:04,427 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:04,427 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:04,428 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:06,088 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1959.567261" rank="1" score="0.729" text="こんにちは"><word score="0.729" text="こんにちは"/></data><data likelihood="-1968.164429" rank="2" score="0.271" text="さようなら"><word score="0.271" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:23:06,089 SEAT0 INFO #1: こんにちは (0.729000)
+2015-02-09 21:23:06,089 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:06,089 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:06,831 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1768.527954" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:06,831 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:06,831 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:06,831 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:08,292 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1884.005249" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:08,292 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:08,293 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:08,293 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:09,544 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1837.650391" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:09,545 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:09,545 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:09,545 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:11,143 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1786.393066" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:11,144 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:11,144 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:11,144 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:12,738 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1790.233398" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:12,738 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:12,738 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:12,738 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:14,355 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1693.365723" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:14,356 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:14,356 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:14,356 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:15,954 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1702.308472" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:15,955 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:15,956 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:15,956 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:17,548 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1684.957764" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:17,549 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:17,549 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:17,549 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:19,173 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1720.693970" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:19,174 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:19,174 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:19,174 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:20,765 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1678.729980" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:20,766 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:20,766 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:20,766 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:22,369 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1768.117065" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:22,370 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:22,370 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:22,370 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:23,977 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1684.566895" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:23,978 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:23,978 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:23,978 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:25,573 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1699.024292" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:25,574 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:25,574 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:25,574 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:27,192 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1790.204224" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:27,192 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:27,192 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:27,192 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:28,811 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1721.076904" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:28,812 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:28,812 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:28,812 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:30,400 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1765.281494" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:30,401 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:30,401 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:30,401 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:32,024 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1789.571655" rank="1" score="0.955" text="こんにちは"><word score="0.955" text="こんにちは"/></data><data likelihood="-1816.198608" rank="2" score="0.045" text="さようなら"><word score="0.045" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:23:32,025 SEAT0 INFO #1: こんにちは (0.955000)
+2015-02-09 21:23:32,025 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:32,025 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:33,608 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1997.025879" rank="1" score="0.997" text="こんにちは"><word score="0.997" text="こんにちは"/></data><data likelihood="-2047.794067" rank="2" score="0.003" text="さようなら"><word score="0.003" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:23:33,609 SEAT0 INFO #1: こんにちは (0.997000)
+2015-02-09 21:23:33,609 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:33,609 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:35,213 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1981.217041" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:35,213 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:35,213 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:35,213 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:35,626 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1800.897949" rank="1" score="0.975" text="さようなら"><word score="0.975" text="さようなら"/></data><data likelihood="-1832.639893" rank="2" score="0.025" text="こんにちは"><word score="0.025" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:35,626 SEAT0 INFO #1: さようなら (0.975000)
+2015-02-09 21:23:35,627 SEAT0 INFO looking up... さようなら
+2015-02-09 21:23:35,627 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 21:23:36,838 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1917.247559" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:36,839 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:36,839 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:36,839 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:38,410 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1738.632690" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:38,410 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:38,411 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:38,411 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:40,088 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1844.572510" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:40,089 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:40,089 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:40,089 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:41,633 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1730.319458" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:41,633 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:41,634 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:41,634 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:43,148 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2004.773804" rank="1" score="0.549" text="さようなら"><word score="0.549" text="さようなら"/></data><data likelihood="-2006.464355" rank="2" score="0.451" text="こんにちは"><word score="0.451" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:43,149 SEAT0 INFO #1: さようなら (0.549000)
+2015-02-09 21:23:43,149 SEAT0 INFO looking up... さようなら
+2015-02-09 21:23:43,149 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 21:23:44,248 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1779.110596" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:44,249 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:44,249 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:44,250 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:45,830 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1713.109375" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:45,831 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:45,831 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:45,831 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:47,410 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1716.395996" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:47,411 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:47,411 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:47,411 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:49,155 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2016.331055" rank="1" score="0.508" text="さようなら"><word score="0.508" text="さようなら"/></data><data likelihood="-2016.603027" rank="2" score="0.492" text="こんにちは"><word score="0.492" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:49,156 SEAT0 INFO #1: さようなら (0.508000)
+2015-02-09 21:23:49,156 SEAT0 INFO looking up... さようなら
+2015-02-09 21:23:49,156 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 21:23:50,475 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1790.515747" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:50,475 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:50,475 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:50,476 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:52,138 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1806.769897" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:52,139 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:52,139 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:52,139 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:53,697 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1834.098999" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:53,698 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:53,698 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:53,698 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:55,423 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1968.974121" rank="1" score="0.64" text="さようなら"><word score="0.640" text="さようなら"/></data><data likelihood="-1973.953003" rank="2" score="0.36" text="こんにちは"><word score="0.360" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:55,424 SEAT0 INFO #1: さようなら (0.640000)
+2015-02-09 21:23:55,424 SEAT0 INFO looking up... さようなら
+2015-02-09 21:23:55,424 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 21:23:56,741 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1903.834473" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:56,742 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:56,742 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:56,742 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:58,336 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1757.133179" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:58,336 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:58,337 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:58,337 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:23:59,945 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1760.430786" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:23:59,945 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:23:59,945 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:23:59,945 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:01,698 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1968.931519" rank="1" score="0.674" text="こんにちは"><word score="0.674" text="こんにちは"/></data><data likelihood="-1975.259644" rank="2" score="0.326" text="さようなら"><word score="0.326" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:24:01,698 SEAT0 INFO #1: こんにちは (0.674000)
+2015-02-09 21:24:01,699 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:01,699 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:02,998 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1745.640503" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:02,999 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:02,999 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:02,999 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:04,601 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1726.191772" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data><data likelihood="-1793.484619" rank="2" score="0.0" text="さようなら"><word score="0.000" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:24:04,602 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:04,602 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:04,602 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:06,210 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1699.826172" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:06,210 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:06,211 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:06,211 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:07,809 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1697.581177" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:07,810 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:07,810 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:07,810 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:09,413 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1727.683960" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:09,413 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:09,413 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:09,413 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:11,017 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1670.755249" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:11,018 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:11,018 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:11,019 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:12,609 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1707.345947" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:12,610 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:12,610 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:12,611 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:14,230 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1867.784302" rank="1" score="0.999" text="こんにちは"><word score="0.999" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:14,230 SEAT0 INFO #1: こんにちは (0.999000)
+2015-02-09 21:24:14,230 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:14,231 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:15,838 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1690.050293" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:15,839 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:15,839 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:15,839 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:17,423 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1660.624146" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:17,423 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:17,423 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:17,424 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:19,041 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1695.931763" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:19,041 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:19,041 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:19,041 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:20,644 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1704.304443" rank="1" score="0.999" text="こんにちは"><word score="0.999" text="こんにちは"/></data><data likelihood="-1761.365723" rank="2" score="0.001" text="さようなら"><word score="0.001" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:24:20,645 SEAT0 INFO #1: こんにちは (0.999000)
+2015-02-09 21:24:20,645 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:20,645 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:22,257 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1792.218018" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:22,257 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:22,257 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:22,258 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:23,863 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1723.553589" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:23,863 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:23,864 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:23,864 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:25,447 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1787.924683" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data><data likelihood="-1854.909668" rank="2" score="0.0" text="さようなら"><word score="0.000" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:24:25,448 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:25,448 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:25,449 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:27,137 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1869.923462" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:27,138 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:27,138 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:27,138 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:28,678 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1763.617188" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:28,678 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:28,678 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:28,678 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:30,286 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1697.139038" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:30,287 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:30,287 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:30,287 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:31,883 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1873.331055" rank="1" score="0.999" text="こんにちは"><word score="0.999" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:31,883 SEAT0 INFO #1: こんにちは (0.999000)
+2015-02-09 21:24:31,883 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:31,883 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:33,494 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1780.745117" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:33,495 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:33,495 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:33,495 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:35,101 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1793.803833" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:35,101 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:35,101 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:35,102 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:46,131 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2415.870605" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:46,132 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:46,132 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:46,132 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:48,694 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1717.325195" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:48,694 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:48,695 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:48,695 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:51,395 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2807.899902" rank="1" score="1.0" text="さようなら"><word score="1.000" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:24:51,396 SEAT0 INFO #1: さようなら (1.000000)
+2015-02-09 21:24:51,396 SEAT0 INFO looking up... さようなら
+2015-02-09 21:24:51,396 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 21:24:54,072 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2079.904297" rank="1" score="0.641" text="こんにちは"><word score="0.641" text="こんにちは"/></data><data likelihood="-2084.921875" rank="2" score="0.359" text="さようなら"><word score="0.359" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:24:54,073 SEAT0 INFO #1: こんにちは (0.641000)
+2015-02-09 21:24:54,073 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:54,073 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:56,629 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1741.800171" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:56,630 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:56,630 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:56,630 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:24:59,193 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1733.251953" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:24:59,194 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:24:59,194 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:24:59,194 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:25:01,747 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1811.072754" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:25:01,748 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:25:01,748 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:25:01,748 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:25:04,309 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1917.882812" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:25:04,309 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:25:04,309 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:25:04,310 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:25:06,872 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1785.580444" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:25:06,873 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:25:06,873 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:25:06,873 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:25:09,435 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1722.639160" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:25:09,436 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:25:09,436 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:25:09,436 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:25:11,992 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1705.413940" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:25:11,992 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:25:11,993 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:25:11,993 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:25:14,552 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1791.971802" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:25:14,553 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:25:14,553 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:25:14,553 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:25:17,118 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1777.088623" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:25:17,119 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:25:17,119 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:25:17,119 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:25:19,674 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1753.374023" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:25:19,674 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:25:19,674 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:25:19,675 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:25:22,229 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1761.379639" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:25:22,229 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:25:22,230 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:25:22,230 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:25:24,738 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1829.908691" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:25:24,739 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:25:24,739 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:25:24,739 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:25:27,300 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1705.218384" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:25:27,301 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:25:27,301 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:25:27,301 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:25:29,866 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1742.954224" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:25:29,867 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:25:29,867 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:25:29,867 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:25:30,937 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2624.710938" rank="1" score="1.0" text="さようなら"><word score="1.000" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:25:30,938 SEAT0 INFO #1: さようなら (1.000000)
+2015-02-09 21:25:30,938 SEAT0 INFO looking up... さようなら
+2015-02-09 21:25:30,938 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 21:25:32,419 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1711.501709" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:25:32,419 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:25:32,419 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:25:32,419 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:25:34,030 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1888.517944" rank="1" score="0.707" text="さようなら"><word score="0.707" text="さようなら"/></data><data likelihood="-1896.160889" rank="2" score="0.293" text="こんにちは"><word score="0.293" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:25:34,031 SEAT0 INFO #1: さようなら (0.707000)
+2015-02-09 21:25:34,031 SEAT0 INFO looking up... さようなら
+2015-02-09 21:25:34,031 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 21:25:35,418 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1590.926025" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:25:35,419 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:25:35,419 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:25:35,420 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:25:38,507 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1693.762207" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:25:38,508 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:25:38,508 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:25:38,508 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:25:41,002 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1663.852783" rank="1" score="0.972" text="こんにちは"><word score="0.972" text="こんにちは"/></data><data likelihood="-1694.663208" rank="2" score="0.028" text="さようなら"><word score="0.028" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:25:41,002 SEAT0 INFO #1: こんにちは (0.972000)
+2015-02-09 21:25:41,002 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:25:41,003 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:25:44,965 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2779.582031" rank="1" score="1.0" text="さようなら"><word score="1.000" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:25:44,967 SEAT0 INFO #1: さようなら (1.000000)
+2015-02-09 21:25:44,967 SEAT0 INFO looking up... さようなら
+2015-02-09 21:25:44,967 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 21:25:47,512 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1903.197876" rank="1" score="0.809" text="さようなら"><word score="0.809" text="さようなら"/></data><data likelihood="-1915.760742" rank="2" score="0.191" text="こんにちは"><word score="0.191" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:25:47,512 SEAT0 INFO #1: さようなら (0.809000)
+2015-02-09 21:25:47,512 SEAT0 INFO looking up... さようなら
+2015-02-09 21:25:47,512 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 21:25:59,991 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2803.991455" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:25:59,992 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:25:59,992 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:25:59,992 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:26:02,554 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1933.154785" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:26:02,555 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:26:02,555 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:26:02,555 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:26:06,781 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2510.672363" rank="1" score="1.0" text="さようなら"><word score="1.000" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:26:06,781 SEAT0 INFO #1: さようなら (1.000000)
+2015-02-09 21:26:06,781 SEAT0 INFO looking up... さようなら
+2015-02-09 21:26:06,781 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 21:26:09,334 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2022.509399" rank="1" score="0.825" text="さようなら"><word score="0.825" text="さようなら"/></data><data likelihood="-2036.004517" rank="2" score="0.175" text="こんにちは"><word score="0.175" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:26:09,335 SEAT0 INFO #1: さようなら (0.825000)
+2015-02-09 21:26:09,335 SEAT0 INFO looking up... さようなら
+2015-02-09 21:26:09,335 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 21:26:16,777 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1561.396973" rank="1" score="0.938" text="こんにちは"><word score="0.938" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:26:16,778 SEAT0 INFO #1: こんにちは (0.938000)
+2015-02-09 21:26:16,778 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:26:16,778 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:26:19,328 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1837.826416" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:26:19,329 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:26:19,329 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:26:19,329 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:26:45,005 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2595.626465" rank="1" score="1.0" text="さようなら"><word score="1.000" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:26:45,006 SEAT0 INFO #1: さようなら (1.000000)
+2015-02-09 21:26:45,006 SEAT0 INFO looking up... さようなら
+2015-02-09 21:26:45,006 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 21:26:47,528 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1949.576782" rank="1" score="0.774" text="こんにちは"><word score="0.774" text="こんにちは"/></data><data likelihood="-1960.255249" rank="2" score="0.226" text="さようなら"><word score="0.226" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:26:47,529 SEAT0 INFO #1: こんにちは (0.774000)
+2015-02-09 21:26:47,529 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:26:47,529 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:26:50,029 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1845.764404" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:26:50,030 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:26:50,030 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:26:50,030 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:26:52,433 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1722.146118" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:26:52,433 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:26:52,433 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:26:52,434 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:26:54,891 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1828.527222" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:26:54,891 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:26:54,891 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:26:54,891 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:26:57,297 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1730.976440" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:26:57,298 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:26:57,298 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:26:57,298 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:26:59,689 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1776.119629" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:26:59,690 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:26:59,690 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:26:59,690 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:27:02,089 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1754.464966" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:27:02,090 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:27:02,090 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:27:02,090 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:27:04,492 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1793.289917" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:27:04,493 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:27:04,493 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:27:04,493 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:27:06,909 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1824.959839" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:27:06,910 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:27:06,910 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:27:06,910 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:27:09,322 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1763.373047" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:27:09,322 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:27:09,323 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:27:09,323 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:27:11,749 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1742.572876" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:27:11,750 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:27:11,750 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:27:11,750 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:27:14,151 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1732.692993" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:27:14,151 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:27:14,151 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:27:14,151 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:27:16,542 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1771.667847" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:27:16,543 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:27:16,543 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:27:16,543 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:27:18,957 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1689.197998" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:27:18,958 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:27:18,958 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:27:18,958 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:27:21,360 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1698.733154" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:27:21,360 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:27:21,360 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:27:21,360 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:27:23,779 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1751.443359" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:27:23,780 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:27:23,780 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:27:23,780 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:27:26,186 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1882.124146" rank="1" score="0.999" text="こんにちは"><word score="0.999" text="こんにちは"/></data><data likelihood="-1961.419556" rank="2" score="0.001" text="さようなら"><word score="0.001" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:27:26,187 SEAT0 INFO #1: こんにちは (0.999000)
+2015-02-09 21:27:26,187 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:27:26,187 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:27:30,294 ec_base ERROR The component is not responding.
+2015-02-09 21:27:31,297 ec_worker WARNING ExecutionContext is already stopped.
+2015-02-09 21:27:31,297 ec_base ERROR Invoking on_shutdown() for each RTC failed.

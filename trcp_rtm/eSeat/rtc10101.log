@@ -1,0 +1,36 @@
+2015-02-09 20:48:59,584 manager INFO 1.1.0
+2015-02-09 20:48:59,584 manager INFO Copyright (C) 2003-2010
+2015-02-09 20:48:59,584 manager INFO   Noriaki Ando
+2015-02-09 20:48:59,584 manager INFO   Intelligent Systems Research Institute, AIST
+2015-02-09 20:48:59,584 manager INFO Manager starting.
+2015-02-09 20:48:59,584 manager INFO Starting local logging.
+2015-02-09 20:48:59,586 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2015-02-09 20:48:59,590 ManagerServant INFO Master manager not found
+2015-02-09 20:48:59,590 manager WARNING Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/Manager.py", line 1900, in initManagerServant
+    reffile = file(self._config.getProperty("manager.refstring_path"),'w')
+IOError: [Errno 13] Permission denied: '/var/log/rtcmanager.ref'
+
+2015-02-09 20:48:59,590 LocalServiceAdmin INFO All the local services are enabled.
+2015-02-09 20:48:59,599 ec_base INFO setRate(1000000.000000) done
+2015-02-09 20:48:59,600 ec_base INFO setRate(1000.000000) done
+2015-02-09 20:48:59,600 rtobject INFO 1 execution context was created.
+2015-02-09 20:48:59,600 eSEAT0 INFO eSEAT (Extended Simple Event Action Transfer) version 0.2
+2015-02-09 20:48:59,600 eSEAT0 INFO Copyright (C) 2009-2014 Yosuke Matsusaka and Isao Hara
+2015-02-09 20:48:59,600 rtobject INFO Initial active configuration set is default.
+2015-02-09 20:48:59,603 eSEAT0 INFO Start loadSEATML:SimpleIO.seatml
+2015-02-09 20:48:59,603 eSEAT0 INFO load script file: SimpleIO.seatml
+2015-02-09 20:48:59,604 eSEAT0 INFO create adaptor: rtcout: str_out
+2015-02-09 20:48:59,604 eSEAT0 INFO create outport: str_out
+2015-02-09 20:48:59,605 eSEAT0 INFO create adaptor: rtcin: str_in
+2015-02-09 20:48:59,605 eSEAT0 INFO create inport: str_in
+2015-02-09 20:48:59,606 eSEAT0 INFO register key=main_mode:gui:textIn
+2015-02-09 20:48:59,606 eSEAT0 INFO register key=main_mode:gui:Send
+2015-02-09 20:48:59,607 eSEAT0 INFO register key=main_mode:gui:textOut
+2015-02-09 20:48:59,607 eSEAT0 INFO register key=main_mode:str_in:ondata
+2015-02-09 20:48:59,607 eSEAT0 INFO current state main_mode
+2015-02-09 20:48:59,607 eSEAT0 INFO loaded successfully
+2015-02-09 20:48:59,794 eSEAT0 INFO Register Entry callback
+2015-02-09 20:49:11,633 ec_worker ERROR State of the RTC is not ACTIVE_STATE.
+2015-02-09 20:49:11,638 ec_worker WARNING ExecutionContext is already stopped.
+2015-02-09 20:49:11,638 ec_base ERROR Invoking on_shutdown() for each RTC failed.

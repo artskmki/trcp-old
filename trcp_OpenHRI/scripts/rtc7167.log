@@ -1,0 +1,26 @@
+2015-02-09 21:17:24,922 manager INFO 1.1.0
+2015-02-09 21:17:24,922 manager INFO Copyright (C) 2003-2010
+2015-02-09 21:17:24,922 manager INFO   Noriaki Ando
+2015-02-09 21:17:24,922 manager INFO   Intelligent Systems Research Institute, AIST
+2015-02-09 21:17:24,923 manager INFO Manager starting.
+2015-02-09 21:17:24,923 manager INFO Starting local logging.
+2015-02-09 21:17:24,925 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2015-02-09 21:17:24,929 ManagerServant INFO Master manager not found
+2015-02-09 21:17:24,929 manager WARNING Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/Manager.py", line 1900, in initManagerServant
+    reffile = file(self._config.getProperty("manager.refstring_path"),'w')
+IOError: [Errno 13] Permission denied: '/var/log/rtcmanager.ref'
+
+2015-02-09 21:17:24,929 LocalServiceAdmin INFO All the local services are enabled.
+2015-02-09 21:17:24,934 ec_base INFO setRate(1000000.000000) done
+2015-02-09 21:17:24,934 ec_base INFO setRate(1000.000000) done
+2015-02-09 21:17:24,934 rtobject INFO 1 execution context was created.
+2015-02-09 21:17:24,935 rtobject INFO Initial active configuration set is default-set.
+2015-02-09 21:17:28,238 SdoServiceAdmin WARNING No available SDO service in the factory: 
+2015-02-09 21:17:28,238 SdoServiceAdmin ERROR type  already exists.
+2015-02-09 21:17:28,240 SdoServiceAdmin WARNING No available SDO service in the factory: IDL:OpenRTM/ComponentObserver:1.0
+2015-02-09 21:17:28,240 SdoServiceAdmin ERROR type 488fb392-b970-4596-8577-1d91691771bd already exists.
+2015-02-09 21:18:51,864 ec_base ERROR The component is not responding.
+2015-02-09 21:18:51,864 ec_base ERROR Unknown error: Invalid state transition.
+2015-02-09 21:18:53,147 ec_worker WARNING ExecutionContext is already stopped.
+2015-02-09 21:18:53,147 ec_base ERROR Invoking on_shutdown() for each RTC failed.

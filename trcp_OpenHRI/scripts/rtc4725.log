@@ -1,0 +1,120 @@
+2015-02-09 21:59:23,644 manager INFO 1.1.0
+2015-02-09 21:59:23,644 manager INFO Copyright (C) 2003-2010
+2015-02-09 21:59:23,644 manager INFO   Noriaki Ando
+2015-02-09 21:59:23,644 manager INFO   Intelligent Systems Research Institute, AIST
+2015-02-09 21:59:23,644 manager INFO Manager starting.
+2015-02-09 21:59:23,645 manager INFO Starting local logging.
+2015-02-09 21:59:23,648 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2015-02-09 21:59:23,659 ManagerServant INFO Master manager not found
+2015-02-09 21:59:23,660 manager WARNING Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/Manager.py", line 1900, in initManagerServant
+    reffile = file(self._config.getProperty("manager.refstring_path"),'w')
+IOError: [Errno 13] Permission denied: '/var/log/rtcmanager.ref'
+
+2015-02-09 21:59:23,660 LocalServiceAdmin INFO All the local services are enabled.
+2015-02-09 21:59:23,667 ec_base INFO setRate(1000000.000000) done
+2015-02-09 21:59:23,667 ec_base INFO setRate(1.000000) done
+2015-02-09 21:59:23,667 rtobject INFO 1 execution context was created.
+2015-02-09 21:59:23,668 SEAT0 INFO SEAT (Speech Event Action Transfer) version 2.00
+2015-02-09 21:59:23,668 SEAT0 INFO Copyright (C) 2009-2010 Yosuke Matsusaka and Isao Hara
+2015-02-09 21:59:23,668 rtobject INFO Initial active configuration set is default.
+2015-02-09 21:59:23,669 SEAT0 INFO load script file: sample.seatml
+2015-02-09 21:59:23,669 SEAT0 INFO create inport: speechin
+2015-02-09 21:59:23,671 SEAT0 INFO create outport: speechout
+2015-02-09 21:59:23,672 SEAT0 INFO register OPEN:default:こんにちは
+2015-02-09 21:59:23,672 SEAT0 INFO register OPEN:default:さようなら
+2015-02-09 21:59:23,672 SEAT0 INFO current state OPEN
+2015-02-09 21:59:23,673 SEAT0 INFO loaded successfully
+2015-02-09 21:59:35,419 ec_base WARNING The component is not responding.
+2015-02-09 21:59:46,058 SdoServiceAdmin WARNING No available SDO service in the factory: 
+2015-02-09 21:59:46,058 SdoServiceAdmin ERROR type  already exists.
+2015-02-09 21:59:46,060 SdoServiceAdmin WARNING No available SDO service in the factory: IDL:OpenRTM/ComponentObserver:1.0
+2015-02-09 21:59:46,060 SdoServiceAdmin ERROR type 423d1717-bab4-452a-944e-24d05508b924 already exists.
+2015-02-09 22:00:05,455 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2471.670166" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 22:00:05,456 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 22:00:05,456 SEAT0 INFO looking up... こんにちは
+2015-02-09 22:00:05,456 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 22:00:08,425 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2719.932861" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 22:00:08,426 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 22:00:08,426 SEAT0 INFO looking up... こんにちは
+2015-02-09 22:00:08,426 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 22:00:11,245 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2512.907471" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 22:00:11,246 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 22:00:11,246 SEAT0 INFO looking up... こんにちは
+2015-02-09 22:00:11,246 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 22:00:14,062 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2498.174072" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 22:00:14,063 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 22:00:14,063 SEAT0 INFO looking up... こんにちは
+2015-02-09 22:00:14,063 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 22:00:15,304 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2401.101074" rank="1" score="1.0" text="さようなら"><word score="1.000" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 22:00:15,304 SEAT0 INFO #1: さようなら (1.000000)
+2015-02-09 22:00:15,305 SEAT0 INFO looking up... さようなら
+2015-02-09 22:00:15,305 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 22:00:16,851 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2510.637451" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 22:00:16,851 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 22:00:16,851 SEAT0 INFO looking up... こんにちは
+2015-02-09 22:00:16,851 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 22:00:18,291 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2328.707764" rank="1" score="0.742" text="こんにちは"><word score="0.742" text="こんにちは"/></data><data likelihood="-2337.861084" rank="2" score="0.258" text="さようなら"><word score="0.258" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 22:00:18,292 SEAT0 INFO #1: こんにちは (0.742000)
+2015-02-09 22:00:18,292 SEAT0 INFO looking up... こんにちは
+2015-02-09 22:00:18,292 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 22:00:19,912 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2622.253418" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 22:00:19,912 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 22:00:19,912 SEAT0 INFO looking up... こんにちは
+2015-02-09 22:00:19,913 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 22:00:22,139 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-4747.170898" rank="1" score="0.994" text="さようなら"><word score="0.994" text="さようなら"/></data><data likelihood="-4791.512695" rank="2" score="0.006" text="こんにちは"><word score="0.006" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 22:00:22,141 SEAT0 INFO #1: さようなら (0.994000)
+2015-02-09 22:00:22,141 SEAT0 INFO looking up... さようなら
+2015-02-09 22:00:22,141 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 22:00:24,057 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-5476.551758" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 22:00:24,058 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 22:00:24,058 SEAT0 INFO looking up... こんにちは
+2015-02-09 22:00:24,058 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 22:00:24,779 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2597.645264" rank="1" score="0.9" text="こんにちは"><word score="0.900" text="こんにちは"/></data><data likelihood="-2616.776855" rank="2" score="0.1" text="さようなら"><word score="0.100" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 22:00:24,780 SEAT0 INFO #1: こんにちは (0.900000)
+2015-02-09 22:00:24,780 SEAT0 INFO looking up... こんにちは
+2015-02-09 22:00:24,780 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 22:00:26,857 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2760.059570" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 22:00:26,857 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 22:00:26,857 SEAT0 INFO looking up... こんにちは
+2015-02-09 22:00:26,857 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 22:00:28,829 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-3850.288818" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 22:00:28,829 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 22:00:28,829 SEAT0 INFO looking up... こんにちは
+2015-02-09 22:00:28,829 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 22:00:30,085 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-3766.695557" rank="1" score="0.976" text="こんにちは"><word score="0.976" text="こんにちは"/></data><data likelihood="-3798.979736" rank="2" score="0.024" text="さようなら"><word score="0.024" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 22:00:30,086 SEAT0 INFO #1: こんにちは (0.976000)
+2015-02-09 22:00:30,086 SEAT0 INFO looking up... こんにちは
+2015-02-09 22:00:30,087 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 22:00:31,682 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2906.308105" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 22:00:31,683 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 22:00:31,683 SEAT0 INFO looking up... こんにちは
+2015-02-09 22:00:31,683 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 22:00:33,291 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2797.324463" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 22:00:33,292 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 22:00:33,292 SEAT0 INFO looking up... こんにちは
+2015-02-09 22:00:33,292 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 22:00:34,902 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2882.948242" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 22:00:34,903 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 22:00:34,903 SEAT0 INFO looking up... こんにちは
+2015-02-09 22:00:34,903 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 22:00:36,499 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-4733.434570" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 22:00:36,500 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 22:00:36,500 SEAT0 INFO looking up... こんにちは
+2015-02-09 22:00:36,500 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 22:00:38,098 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2680.268555" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 22:00:38,099 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 22:00:38,099 SEAT0 INFO looking up... こんにちは
+2015-02-09 22:00:38,099 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 22:00:39,699 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2811.612061" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 22:00:39,700 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 22:00:39,700 SEAT0 INFO looking up... こんにちは
+2015-02-09 22:00:39,700 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 22:00:41,309 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2615.491699" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 22:00:41,310 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 22:00:41,310 SEAT0 INFO looking up... こんにちは
+2015-02-09 22:00:41,310 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 22:00:44,278 ec_base ERROR The component is not responding.
+2015-02-09 22:02:48,995 ec_worker ERROR State of the RTC is not ACTIVE_STATE.
+2015-02-09 22:02:49,998 ec_worker WARNING ExecutionContext is already stopped.
+2015-02-09 22:02:49,998 ec_base ERROR Invoking on_shutdown() for each RTC failed.

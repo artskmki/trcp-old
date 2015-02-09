@@ -1,0 +1,48 @@
+2015-02-09 21:57:30,541 manager INFO 1.1.0
+2015-02-09 21:57:30,541 manager INFO Copyright (C) 2003-2010
+2015-02-09 21:57:30,541 manager INFO   Noriaki Ando
+2015-02-09 21:57:30,541 manager INFO   Intelligent Systems Research Institute, AIST
+2015-02-09 21:57:30,541 manager INFO Manager starting.
+2015-02-09 21:57:30,541 manager INFO Starting local logging.
+2015-02-09 21:57:30,543 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2015-02-09 21:57:30,546 ManagerServant INFO Master manager not found
+2015-02-09 21:57:30,547 manager WARNING Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/Manager.py", line 1900, in initManagerServant
+    reffile = file(self._config.getProperty("manager.refstring_path"),'w')
+IOError: [Errno 13] Permission denied: '/var/log/rtcmanager.ref'
+
+2015-02-09 21:57:30,547 LocalServiceAdmin INFO All the local services are enabled.
+2015-02-09 21:57:30,552 ec_base INFO setRate(1000000.000000) done
+2015-02-09 21:57:30,553 ec_base INFO setRate(1.000000) done
+2015-02-09 21:57:30,553 rtobject INFO 1 execution context was created.
+2015-02-09 21:57:30,553 SEAT0 INFO SEAT (Speech Event Action Transfer) version 2.00
+2015-02-09 21:57:30,553 SEAT0 INFO Copyright (C) 2009-2010 Yosuke Matsusaka and Isao Hara
+2015-02-09 21:57:30,553 rtobject INFO Initial active configuration set is default.
+2015-02-09 21:57:30,558 SEAT0 INFO load script file: sample.seatml
+2015-02-09 21:57:30,558 SEAT0 INFO create inport: speechin
+2015-02-09 21:57:30,559 SEAT0 INFO create outport: speechout
+2015-02-09 21:57:30,561 SEAT0 INFO register OPEN:default:こんにちは
+2015-02-09 21:57:30,561 SEAT0 INFO register OPEN:default:さようなら
+2015-02-09 21:57:30,561 SEAT0 INFO current state OPEN
+2015-02-09 21:57:30,561 SEAT0 INFO loaded successfully
+2015-02-09 21:57:42,423 ec_base WARNING The component is not responding.
+2015-02-09 21:58:00,699 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2445.314697" rank="1" score="1.0" text="こんにちは"><word score="1.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-09 21:58:00,700 SEAT0 INFO #1: こんにちは (1.000000)
+2015-02-09 21:58:00,700 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:58:00,700 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:58:04,839 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2636.302002" rank="1" score="1.0" text="さようなら"><word score="1.000" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:58:04,840 SEAT0 INFO #1: さようなら (1.000000)
+2015-02-09 21:58:04,840 SEAT0 INFO looking up... さようなら
+2015-02-09 21:58:04,840 SEAT0 INFO sending command バイバイ (to speechout)
+2015-02-09 21:58:09,646 SEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2257.924072" rank="1" score="0.992" text="こんにちは"><word score="0.992" text="こんにちは"/></data><data likelihood="-2300.161621" rank="2" score="0.008" text="さようなら"><word score="0.008" text="さようなら"/></data></listenText> (speechin)
+2015-02-09 21:58:09,647 SEAT0 INFO #1: こんにちは (0.992000)
+2015-02-09 21:58:09,647 SEAT0 INFO looking up... こんにちは
+2015-02-09 21:58:09,647 SEAT0 INFO sending command こんにちは (to speechout)
+2015-02-09 21:58:13,721 SdoServiceAdmin WARNING No available SDO service in the factory: 
+2015-02-09 21:58:13,721 SdoServiceAdmin ERROR type  already exists.
+2015-02-09 21:58:13,723 SdoServiceAdmin WARNING No available SDO service in the factory: IDL:OpenRTM/ComponentObserver:1.0
+2015-02-09 21:58:13,723 SdoServiceAdmin ERROR type cdb7f372-7743-4563-af6b-6746d84d1bf8 already exists.
+2015-02-09 21:58:29,863 ec_base ERROR The component is not responding.
+2015-02-09 21:58:52,766 ec_worker ERROR State of the RTC is not ACTIVE_STATE.
+2015-02-09 21:58:53,767 ec_worker WARNING ExecutionContext is already stopped.
+2015-02-09 21:58:53,767 ec_base ERROR Invoking on_shutdown() for each RTC failed.

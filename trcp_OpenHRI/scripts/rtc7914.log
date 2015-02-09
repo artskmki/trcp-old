@@ -1,0 +1,271 @@
+2015-02-09 21:28:25,400 manager INFO 1.1.0
+2015-02-09 21:28:25,400 manager INFO Copyright (C) 2003-2010
+2015-02-09 21:28:25,400 manager INFO   Noriaki Ando
+2015-02-09 21:28:25,400 manager INFO   Intelligent Systems Research Institute, AIST
+2015-02-09 21:28:25,401 manager INFO Manager starting.
+2015-02-09 21:28:25,401 manager INFO Starting local logging.
+2015-02-09 21:28:25,403 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2015-02-09 21:28:25,407 ManagerServant INFO Master manager not found
+2015-02-09 21:28:25,408 manager WARNING Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/Manager.py", line 1900, in initManagerServant
+    reffile = file(self._config.getProperty("manager.refstring_path"),'w')
+IOError: [Errno 13] Permission denied: '/var/log/rtcmanager.ref'
+
+2015-02-09 21:28:25,408 LocalServiceAdmin INFO All the local services are enabled.
+2015-02-09 21:28:25,415 ec_base INFO setRate(1000000.000000) done
+2015-02-09 21:28:25,415 ec_base INFO setRate(1.000000) done
+2015-02-09 21:28:25,415 rtobject INFO 1 execution context was created.
+2015-02-09 21:28:25,415 SEAT0 INFO SEAT (Speech Event Action Transfer) version 2.00
+2015-02-09 21:28:25,415 SEAT0 INFO Copyright (C) 2009-2010 Yosuke Matsusaka and Isao Hara
+2015-02-09 21:28:25,416 rtobject INFO Initial active configuration set is default.
+2015-02-09 21:28:25,417 SEAT0 INFO load script file: sample.seatml
+2015-02-09 21:28:25,417 SEAT0 INFO create inport: speechin
+2015-02-09 21:28:25,418 SEAT0 INFO create outport: speechout
+2015-02-09 21:28:25,420 SEAT0 INFO register OPEN:default:こんにちは
+2015-02-09 21:28:25,420 SEAT0 INFO register OPEN:default:さようなら
+2015-02-09 21:28:25,420 SEAT0 INFO current state OPEN
+2015-02-09 21:28:25,420 SEAT0 INFO loaded successfully
+2015-02-09 21:28:39,936 SdoServiceAdmin WARNING No available SDO service in the factory: 
+2015-02-09 21:28:39,936 SdoServiceAdmin ERROR type  already exists.
+2015-02-09 21:28:39,937 SdoServiceAdmin WARNING No available SDO service in the factory: IDL:OpenRTM/ComponentObserver:1.0
+2015-02-09 21:28:39,937 SdoServiceAdmin ERROR type 4569fd04-58c8-4181-91c1-a0a33fba4572 already exists.
+2015-02-09 21:28:56,597 ec_base WARNING The component is not responding.
+2015-02-09 21:29:02,573 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:29:02,573 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:29:02,573 SEAT0 INFO no command found
+2015-02-09 21:29:02,726 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:29:02,726 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:29:02,726 SEAT0 INFO no command found
+2015-02-09 21:29:02,727 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:29:02,727 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:29:02,727 SEAT0 INFO no command found
+2015-02-09 21:29:02,786 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:29:02,787 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:29:02,787 SEAT0 INFO no command found
+2015-02-09 21:29:02,787 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:29:02,787 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:29:02,788 SEAT0 INFO no command found
+2015-02-09 21:29:06,581 SEAT0 INFO got input STARTREC (speechin)
+2015-02-09 21:29:06,581 SEAT0 INFO looking up... STARTREC
+2015-02-09 21:29:06,581 SEAT0 INFO no command found
+2015-02-09 21:29:07,525 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:29:07,525 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:29:07,525 SEAT0 INFO no command found
+2015-02-09 21:29:07,534 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:29:07,534 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:29:07,534 SEAT0 INFO no command found
+2015-02-09 21:29:13,667 SEAT0 INFO got input STARTREC (speechin)
+2015-02-09 21:29:13,667 SEAT0 INFO looking up... STARTREC
+2015-02-09 21:29:13,667 SEAT0 INFO no command found
+2015-02-09 21:29:14,529 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:29:14,529 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:29:14,529 SEAT0 INFO no command found
+2015-02-09 21:29:14,538 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:29:14,539 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:29:14,539 SEAT0 INFO no command found
+2015-02-09 21:29:20,929 SEAT0 INFO got input STARTREC (speechin)
+2015-02-09 21:29:20,930 SEAT0 INFO looking up... STARTREC
+2015-02-09 21:29:20,930 SEAT0 INFO no command found
+2015-02-09 21:29:21,844 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:29:21,844 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:29:21,844 SEAT0 INFO no command found
+2015-02-09 21:29:21,848 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:29:21,848 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:29:21,848 SEAT0 INFO no command found
+2015-02-09 21:29:25,567 SEAT0 INFO got input STARTREC (speechin)
+2015-02-09 21:29:25,567 SEAT0 INFO looking up... STARTREC
+2015-02-09 21:29:25,567 SEAT0 INFO no command found
+2015-02-09 21:29:26,502 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:29:26,502 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:29:26,502 SEAT0 INFO no command found
+2015-02-09 21:29:26,511 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:29:26,511 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:29:26,511 SEAT0 INFO no command found
+2015-02-09 21:29:45,000 SEAT0 INFO got input STARTREC (speechin)
+2015-02-09 21:29:45,000 SEAT0 INFO looking up... STARTREC
+2015-02-09 21:29:45,000 SEAT0 INFO no command found
+2015-02-09 21:29:45,793 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:29:45,793 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:29:45,793 SEAT0 INFO no command found
+2015-02-09 21:29:45,798 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:29:45,798 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:29:45,799 SEAT0 INFO no command found
+2015-02-09 21:29:48,328 SEAT0 INFO got input STARTREC (speechin)
+2015-02-09 21:29:48,329 SEAT0 INFO looking up... STARTREC
+2015-02-09 21:29:48,329 SEAT0 INFO no command found
+2015-02-09 21:29:49,249 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:29:49,249 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:29:49,249 SEAT0 INFO no command found
+2015-02-09 21:29:49,254 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:29:49,254 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:29:49,254 SEAT0 INFO no command found
+2015-02-09 21:29:52,033 SEAT0 INFO got input STARTREC (speechin)
+2015-02-09 21:29:52,033 SEAT0 INFO looking up... STARTREC
+2015-02-09 21:29:52,033 SEAT0 INFO no command found
+2015-02-09 21:29:52,953 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:29:52,953 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:29:52,953 SEAT0 INFO no command found
+2015-02-09 21:29:52,962 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:29:52,962 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:29:52,962 SEAT0 INFO no command found
+2015-02-09 21:30:05,506 SEAT0 INFO got input STARTREC (speechin)
+2015-02-09 21:30:05,506 SEAT0 INFO looking up... STARTREC
+2015-02-09 21:30:05,506 SEAT0 INFO no command found
+2015-02-09 21:30:06,248 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:30:06,248 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:30:06,248 SEAT0 INFO no command found
+2015-02-09 21:30:06,251 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:30:06,251 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:30:06,251 SEAT0 INFO no command found
+2015-02-09 21:30:20,246 SEAT0 INFO got input STARTREC (speechin)
+2015-02-09 21:30:20,246 SEAT0 INFO looking up... STARTREC
+2015-02-09 21:30:20,246 SEAT0 INFO no command found
+2015-02-09 21:30:21,045 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:30:21,046 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:30:21,046 SEAT0 INFO no command found
+2015-02-09 21:30:21,057 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:30:21,057 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:30:21,057 SEAT0 INFO no command found
+2015-02-09 21:30:22,988 SEAT0 INFO got input STARTREC (speechin)
+2015-02-09 21:30:22,989 SEAT0 INFO looking up... STARTREC
+2015-02-09 21:30:22,989 SEAT0 INFO no command found
+2015-02-09 21:30:23,351 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:30:23,351 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:30:23,352 SEAT0 INFO no command found
+2015-02-09 21:30:23,360 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:30:23,360 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:30:23,360 SEAT0 INFO no command found
+2015-02-09 21:30:23,654 SEAT0 INFO got input STARTREC (speechin)
+2015-02-09 21:30:23,654 SEAT0 INFO looking up... STARTREC
+2015-02-09 21:30:23,654 SEAT0 INFO no command found
+2015-02-09 21:30:24,513 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:30:24,513 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:30:24,513 SEAT0 INFO no command found
+2015-02-09 21:30:24,528 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:30:24,528 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:30:24,528 SEAT0 INFO no command found
+2015-02-09 21:30:26,140 SEAT0 INFO got input STARTREC (speechin)
+2015-02-09 21:30:26,140 SEAT0 INFO looking up... STARTREC
+2015-02-09 21:30:26,140 SEAT0 INFO no command found
+2015-02-09 21:30:26,500 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:30:26,500 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:30:26,500 SEAT0 INFO no command found
+2015-02-09 21:30:26,511 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:30:26,511 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:30:26,511 SEAT0 INFO no command found
+2015-02-09 21:30:39,316 ec_base ERROR The component is not responding.
+2015-02-09 21:30:43,943 ec_base WARNING The component is not responding.
+2015-02-09 21:30:43,952 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:30:43,952 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:30:43,952 SEAT0 INFO no command found
+2015-02-09 21:30:44,094 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:30:44,094 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:30:44,094 SEAT0 INFO no command found
+2015-02-09 21:30:44,095 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:30:44,095 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:30:44,095 SEAT0 INFO no command found
+2015-02-09 21:30:44,161 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:30:44,161 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:30:44,161 SEAT0 INFO no command found
+2015-02-09 21:30:48,127 SEAT0 INFO got input STARTREC (speechin)
+2015-02-09 21:30:48,127 SEAT0 INFO looking up... STARTREC
+2015-02-09 21:30:48,127 SEAT0 INFO no command found
+2015-02-09 21:30:49,070 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:30:49,070 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:30:49,070 SEAT0 INFO no command found
+2015-02-09 21:30:49,078 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:30:49,078 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:30:49,078 SEAT0 INFO no command found
+2015-02-09 21:30:53,013 SEAT0 INFO got input STARTREC (speechin)
+2015-02-09 21:30:53,013 SEAT0 INFO looking up... STARTREC
+2015-02-09 21:30:53,013 SEAT0 INFO no command found
+2015-02-09 21:30:54,020 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:30:54,020 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:30:54,020 SEAT0 INFO no command found
+2015-02-09 21:30:54,028 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:30:54,028 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:30:54,028 SEAT0 INFO no command found
+2015-02-09 21:31:09,444 SEAT0 INFO got input STARTREC (speechin)
+2015-02-09 21:31:09,444 SEAT0 INFO looking up... STARTREC
+2015-02-09 21:31:09,444 SEAT0 INFO no command found
+2015-02-09 21:31:10,303 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:31:10,303 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:31:10,303 SEAT0 INFO no command found
+2015-02-09 21:31:10,309 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:31:10,310 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:31:10,310 SEAT0 INFO no command found
+2015-02-09 21:31:13,118 SEAT0 INFO got input STARTREC (speechin)
+2015-02-09 21:31:13,118 SEAT0 INFO looking up... STARTREC
+2015-02-09 21:31:13,118 SEAT0 INFO no command found
+2015-02-09 21:31:14,043 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:31:14,043 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:31:14,043 SEAT0 INFO no command found
+2015-02-09 21:31:14,052 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:31:14,053 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:31:14,053 SEAT0 INFO no command found
+2015-02-09 21:31:19,388 SEAT0 INFO got input STARTREC (speechin)
+2015-02-09 21:31:19,389 SEAT0 INFO looking up... STARTREC
+2015-02-09 21:31:19,389 SEAT0 INFO no command found
+2015-02-09 21:31:19,784 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:31:19,784 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:31:19,784 SEAT0 INFO no command found
+2015-02-09 21:31:19,788 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:31:19,788 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:31:19,788 SEAT0 INFO no command found
+2015-02-09 21:31:19,789 SEAT0 INFO got input STARTREC (speechin)
+2015-02-09 21:31:19,789 SEAT0 INFO looking up... STARTREC
+2015-02-09 21:31:19,789 SEAT0 INFO no command found
+2015-02-09 21:31:20,923 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:31:20,923 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:31:20,923 SEAT0 INFO no command found
+2015-02-09 21:31:20,934 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:31:20,934 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:31:20,934 SEAT0 INFO no command found
+2015-02-09 21:31:24,769 SEAT0 INFO got input STARTREC (speechin)
+2015-02-09 21:31:24,769 SEAT0 INFO looking up... STARTREC
+2015-02-09 21:31:24,769 SEAT0 INFO no command found
+2015-02-09 21:31:25,158 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:31:25,158 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:31:25,158 SEAT0 INFO no command found
+2015-02-09 21:31:25,170 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:31:25,171 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:31:25,171 SEAT0 INFO no command found
+2015-02-09 21:31:25,250 SEAT0 INFO got input STARTREC (speechin)
+2015-02-09 21:31:25,250 SEAT0 INFO looking up... STARTREC
+2015-02-09 21:31:25,250 SEAT0 INFO no command found
+2015-02-09 21:31:26,376 SEAT0 INFO got input ENDREC (speechin)
+2015-02-09 21:31:26,376 SEAT0 INFO looking up... ENDREC
+2015-02-09 21:31:26,377 SEAT0 INFO no command found
+2015-02-09 21:31:26,389 SEAT0 INFO got input LISTEN (speechin)
+2015-02-09 21:31:26,390 SEAT0 INFO looking up... LISTEN
+2015-02-09 21:31:26,390 SEAT0 INFO no command found
+2015-02-09 21:32:06,903 speechout WARNING Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/PortBase.py", line 2262, in checkPorts
+    if port._non_existent():
+  File "/usr/lib/python2.7/dist-packages/omniORB/CORBA.py", line 775, in _non_existent
+    return _omnipy.nonExistent(self)
+COMM_FAILURE: CORBA.COMM_FAILURE(omniORB.COMM_FAILURE_WaitingForReply, CORBA.COMPLETED_MAYBE)
+
+2015-02-09 21:32:06,904 speechout WARNING Dead connection: 31caf9f8-b057-11e4-a9ea-000c299e602b
+2015-02-09 21:32:06,904 speechout WARNING Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/PortBase.py", line 1624, in disconnectNext
+    return p.notify_disconnect(connector_profile.connector_id)
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/RTM_IDL/RTC_idl.py", line 1226, in notify_disconnect
+    return _omnipy.invoke(self, "notify_disconnect", _0_RTC.PortService._d_notify_disconnect, args)
+TRANSIENT: CORBA.TRANSIENT(omniORB.TRANSIENT_ConnectFailed, CORBA.COMPLETED_NO)
+
+2015-02-09 21:32:07,891 speechin WARNING Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/PortBase.py", line 2262, in checkPorts
+    if port._non_existent():
+  File "/usr/lib/python2.7/dist-packages/omniORB/CORBA.py", line 775, in _non_existent
+    return _omnipy.nonExistent(self)
+COMM_FAILURE: CORBA.COMM_FAILURE(omniORB.COMM_FAILURE_WaitingForReply, CORBA.COMPLETED_MAYBE)
+
+2015-02-09 21:32:07,892 speechin WARNING Dead connection: 2fde2872-b057-11e4-b43a-000c299e602b
+2015-02-09 21:32:07,892 speechin WARNING Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/PortBase.py", line 836, in disconnect
+    return p.notify_disconnect(connector_id)
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/RTM_IDL/RTC_idl.py", line 1226, in notify_disconnect
+    return _omnipy.invoke(self, "notify_disconnect", _0_RTC.PortService._d_notify_disconnect, args)
+TRANSIENT: CORBA.TRANSIENT(omniORB.TRANSIENT_ConnectFailed, CORBA.COMPLETED_NO)
+

@@ -1,0 +1,27 @@
+2015-02-09 21:46:25,252 manager INFO 1.1.0
+2015-02-09 21:46:25,252 manager INFO Copyright (C) 2003-2010
+2015-02-09 21:46:25,252 manager INFO   Noriaki Ando
+2015-02-09 21:46:25,252 manager INFO   Intelligent Systems Research Institute, AIST
+2015-02-09 21:46:25,252 manager INFO Manager starting.
+2015-02-09 21:46:25,252 manager INFO Starting local logging.
+2015-02-09 21:46:25,256 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2015-02-09 21:46:25,265 ManagerServant INFO Master manager not found
+2015-02-09 21:46:25,266 manager WARNING Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/Manager.py", line 1900, in initManagerServant
+    reffile = file(self._config.getProperty("manager.refstring_path"),'w')
+IOError: [Errno 13] Permission denied: '/var/log/rtcmanager.ref'
+
+2015-02-09 21:46:25,266 LocalServiceAdmin INFO All the local services are enabled.
+2015-02-09 21:46:25,275 ec_base INFO setRate(1000000.000000) done
+2015-02-09 21:46:25,275 ec_base INFO setRate(1.000000) done
+2015-02-09 21:46:25,276 rtobject INFO 1 execution context was created.
+2015-02-09 21:46:25,276 SEAT0 INFO SEAT (Speech Event Action Transfer) version 2.00
+2015-02-09 21:46:25,276 SEAT0 INFO Copyright (C) 2009-2010 Yosuke Matsusaka and Isao Hara
+2015-02-09 21:46:25,276 rtobject INFO Initial active configuration set is default.
+2015-02-09 21:46:25,277 SEAT0 INFO load script file: sample.seatml
+2015-02-09 21:46:25,277 SEAT0 INFO create inport: speechin
+2015-02-09 21:46:25,279 SEAT0 INFO create outport: speechout
+2015-02-09 21:46:25,280 SEAT0 INFO register OPEN:default:こんにちは
+2015-02-09 21:46:25,280 SEAT0 INFO register OPEN:default:さようなら
+2015-02-09 21:46:25,280 SEAT0 INFO current state OPEN
+2015-02-09 21:46:25,281 SEAT0 INFO loaded successfully

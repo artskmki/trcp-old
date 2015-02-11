@@ -1,0 +1,14 @@
+2015-02-11 14:03:57,027 manager INFO 1.1.0
+2015-02-11 14:03:57,028 manager INFO Copyright (C) 2003-2010
+2015-02-11 14:03:57,028 manager INFO   Noriaki Ando
+2015-02-11 14:03:57,028 manager INFO   Intelligent Systems Research Institute, AIST
+2015-02-11 14:03:57,028 manager INFO Manager starting.
+2015-02-11 14:03:57,028 manager INFO Starting local logging.
+2015-02-11 14:03:57,030 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2015-02-11 14:03:57,034 ManagerServant INFO Master manager not found
+2015-02-11 14:03:57,035 manager WARNING Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/Manager.py", line 1900, in initManagerServant
+    reffile = file(self._config.getProperty("manager.refstring_path"),'w')
+IOError: [Errno 13] Permission denied: '/var/log/rtcmanager.ref'
+
+2015-02-11 14:03:57,035 LocalServiceAdmin INFO All the local services are enabled.

@@ -1,0 +1,15 @@
+2015-02-11 14:07:54,500 manager INFO 1.1.0
+2015-02-11 14:07:54,500 manager INFO Copyright (C) 2003-2010
+2015-02-11 14:07:54,500 manager INFO   Noriaki Ando
+2015-02-11 14:07:54,500 manager INFO   Intelligent Systems Research Institute, AIST
+2015-02-11 14:07:54,500 manager INFO Manager starting.
+2015-02-11 14:07:54,500 manager INFO Starting local logging.
+2015-02-11 14:07:54,503 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2015-02-11 14:07:54,512 ManagerServant INFO Master manager not found
+2015-02-11 14:07:54,525 manager WARNING Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/Manager.py", line 1900, in initManagerServant
+    reffile = file(self._config.getProperty("manager.refstring_path"),'w')
+IOError: [Errno 13] Permission denied: '/var/log/rtcmanager.ref'
+
+2015-02-11 14:07:54,525 LocalServiceAdmin INFO All the local services are enabled.
+2015-02-11 14:07:54,543 manager ERROR createComponent: RTC creation failed: eSEAT

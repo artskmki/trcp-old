@@ -1,0 +1,41 @@
+2015-02-13 20:45:36,482 manager INFO 1.1.0
+2015-02-13 20:45:36,482 manager INFO Copyright (C) 2003-2010
+2015-02-13 20:45:36,482 manager INFO   Noriaki Ando
+2015-02-13 20:45:36,482 manager INFO   Intelligent Systems Research Institute, AIST
+2015-02-13 20:45:36,482 manager INFO Manager starting.
+2015-02-13 20:45:36,482 manager INFO Starting local logging.
+2015-02-13 20:45:36,485 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2015-02-13 20:45:36,492 ManagerServant INFO Master manager not found
+2015-02-13 20:45:36,493 manager WARNING Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/Manager.py", line 1900, in initManagerServant
+    reffile = file(self._config.getProperty("manager.refstring_path"),'w')
+IOError: [Errno 13] Permission denied: '/var/log/rtcmanager.ref'
+
+2015-02-13 20:45:36,493 LocalServiceAdmin INFO All the local services are enabled.
+2015-02-13 20:45:36,518 ec_base INFO setRate(1000000.000000) done
+2015-02-13 20:45:36,519 ec_base INFO setRate(1.000000) done
+2015-02-13 20:45:36,519 rtobject INFO 1 execution context was created.
+2015-02-13 20:45:36,520 JuliusRTC0 INFO JuliusRTC version 2.00
+2015-02-13 20:45:36,520 JuliusRTC0 INFO Copyright (C) 2010-2011 Yosuke Matsusaka
+2015-02-13 20:45:36,537 JuliusRTC0 INFO This component depends on following softwares and datas:
+2015-02-13 20:45:36,537 JuliusRTC0 INFO 
+2015-02-13 20:45:36,537 JuliusRTC0 INFO   Large Vocabulary Continuous Speech Recognition Engine Julius
+2015-02-13 20:45:36,537 JuliusRTC0 INFO   (http://julius.sourceforge.jp/)
+2015-02-13 20:45:36,537 JuliusRTC0 INFO   Copyright (c) 1997-2000 Information-technology Promotion Agency, Japan
+2015-02-13 20:45:36,537 JuliusRTC0 INFO   Copyright (c) 1991-2008 Kawahara Lab., Kyoto University
+2015-02-13 20:45:36,537 JuliusRTC0 INFO   Copyright (c) 2000-2005 Shikano Lab., Nara Institute of Science and Technology
+2015-02-13 20:45:36,537 JuliusRTC0 INFO   Copyright (c) 2005-2008 Julius project team, Nagoya Institute of Technology
+2015-02-13 20:45:36,538 JuliusRTC0 INFO 
+2015-02-13 20:45:36,538 JuliusRTC0 INFO   VoxForge English Acoustic Model for HTK/Juilus
+2015-02-13 20:45:36,538 JuliusRTC0 INFO   (http://www.voxforge.org/)
+2015-02-13 20:45:36,538 JuliusRTC0 INFO   Copyright (c) 2005-2009 Ken MacLean <contact@voxforge.org>
+2015-02-13 20:45:36,538 JuliusRTC0 INFO   Copyright (c) 2005-2009 Free Software Foundation
+2015-02-13 20:45:36,538 JuliusRTC0 INFO 
+2015-02-13 20:45:36,538 rtobject INFO Initial active configuration set is default.
+2015-02-13 20:45:58,890 SdoServiceAdmin WARNING No available SDO service in the factory: 
+2015-02-13 20:45:58,890 SdoServiceAdmin ERROR type  already exists.
+2015-02-13 20:45:58,893 SdoServiceAdmin WARNING No available SDO service in the factory: IDL:OpenRTM/ComponentObserver:1.0
+2015-02-13 20:45:58,893 SdoServiceAdmin ERROR type bce9dafb-0cfb-4783-a8c7-12663bb111ea already exists.
+2015-02-13 20:46:18,762 ec_worker ERROR State of the RTC is not ACTIVE_STATE.
+2015-02-13 20:46:19,764 ec_worker WARNING ExecutionContext is already stopped.
+2015-02-13 20:46:19,764 ec_base ERROR Invoking on_shutdown() for each RTC failed.

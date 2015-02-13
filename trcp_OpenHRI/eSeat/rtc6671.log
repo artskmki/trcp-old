@@ -1,0 +1,35 @@
+2015-02-13 20:37:53,888 manager INFO 1.1.0
+2015-02-13 20:37:53,888 manager INFO Copyright (C) 2003-2010
+2015-02-13 20:37:53,888 manager INFO   Noriaki Ando
+2015-02-13 20:37:53,888 manager INFO   Intelligent Systems Research Institute, AIST
+2015-02-13 20:37:53,888 manager INFO Manager starting.
+2015-02-13 20:37:53,888 manager INFO Starting local logging.
+2015-02-13 20:37:53,890 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2015-02-13 20:37:53,895 ManagerServant INFO Master manager not found
+2015-02-13 20:37:53,896 manager WARNING Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/Manager.py", line 1900, in initManagerServant
+    reffile = file(self._config.getProperty("manager.refstring_path"),'w')
+IOError: [Errno 13] Permission denied: '/var/log/rtcmanager.ref'
+
+2015-02-13 20:37:53,896 LocalServiceAdmin INFO All the local services are enabled.
+2015-02-13 20:37:53,904 ec_base INFO setRate(1000000.000000) done
+2015-02-13 20:37:53,904 ec_base INFO setRate(1.000000) done
+2015-02-13 20:37:53,904 rtobject INFO 1 execution context was created.
+2015-02-13 20:37:53,905 SEAT0 INFO SEAT (Speech Event Action Transfer) version 2.00
+2015-02-13 20:37:53,905 SEAT0 INFO Copyright (C) 2009-2010 Yosuke Matsusaka and Isao Hara
+2015-02-13 20:37:53,905 rtobject INFO Initial active configuration set is default.
+2015-02-13 20:37:53,910 SEAT0 INFO load script file: sample.seatml
+2015-02-13 20:37:53,911 SEAT0 INFO create inport: speechin
+2015-02-13 20:37:53,913 SEAT0 INFO create outport: speechout
+2015-02-13 20:37:53,915 SEAT0 INFO register OPEN:default:こんにちは
+2015-02-13 20:37:53,915 SEAT0 INFO register OPEN:default:さようなら
+2015-02-13 20:37:53,915 SEAT0 INFO register OPEN:default:つ
+2015-02-13 20:37:53,915 SEAT0 INFO register OPEN:default:た
+2015-02-13 20:37:53,915 SEAT0 INFO register END:default:おはよう
+2015-02-13 20:37:53,916 SEAT0 INFO current state OPEN
+2015-02-13 20:37:53,916 SEAT0 INFO loaded successfully
+2015-02-13 20:38:05,502 ec_base WARNING The component is not responding.
+2015-02-13 20:38:05,502 ec_base ERROR Unknown error: Invalid state transition.
+2015-02-13 20:40:41,132 ec_base ERROR The component is not responding.
+2015-02-13 20:40:42,137 ec_worker WARNING ExecutionContext is already stopped.
+2015-02-13 20:40:42,138 ec_base ERROR Invoking on_shutdown() for each RTC failed.

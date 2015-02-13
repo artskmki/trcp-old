@@ -129,7 +129,7 @@ eseat_spec = ["implementation_id", "eSEAT",
              "language",          "Python",
              "lang_type",         "script",
              "conf.default.scriptfile", "None",
-             "conf.default.scorelimit", "0.8",
+             "conf.default.scorelimit", "0.0",
 #             "conf.__widget__.scorelimit", "slider",
              "exec_cxt.periodic.rate", "1",
              ""]
@@ -312,15 +312,23 @@ class SEATML_Parser():
               elif e.tag == 'rule':
                 commands = self.parseCommands(e)
                 adaptor = e.get('source')
+                keys = e.findall('key')
                 if adaptor :
                     kond = [None, "True"]
                     kn = e.find('cond')
                     if kn is not None : kond = [kn.get("execfile"), kn.text]
 
-                    tag = name+":"+adaptor+":ondata"
-                    self.parent.registerCommandArray(tag, [kond, commands])
+                    if keys :
+                        for k in keys:
+                            word = decompString([k.text])
+                            for w in word:
+                                tag = name+":"+adaptor+":"+w
+                                self.parent.registerCommands(tag, commands)
+                    else :
+                        tag = name+":"+adaptor+":ondata"
+                        self.parent.registerCommandArray(tag, [kond, commands])
 
-                for k in e.findall('key'):
+                for k in keys:
                     source = k.get('source')
                     word = decompString([k.text])
 		    if source is None: source = "default" 
@@ -433,7 +441,7 @@ class eSEAT(OpenRTM_aist.DataFlowComponentBase):
         self._data = {}
         self._port = {}
         self._scriptfile = ["None"]
-        self._scorelimit = [0.8]
+        self._scorelimit = [0.0]
         self.init_state = None
         self.gui_items = {}
         self.frames = {}
@@ -456,7 +464,7 @@ class eSEAT(OpenRTM_aist.DataFlowComponentBase):
         self._logger.RTC_INFO("eSEAT (Extended Simple Event Action Transfer) version " + __version__)
         self._logger.RTC_INFO("Copyright (C) 2009-2014 Yosuke Matsusaka and Isao Hara")
         self.bindParameter("scriptfile", self._scriptfile, "None")
-        self.bindParameter("scorelimit", self._scorelimit, "0.8")
+        self.bindParameter("scorelimit", self._scorelimit, "0.0")
 
         return RTC_OK
 
@@ -672,7 +680,7 @@ class eSEAT(OpenRTM_aist.DataFlowComponentBase):
         cmds = None
 
         if s.count('<?xml') > 0:
-            self.processJuliusResult(name, s)
+            cmds = self.processJuliusResult(name, s)
         else:
             cmds = self.lookupWithDefault(self.currentstate, name, s)
 
@@ -684,23 +692,25 @@ class eSEAT(OpenRTM_aist.DataFlowComponentBase):
             self.activateCommand(c, s)
         return True
 
-    def processJuliusResult(self, host, s):
+    def processJuliusResult(self, name, s):
         doc = BeautifulSoup(s)
+
         for s in doc.findAll('data'):
             rank = int(s['rank'])
             score = float(s['score'])
             text = s['text']
             self._logger.RTC_INFO("#%i: %s (%f)" % (rank, text, score))
+
             if score < self._scorelimit[0]:
                 self._logger.RTC_INFO("[rejected] score under limit")
                 continue
-            cmds = self.lookupWithDefault(self.currentstate, host, text)
-            if not cmds:
-                cmds = self.lookupWithDefault(self.currentstate, host, text)
+
+            cmds = self.lookupWithDefault(self.currentstate, name, text)
             if cmds:
-                break
+                return cmds
             else:
                 self._logger.RTC_INFO("[rejected] no matching phrases")
+        return None
 
     def processOnDataIn(self, name, data):
         self._logger.RTC_INFO("got input from %s" %  (name,))

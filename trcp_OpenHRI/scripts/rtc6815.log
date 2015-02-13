@@ -1,0 +1,57 @@
+2015-02-13 20:39:04,402 manager INFO 1.1.0
+2015-02-13 20:39:04,402 manager INFO Copyright (C) 2003-2010
+2015-02-13 20:39:04,402 manager INFO   Noriaki Ando
+2015-02-13 20:39:04,402 manager INFO   Intelligent Systems Research Institute, AIST
+2015-02-13 20:39:04,402 manager INFO Manager starting.
+2015-02-13 20:39:04,402 manager INFO Starting local logging.
+2015-02-13 20:39:04,404 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2015-02-13 20:39:04,408 ManagerServant INFO Master manager not found
+2015-02-13 20:39:04,408 manager WARNING Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/Manager.py", line 1900, in initManagerServant
+    reffile = file(self._config.getProperty("manager.refstring_path"),'w')
+IOError: [Errno 13] Permission denied: '/var/log/rtcmanager.ref'
+
+2015-02-13 20:39:04,409 LocalServiceAdmin INFO All the local services are enabled.
+2015-02-13 20:39:04,418 ec_base INFO setRate(1000000.000000) done
+2015-02-13 20:39:04,418 ec_base INFO setRate(1000.000000) done
+2015-02-13 20:39:04,418 rtobject INFO 1 execution context was created.
+2015-02-13 20:39:04,418 OpenJTalkRTC0 INFO OpenJTalkRTC version 2.00
+2015-02-13 20:39:04,418 OpenJTalkRTC0 INFO Copyright (C) 2010-2011 Yosuke Matsusaka
+2015-02-13 20:39:04,431 OpenJTalkRTC0 INFO This component depends on following softwares and datas:
+2015-02-13 20:39:04,432 OpenJTalkRTC0 INFO 
+2015-02-13 20:39:04,432 OpenJTalkRTC0 INFO   The Japanese TTS System "Open JTalk"
+2015-02-13 20:39:04,432 OpenJTalkRTC0 INFO   Version 1.08 (http://open-jtalk.sourceforge.net/)
+2015-02-13 20:39:04,432 OpenJTalkRTC0 INFO   Copyright (C) 2008-2014 Nagoya Institute of Technology
+2015-02-13 20:39:04,432 OpenJTalkRTC0 INFO   All rights reserved.
+2015-02-13 20:39:04,432 OpenJTalkRTC0 INFO 
+2015-02-13 20:39:04,432 OpenJTalkRTC0 INFO   The HMM-Based Speech Synthesis Engine "hts_engine API"
+2015-02-13 20:39:04,432 OpenJTalkRTC0 INFO   Version 1.09 (http://hts-engine.sourceforge.net/)
+2015-02-13 20:39:04,432 OpenJTalkRTC0 INFO   Copyright (C) 2001-2014 Nagoya Institute of Technology
+2015-02-13 20:39:04,432 OpenJTalkRTC0 INFO                 2001-2008 Tokyo Institute of Technology
+2015-02-13 20:39:04,433 OpenJTalkRTC0 INFO   All rights reserved.
+2015-02-13 20:39:04,433 OpenJTalkRTC0 INFO 
+2015-02-13 20:39:04,433 OpenJTalkRTC0 INFO   Yet Another Part-of-Speech and Morphological Analyzer "Mecab"
+2015-02-13 20:39:04,433 OpenJTalkRTC0 INFO   Version 0.996 (http://mecab.sourceforge.net/)
+2015-02-13 20:39:04,433 OpenJTalkRTC0 INFO   Copyright (C) 2001-2008 Taku Kudo
+2015-02-13 20:39:04,433 OpenJTalkRTC0 INFO                 2004-2008 Nippon Telegraph and Telephone Corporation
+2015-02-13 20:39:04,433 OpenJTalkRTC0 INFO   All rights reserved.
+2015-02-13 20:39:04,433 OpenJTalkRTC0 INFO 
+2015-02-13 20:39:04,433 OpenJTalkRTC0 INFO   NAIST Japanese Dictionary
+2015-02-13 20:39:04,433 OpenJTalkRTC0 INFO   Version 0.6.1-20090630 (http://naist-jdic.sourceforge.jp/)
+2015-02-13 20:39:04,433 OpenJTalkRTC0 INFO   Copyright (C) 2009 Nara Institute of Science and Technology
+2015-02-13 20:39:04,433 OpenJTalkRTC0 INFO   All rights reserved.
+2015-02-13 20:39:04,433 OpenJTalkRTC0 INFO 
+2015-02-13 20:39:04,433 OpenJTalkRTC0 INFO   The Nitech Japanese Speech Database "NIT ATR503 M001"
+2015-02-13 20:39:04,433 OpenJTalkRTC0 INFO   released by HTS Working Group (http://hts.sp.nitech.ac.jp/)
+2015-02-13 20:39:04,433 OpenJTalkRTC0 INFO   Copyright (C) 2003-2011  Nagoya Institute of Technology
+2015-02-13 20:39:04,433 OpenJTalkRTC0 INFO   Some rights reserved.
+2015-02-13 20:39:04,434 OpenJTalkRTC0 INFO 
+2015-02-13 20:39:04,434 OpenJTalkRTC0 INFO   HTS Voice "Mei (Normal)"
+2015-02-13 20:39:04,434 OpenJTalkRTC0 INFO   released by MMDAgent Project Team (http://www.mmdagent.jp/)
+2015-02-13 20:39:04,434 OpenJTalkRTC0 INFO   Copyright (C) 2009-2011  Nagoya Institute of Technology
+2015-02-13 20:39:04,434 OpenJTalkRTC0 INFO   Some rights reserved.
+2015-02-13 20:39:04,434 OpenJTalkRTC0 INFO 
+2015-02-13 20:39:04,434 rtobject INFO Initial active configuration set is default.
+2015-02-13 20:39:06,646 ec_worker ERROR State of the RTC is not ACTIVE_STATE.
+2015-02-13 20:39:06,649 ec_worker WARNING ExecutionContext is already stopped.
+2015-02-13 20:39:06,650 ec_base ERROR Invoking on_shutdown() for each RTC failed.

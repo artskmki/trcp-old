@@ -7,6 +7,10 @@
 
   <state name="OPEN">
     <rule>
+      <key source="speechin">こんにちわ</key>
+      <message sendto="speechout">ハローです</message>
+    </rule>
+    <rule>
       <key source="speechin">こんにちは</key>
       <message sendto="speechout">ハロー</message>
     </rule>
@@ -14,5 +18,14 @@
       <key source="speechin">さようなら</key>
       <message sendto="speechout">バイバイ</message>
     </rule>
+    <rule> <!-- 雑音を無視するためのルール -->
+      <key source="speechin">つ</key>
+      <message sendto="NoiseDiscarding">input noise</message>
+    </rule>
+    <rule> <!-- 雑音を無視するためのルール -->
+      <key source="speechin">た</key>
+      <message sendto="NoiseDiscarding">input noise</message>
+    </rule>
+
   </state>
 </seatml>

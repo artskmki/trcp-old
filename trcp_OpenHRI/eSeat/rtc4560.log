@@ -1,0 +1,65 @@
+2015-02-14 19:30:18,957 manager INFO 1.1.0
+2015-02-14 19:30:18,958 manager INFO Copyright (C) 2003-2010
+2015-02-14 19:30:18,958 manager INFO   Noriaki Ando
+2015-02-14 19:30:18,958 manager INFO   Intelligent Systems Research Institute, AIST
+2015-02-14 19:30:18,958 manager INFO Manager starting.
+2015-02-14 19:30:18,958 manager INFO Starting local logging.
+2015-02-14 19:30:18,962 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2015-02-14 19:30:18,976 ManagerServant INFO Master manager not found
+2015-02-14 19:30:18,977 manager WARNING Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/Manager.py", line 1900, in initManagerServant
+    reffile = file(self._config.getProperty("manager.refstring_path"),'w')
+IOError: [Errno 13] Permission denied: '/var/log/rtcmanager.ref'
+
+2015-02-14 19:30:18,977 LocalServiceAdmin INFO All the local services are enabled.
+2015-02-14 19:30:18,990 ec_base INFO setRate(1000000.000000) done
+2015-02-14 19:30:18,990 ec_base INFO setRate(1000.000000) done
+2015-02-14 19:30:18,991 rtobject INFO 1 execution context was created.
+2015-02-14 19:30:18,992 eSEAT0 INFO eSEAT (Extended Simple Event Action Transfer) version 0.2
+2015-02-14 19:30:18,992 eSEAT0 INFO Copyright (C) 2009-2014 Yosuke Matsusaka and Isao Hara
+2015-02-14 19:30:18,992 rtobject INFO Initial active configuration set is default.
+2015-02-14 19:30:18,994 eSEAT0 INFO Start loadSEATML:a.seatml
+2015-02-14 19:30:18,995 eSEAT0 INFO load script file: a.seatml
+2015-02-14 19:30:18,996 eSEAT0 INFO create adaptor: rtcin: speechin
+2015-02-14 19:30:18,997 eSEAT0 INFO create inport: speechin
+2015-02-14 19:30:19,000 eSEAT0 INFO create adaptor: rtcout: speechout
+2015-02-14 19:30:19,000 eSEAT0 INFO create outport: speechout
+2015-02-14 19:30:19,003 eSEAT0 INFO register key=OPEN:::entry
+2015-02-14 19:30:19,003 eSEAT0 INFO register key=OPEN:speechin:いれいさー こんにちは
+2015-02-14 19:30:19,003 eSEAT0 INFO register key=OPEN:speechin:いれいさー さようなら
+2015-02-14 19:30:19,003 eSEAT0 INFO register key=OPEN:speechin:いれいさー いまなんじ
+2015-02-14 19:30:19,003 eSEAT0 INFO sending message to speechout
+2015-02-14 19:30:19,003 eSEAT0 INFO current state OPEN
+2015-02-14 19:30:19,004 eSEAT0 INFO loaded successfully
+2015-02-14 19:30:53,746 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1588.624512" rank="1" score="0.8605" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.721" text="た"/></data><data likelihood="-1607.868896" rank="2" score="0.6375" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.275" text="つ"/></data></listenText> (speechin)
+2015-02-14 19:30:53,750 eSEAT0 INFO #1: いれいさー た (0.860500)
+2015-02-14 19:30:53,750 eSEAT0 INFO looking up...speechin: いれいさー た
+2015-02-14 19:30:53,750 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:30:53,750 eSEAT0 INFO #2: いれいさー つ (0.637500)
+2015-02-14 19:30:53,750 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:30:53,750 eSEAT0 INFO no command found
+2015-02-14 19:30:53,750 eSEAT0 INFO got input from speechin
+2015-02-14 19:30:53,750 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:30:53,751 eSEAT0 INFO no command found
+2015-02-14 19:30:54,547 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1617.321533" rank="1" score="0.918" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.836" text="た"/></data><data likelihood="-1632.976807" rank="2" score="0.5785" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.157" text="つ"/></data></listenText> (speechin)
+2015-02-14 19:30:54,548 eSEAT0 INFO #1: いれいさー た (0.918000)
+2015-02-14 19:30:54,549 eSEAT0 INFO looking up...speechin: いれいさー た
+2015-02-14 19:30:54,549 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:30:54,549 eSEAT0 INFO #2: いれいさー つ (0.578500)
+2015-02-14 19:30:54,549 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:30:54,549 eSEAT0 INFO no command found
+2015-02-14 19:30:54,549 eSEAT0 INFO got input from speechin
+2015-02-14 19:30:54,549 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:30:54,549 eSEAT0 INFO no command found
+2015-02-14 19:30:55,312 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1609.076172" rank="1" score="0.8195" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.639" text="つ"/></data><data likelihood="-1611.961426" rank="2" score="0.6795" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.359" text="た"/></data></listenText> (speechin)
+2015-02-14 19:30:55,314 eSEAT0 INFO #1: いれいさー つ (0.819500)
+2015-02-14 19:30:55,314 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:30:55,314 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:30:55,314 eSEAT0 INFO #2: いれいさー た (0.679500)
+2015-02-14 19:30:55,314 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:30:55,314 eSEAT0 INFO no command found
+2015-02-14 19:30:55,314 eSEAT0 INFO got input from speechin
+2015-02-14 19:30:55,314 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:30:55,314 eSEAT0 INFO no command found
+2015-02-14 19:31:03,460 ec_worker WARNING ExecutionContext is already stopped.
+2015-02-14 19:31:03,460 ec_base ERROR Invoking on_shutdown() for each RTC failed.

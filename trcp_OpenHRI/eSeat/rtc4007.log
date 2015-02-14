@@ -1,0 +1,27 @@
+2015-02-14 19:24:13,880 manager INFO 1.1.0
+2015-02-14 19:24:13,881 manager INFO Copyright (C) 2003-2010
+2015-02-14 19:24:13,881 manager INFO   Noriaki Ando
+2015-02-14 19:24:13,881 manager INFO   Intelligent Systems Research Institute, AIST
+2015-02-14 19:24:13,881 manager INFO Manager starting.
+2015-02-14 19:24:13,881 manager INFO Starting local logging.
+2015-02-14 19:24:13,884 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2015-02-14 19:24:13,890 ManagerServant INFO Master manager not found
+2015-02-14 19:24:13,891 manager WARNING Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/Manager.py", line 1900, in initManagerServant
+    reffile = file(self._config.getProperty("manager.refstring_path"),'w')
+IOError: [Errno 13] Permission denied: '/var/log/rtcmanager.ref'
+
+2015-02-14 19:24:13,891 LocalServiceAdmin INFO All the local services are enabled.
+2015-02-14 19:24:13,900 ec_base INFO setRate(1000000.000000) done
+2015-02-14 19:24:13,900 ec_base INFO setRate(1000.000000) done
+2015-02-14 19:24:13,901 rtobject INFO 1 execution context was created.
+2015-02-14 19:24:13,901 eSEAT0 INFO eSEAT (Extended Simple Event Action Transfer) version 0.2
+2015-02-14 19:24:13,901 eSEAT0 INFO Copyright (C) 2009-2014 Yosuke Matsusaka and Isao Hara
+2015-02-14 19:24:13,901 rtobject INFO Initial active configuration set is default.
+2015-02-14 19:24:13,902 eSEAT0 INFO Start loadSEATML:a.seatml
+2015-02-14 19:24:13,902 eSEAT0 INFO load script file: a.seatml
+2015-02-14 19:24:13,903 eSEAT0 ERROR invalid script file: a.seatml: Element 'onentry': This element is not expected. Expected is ( state )., line 7
+2015-02-14 19:24:13,903 eSEAT0 ERROR ===> SEATML Parser error
+2015-02-14 19:24:13,903 ec_worker ERROR State of the RTC is not ACTIVE_STATE.
+2015-02-14 19:24:13,903 ec_worker WARNING ExecutionContext is already stopped.
+2015-02-14 19:24:13,904 ec_base ERROR Invoking on_shutdown() for each RTC failed.

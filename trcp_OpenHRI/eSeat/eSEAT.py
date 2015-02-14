@@ -129,7 +129,7 @@ eseat_spec = ["implementation_id", "eSEAT",
              "language",          "Python",
              "lang_type",         "script",
              "conf.default.scriptfile", "None",
-             "conf.default.scorelimit", "0.0",
+             "conf.default.scorelimit", "0.8",
 #             "conf.__widget__.scorelimit", "slider",
              "exec_cxt.periodic.rate", "1",
              ""]
@@ -441,7 +441,7 @@ class eSEAT(OpenRTM_aist.DataFlowComponentBase):
         self._data = {}
         self._port = {}
         self._scriptfile = ["None"]
-        self._scorelimit = [0.0]
+        self._scorelimit = [0.8]
         self.init_state = None
         self.gui_items = {}
         self.frames = {}
@@ -464,7 +464,7 @@ class eSEAT(OpenRTM_aist.DataFlowComponentBase):
         self._logger.RTC_INFO("eSEAT (Extended Simple Event Action Transfer) version " + __version__)
         self._logger.RTC_INFO("Copyright (C) 2009-2014 Yosuke Matsusaka and Isao Hara")
         self.bindParameter("scriptfile", self._scriptfile, "None")
-        self.bindParameter("scorelimit", self._scorelimit, "0.0")
+        self.bindParameter("scorelimit", self._scorelimit, "0.8")
 
         return RTC_OK
 

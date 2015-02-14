@@ -30,5 +30,13 @@
       <command host="speechout">開始の状態に戻ります</command>
       <statetransition>OPEN</statetransition>
     </rule>
+    <rule> <!-- 雑音を無視するためのルール -->
+      <key>つ</key>
+      <command host="NoiseDiscarding">input noise</command>
+    </rule>
+    <rule> <!-- 雑音を無視するためのルール -->
+      <key>た</key>
+      <command host="NoiseDiscarding">input noise</command>
+    </rule>
   </state>
 </seatml>

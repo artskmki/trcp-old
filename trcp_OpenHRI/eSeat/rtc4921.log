@@ -1,0 +1,1199 @@
+2015-02-14 19:34:50,370 manager INFO 1.1.0
+2015-02-14 19:34:50,370 manager INFO Copyright (C) 2003-2010
+2015-02-14 19:34:50,370 manager INFO   Noriaki Ando
+2015-02-14 19:34:50,370 manager INFO   Intelligent Systems Research Institute, AIST
+2015-02-14 19:34:50,370 manager INFO Manager starting.
+2015-02-14 19:34:50,370 manager INFO Starting local logging.
+2015-02-14 19:34:50,372 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2015-02-14 19:34:50,376 ManagerServant INFO Master manager not found
+2015-02-14 19:34:50,376 manager WARNING Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/Manager.py", line 1900, in initManagerServant
+    reffile = file(self._config.getProperty("manager.refstring_path"),'w')
+IOError: [Errno 13] Permission denied: '/var/log/rtcmanager.ref'
+
+2015-02-14 19:34:50,376 LocalServiceAdmin INFO All the local services are enabled.
+2015-02-14 19:34:50,385 ec_base INFO setRate(1000000.000000) done
+2015-02-14 19:34:50,385 ec_base INFO setRate(1000.000000) done
+2015-02-14 19:34:50,386 rtobject INFO 1 execution context was created.
+2015-02-14 19:34:50,386 eSEAT0 INFO eSEAT (Extended Simple Event Action Transfer) version 0.2
+2015-02-14 19:34:50,386 eSEAT0 INFO Copyright (C) 2009-2014 Yosuke Matsusaka and Isao Hara
+2015-02-14 19:34:50,386 rtobject INFO Initial active configuration set is default.
+2015-02-14 19:34:50,390 eSEAT0 INFO Start loadSEATML:a.seatml
+2015-02-14 19:34:50,390 eSEAT0 INFO load script file: a.seatml
+2015-02-14 19:34:50,391 eSEAT0 INFO create adaptor: rtcin: speechin
+2015-02-14 19:34:50,391 eSEAT0 INFO create inport: speechin
+2015-02-14 19:34:50,392 eSEAT0 INFO create adaptor: rtcout: speechout
+2015-02-14 19:34:50,392 eSEAT0 INFO create outport: speechout
+2015-02-14 19:34:50,393 eSEAT0 INFO register key=OPEN:::entry
+2015-02-14 19:34:50,394 eSEAT0 INFO register key=OPEN:speechin:いれいさー こんにちは
+2015-02-14 19:34:50,394 eSEAT0 INFO register key=OPEN:speechin:いれいさー さようなら
+2015-02-14 19:34:50,394 eSEAT0 INFO register key=OPEN:speechin:いれいさー いまなんじ
+2015-02-14 19:34:50,394 eSEAT0 INFO sending message to speechout
+2015-02-14 19:34:50,394 eSEAT0 INFO current state OPEN
+2015-02-14 19:34:50,394 eSEAT0 INFO loaded successfully
+2015-02-14 19:35:13,550 SdoServiceAdmin WARNING No available SDO service in the factory: 
+2015-02-14 19:35:13,550 SdoServiceAdmin ERROR type  already exists.
+2015-02-14 19:35:13,551 SdoServiceAdmin WARNING No available SDO service in the factory: IDL:OpenRTM/ComponentObserver:1.0
+2015-02-14 19:35:13,552 SdoServiceAdmin ERROR type 5a55f35e-7975-46c4-9138-6916b7c17a25 already exists.
+2015-02-14 19:35:16,371 ec_worker ERROR State of the RTC is not INACTIVE_STATE.
+2015-02-14 19:36:20,671 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1922.403687" rank="1" score="0.783" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.566" text="た"/></data><data likelihood="-1925.483154" rank="2" score="0.717" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.434" text="つ"/></data></listenText> (speechin)
+2015-02-14 19:36:20,673 eSEAT0 INFO #1: いれいさー た (0.783000)
+2015-02-14 19:36:20,673 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:36:20,673 eSEAT0 INFO #2: いれいさー つ (0.717000)
+2015-02-14 19:36:20,673 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:36:20,673 eSEAT0 INFO no command found
+2015-02-14 19:36:20,673 eSEAT0 INFO got input from speechin
+2015-02-14 19:36:20,673 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:36:20,673 eSEAT0 INFO no command found
+2015-02-14 19:36:26,437 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1509.890747" rank="1" score="0.8385" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.677" text="つ"/></data><data likelihood="-1514.552856" rank="2" score="0.6615" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.323" text="た"/></data></listenText> (speechin)
+2015-02-14 19:36:26,438 eSEAT0 INFO #1: いれいさー つ (0.838500)
+2015-02-14 19:36:26,438 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:36:26,439 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:36:26,439 eSEAT0 INFO #2: いれいさー た (0.661500)
+2015-02-14 19:36:26,439 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:36:26,439 eSEAT0 INFO no command found
+2015-02-14 19:36:26,439 eSEAT0 INFO got input from speechin
+2015-02-14 19:36:26,439 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:36:26,439 eSEAT0 INFO no command found
+2015-02-14 19:36:27,151 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1391.008179" rank="1" score="0.839" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.678" text="た"/></data><data likelihood="-1395.570923" rank="2" score="0.6605" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.321" text="つ"/></data></listenText> (speechin)
+2015-02-14 19:36:27,153 eSEAT0 INFO #1: いれいさー た (0.839000)
+2015-02-14 19:36:27,153 eSEAT0 INFO looking up...speechin: いれいさー た
+2015-02-14 19:36:27,153 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:36:27,153 eSEAT0 INFO #2: いれいさー つ (0.660500)
+2015-02-14 19:36:27,153 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:36:27,155 eSEAT0 INFO no command found
+2015-02-14 19:36:27,155 eSEAT0 INFO got input from speechin
+2015-02-14 19:36:27,155 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:36:27,155 eSEAT0 INFO no command found
+2015-02-14 19:36:28,728 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1517.674927" rank="1" score="0.7895" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.579" text="た"/></data><data likelihood="-1520.467896" rank="2" score="0.71" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.420" text="つ"/></data></listenText> (speechin)
+2015-02-14 19:36:28,730 eSEAT0 INFO #1: いれいさー た (0.789500)
+2015-02-14 19:36:28,731 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:36:28,731 eSEAT0 INFO #2: いれいさー つ (0.710000)
+2015-02-14 19:36:28,731 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:36:28,731 eSEAT0 INFO no command found
+2015-02-14 19:36:28,731 eSEAT0 INFO got input from speechin
+2015-02-14 19:36:28,731 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:36:28,731 eSEAT0 INFO no command found
+2015-02-14 19:36:35,498 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1610.340698" rank="1" score="0.819" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.638" text="た"/></data><data likelihood="-1615.336182" rank="2" score="0.6795" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.359" text="つ"/></data><data likelihood="-1657.200562" rank="3" score="0.501" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.002" text="おはよう"/></data></listenText> (speechin)
+2015-02-14 19:36:35,499 eSEAT0 INFO #1: いれいさー た (0.819000)
+2015-02-14 19:36:35,499 eSEAT0 INFO looking up...speechin: いれいさー た
+2015-02-14 19:36:35,499 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:36:35,499 eSEAT0 INFO #2: いれいさー つ (0.679500)
+2015-02-14 19:36:35,499 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:36:35,499 eSEAT0 INFO #3: いれいさー おはよう (0.501000)
+2015-02-14 19:36:35,499 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:36:35,499 eSEAT0 INFO no command found
+2015-02-14 19:36:35,499 eSEAT0 INFO got input from speechin
+2015-02-14 19:36:35,499 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:36:35,499 eSEAT0 INFO no command found
+2015-02-14 19:36:40,545 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1256.356079" rank="1" score="0.7605" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.521" text="つ"/></data><data likelihood="-1257.113037" rank="2" score="0.739" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.478" text="た"/></data></listenText> (speechin)
+2015-02-14 19:36:40,546 eSEAT0 INFO #1: いれいさー つ (0.760500)
+2015-02-14 19:36:40,546 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:36:40,547 eSEAT0 INFO #2: いれいさー た (0.739000)
+2015-02-14 19:36:40,547 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:36:40,547 eSEAT0 INFO no command found
+2015-02-14 19:36:40,547 eSEAT0 INFO got input from speechin
+2015-02-14 19:36:40,547 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:36:40,547 eSEAT0 INFO no command found
+2015-02-14 19:36:43,780 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2204.526367" rank="1" score="0.9125" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.825" text="つ"/></data><data likelihood="-2219.093994" rank="2" score="0.5865" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.173" text="た"/></data></listenText> (speechin)
+2015-02-14 19:36:43,781 eSEAT0 INFO #1: いれいさー つ (0.912500)
+2015-02-14 19:36:43,781 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:36:43,782 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:36:43,782 eSEAT0 INFO #2: いれいさー た (0.586500)
+2015-02-14 19:36:43,782 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:36:43,782 eSEAT0 INFO no command found
+2015-02-14 19:36:43,782 eSEAT0 INFO got input from speechin
+2015-02-14 19:36:43,782 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:36:43,782 eSEAT0 INFO no command found
+2015-02-14 19:36:44,361 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-951.267395" rank="1" score="0.906" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.812" text="た"/></data><data likelihood="-964.068665" rank="2" score="0.594" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.188" text="つ"/></data></listenText> (speechin)
+2015-02-14 19:36:44,361 eSEAT0 INFO #1: いれいさー た (0.906000)
+2015-02-14 19:36:44,361 eSEAT0 INFO looking up...speechin: いれいさー た
+2015-02-14 19:36:44,361 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:36:44,362 eSEAT0 INFO #2: いれいさー つ (0.594000)
+2015-02-14 19:36:44,362 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:36:44,362 eSEAT0 INFO no command found
+2015-02-14 19:36:44,362 eSEAT0 INFO got input from speechin
+2015-02-14 19:36:44,362 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:36:44,362 eSEAT0 INFO no command found
+2015-02-14 19:36:46,663 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2244.268066" rank="1" score="0.8765" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.753" text="つ"/></data><data likelihood="-2254.043457" rank="2" score="0.622" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.244" text="た"/></data><data likelihood="-2303.386719" rank="3" score="0.5005" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.001" text="いまなんじ"/></data></listenText> (speechin)
+2015-02-14 19:36:46,664 eSEAT0 INFO #1: いれいさー つ (0.876500)
+2015-02-14 19:36:46,664 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:36:46,664 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:36:46,665 eSEAT0 INFO #2: いれいさー た (0.622000)
+2015-02-14 19:36:46,665 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:36:46,665 eSEAT0 INFO #3: いれいさー いまなんじ (0.500500)
+2015-02-14 19:36:46,665 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:36:46,665 eSEAT0 INFO no command found
+2015-02-14 19:36:46,665 eSEAT0 INFO got input from speechin
+2015-02-14 19:36:46,666 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:36:46,666 eSEAT0 INFO no command found
+2015-02-14 19:36:51,331 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2131.363037" rank="1" score="0.8895" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.779" text="つ"/></data><data likelihood="-2142.324219" rank="2" score="0.61" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.220" text="た"/></data><data likelihood="-2203.404053" rank="3" score="0.5" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.000" text="いまなんじ"/></data></listenText> (speechin)
+2015-02-14 19:36:51,332 eSEAT0 INFO #1: いれいさー つ (0.889500)
+2015-02-14 19:36:51,332 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:36:51,332 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:36:51,332 eSEAT0 INFO #2: いれいさー た (0.610000)
+2015-02-14 19:36:51,333 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:36:51,333 eSEAT0 INFO #3: いれいさー いまなんじ (0.500000)
+2015-02-14 19:36:51,333 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:36:51,333 eSEAT0 INFO no command found
+2015-02-14 19:36:51,333 eSEAT0 INFO got input from speechin
+2015-02-14 19:36:51,333 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:36:51,333 eSEAT0 INFO no command found
+2015-02-14 19:37:02,243 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1554.270142" rank="1" score="0.8425" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.685" text="つ"/></data><data likelihood="-1560.532104" rank="2" score="0.6575" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.315" text="た"/></data></listenText> (speechin)
+2015-02-14 19:37:02,244 eSEAT0 INFO #1: いれいさー つ (0.842500)
+2015-02-14 19:37:02,244 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:37:02,244 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:37:02,244 eSEAT0 INFO #2: いれいさー た (0.657500)
+2015-02-14 19:37:02,244 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:02,244 eSEAT0 INFO no command found
+2015-02-14 19:37:02,244 eSEAT0 INFO got input from speechin
+2015-02-14 19:37:02,244 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:37:02,244 eSEAT0 INFO no command found
+2015-02-14 19:37:03,144 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2450.675537" rank="1" score="0.77" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.540" text="つ"/></data><data likelihood="-2452.601318" rank="2" score="0.726" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.452" text="た"/></data><data likelihood="-2494.359863" rank="3" score="0.501" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.002" text="いまなんじ"/></data><data likelihood="-2499.705078" rank="4" score="0.5015" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.003" text="おはよう"/></data><data likelihood="-2507.886475" rank="5" score="0.5005" text="いれいさー さようなら"><word score="1.000" text="いれいさー"/><word score="0.001" text="さようなら"/></data></listenText> (speechin)
+2015-02-14 19:37:03,146 eSEAT0 INFO #1: いれいさー つ (0.770000)
+2015-02-14 19:37:03,146 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:03,146 eSEAT0 INFO #2: いれいさー た (0.726000)
+2015-02-14 19:37:03,146 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:03,147 eSEAT0 INFO #3: いれいさー いまなんじ (0.501000)
+2015-02-14 19:37:03,147 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:03,147 eSEAT0 INFO #4: いれいさー おはよう (0.501500)
+2015-02-14 19:37:03,147 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:03,147 eSEAT0 INFO #5: いれいさー さようなら (0.500500)
+2015-02-14 19:37:03,147 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:03,147 eSEAT0 INFO no command found
+2015-02-14 19:37:03,147 eSEAT0 INFO got input from speechin
+2015-02-14 19:37:03,147 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:37:03,147 eSEAT0 INFO no command found
+2015-02-14 19:37:06,676 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1367.573242" rank="1" score="0.806" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.612" text="つ"/></data><data likelihood="-1372.475830" rank="2" score="0.694" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.388" text="た"/></data></listenText> (speechin)
+2015-02-14 19:37:06,676 eSEAT0 INFO #1: いれいさー つ (0.806000)
+2015-02-14 19:37:06,677 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:37:06,677 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:37:06,677 eSEAT0 INFO #2: いれいさー た (0.694000)
+2015-02-14 19:37:06,677 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:06,677 eSEAT0 INFO no command found
+2015-02-14 19:37:06,677 eSEAT0 INFO got input from speechin
+2015-02-14 19:37:06,678 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:37:06,678 eSEAT0 INFO no command found
+2015-02-14 19:37:17,892 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-962.721130" rank="1" score="0.7635" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.527" text="つ"/></data><data likelihood="-963.672302" rank="2" score="0.7365" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.473" text="た"/></data></listenText> (speechin)
+2015-02-14 19:37:17,893 eSEAT0 INFO #1: いれいさー つ (0.763500)
+2015-02-14 19:37:17,893 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:17,893 eSEAT0 INFO #2: いれいさー た (0.736500)
+2015-02-14 19:37:17,893 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:17,893 eSEAT0 INFO no command found
+2015-02-14 19:37:17,893 eSEAT0 INFO got input from speechin
+2015-02-14 19:37:17,894 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:37:17,894 eSEAT0 INFO no command found
+2015-02-14 19:37:21,474 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1769.403564" rank="1" score="0.877" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.754" text="つ"/></data><data likelihood="-1779.358521" rank="2" score="0.623" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.246" text="た"/></data></listenText> (speechin)
+2015-02-14 19:37:21,475 eSEAT0 INFO #1: いれいさー つ (0.877000)
+2015-02-14 19:37:21,475 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:37:21,476 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:37:21,476 eSEAT0 INFO #2: いれいさー た (0.623000)
+2015-02-14 19:37:21,476 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:21,476 eSEAT0 INFO no command found
+2015-02-14 19:37:21,477 eSEAT0 INFO got input from speechin
+2015-02-14 19:37:21,477 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:37:21,477 eSEAT0 INFO no command found
+2015-02-14 19:37:22,421 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1568.848022" rank="1" score="0.7935" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.587" text="つ"/></data><data likelihood="-1571.987305" rank="2" score="0.7045" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.409" text="た"/></data><data likelihood="-1619.544556" rank="3" score="0.501" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.002" text="おはよう"/></data></listenText> (speechin)
+2015-02-14 19:37:22,422 eSEAT0 INFO #1: いれいさー つ (0.793500)
+2015-02-14 19:37:22,422 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:22,422 eSEAT0 INFO #2: いれいさー た (0.704500)
+2015-02-14 19:37:22,422 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:22,423 eSEAT0 INFO #3: いれいさー おはよう (0.501000)
+2015-02-14 19:37:22,423 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:22,423 eSEAT0 INFO no command found
+2015-02-14 19:37:22,423 eSEAT0 INFO got input from speechin
+2015-02-14 19:37:22,423 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:37:22,423 eSEAT0 INFO no command found
+2015-02-14 19:37:23,466 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1052.989014" rank="1" score="0.8505" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.701" text="つ"/></data><data likelihood="-1060.429932" rank="2" score="0.649" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.298" text="た"/></data></listenText> (speechin)
+2015-02-14 19:37:23,468 eSEAT0 INFO #1: いれいさー つ (0.850500)
+2015-02-14 19:37:23,468 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:37:23,468 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:37:23,468 eSEAT0 INFO #2: いれいさー た (0.649000)
+2015-02-14 19:37:23,469 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:23,469 eSEAT0 INFO no command found
+2015-02-14 19:37:23,469 eSEAT0 INFO got input from speechin
+2015-02-14 19:37:23,469 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:37:23,469 eSEAT0 INFO no command found
+2015-02-14 19:37:23,991 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1887.429321" rank="1" score="0.9325" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.865" text="つ"/></data><data likelihood="-1903.610718" rank="2" score="0.567" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.134" text="た"/></data></listenText> (speechin)
+2015-02-14 19:37:23,991 eSEAT0 INFO #1: いれいさー つ (0.932500)
+2015-02-14 19:37:23,991 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:37:23,992 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:37:23,992 eSEAT0 INFO #2: いれいさー た (0.567000)
+2015-02-14 19:37:23,992 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:23,992 eSEAT0 INFO no command found
+2015-02-14 19:37:23,992 eSEAT0 INFO got input from speechin
+2015-02-14 19:37:23,992 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:37:23,992 eSEAT0 INFO no command found
+2015-02-14 19:37:38,527 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-3384.548096" rank="1" score="0.8075" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.615" text="た"/></data><data likelihood="-3386.599609" rank="2" score="0.6865" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.373" text="つ"/></data><data likelihood="-3428.020752" rank="3" score="0.502" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.004" text="おはよう"/></data><data likelihood="-3428.802490" rank="4" score="0.5015" text="いれいさー さようなら"><word score="1.000" text="いれいさー"/><word score="0.003" text="さようなら"/></data><data likelihood="-3431.134033" rank="5" score="0.501" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.002" text="いまなんじ"/></data></listenText> (speechin)
+2015-02-14 19:37:38,529 eSEAT0 INFO #1: いれいさー た (0.807500)
+2015-02-14 19:37:38,529 eSEAT0 INFO looking up...speechin: いれいさー た
+2015-02-14 19:37:38,530 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:37:38,530 eSEAT0 INFO #2: いれいさー つ (0.686500)
+2015-02-14 19:37:38,530 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:38,530 eSEAT0 INFO #3: いれいさー おはよう (0.502000)
+2015-02-14 19:37:38,530 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:38,530 eSEAT0 INFO #4: いれいさー さようなら (0.501500)
+2015-02-14 19:37:38,530 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:38,531 eSEAT0 INFO #5: いれいさー いまなんじ (0.501000)
+2015-02-14 19:37:38,531 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:38,531 eSEAT0 INFO no command found
+2015-02-14 19:37:38,531 eSEAT0 INFO got input from speechin
+2015-02-14 19:37:38,532 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:37:38,532 eSEAT0 INFO no command found
+2015-02-14 19:37:40,749 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1151.864258" rank="1" score="0.826" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.652" text="つ"/></data><data likelihood="-1157.313721" rank="2" score="0.674" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.348" text="た"/></data></listenText> (speechin)
+2015-02-14 19:37:40,750 eSEAT0 INFO #1: いれいさー つ (0.826000)
+2015-02-14 19:37:40,750 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:37:40,750 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:37:40,750 eSEAT0 INFO #2: いれいさー た (0.674000)
+2015-02-14 19:37:40,750 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:40,751 eSEAT0 INFO no command found
+2015-02-14 19:37:40,751 eSEAT0 INFO got input from speechin
+2015-02-14 19:37:40,751 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:37:40,751 eSEAT0 INFO no command found
+2015-02-14 19:37:47,221 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1279.244751" rank="1" score="0.893" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.786" text="つ"/></data><data likelihood="-1290.067871" rank="2" score="0.607" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.214" text="た"/></data><data likelihood="-1341.042969" rank="3" score="0.5005" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.001" text="おはよう"/></data></listenText> (speechin)
+2015-02-14 19:37:47,222 eSEAT0 INFO #1: いれいさー つ (0.893000)
+2015-02-14 19:37:47,223 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:37:47,223 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:37:47,223 eSEAT0 INFO #2: いれいさー た (0.607000)
+2015-02-14 19:37:47,223 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:47,223 eSEAT0 INFO #3: いれいさー おはよう (0.500500)
+2015-02-14 19:37:47,223 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:47,224 eSEAT0 INFO no command found
+2015-02-14 19:37:47,224 eSEAT0 INFO got input from speechin
+2015-02-14 19:37:47,224 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:37:47,224 eSEAT0 INFO no command found
+2015-02-14 19:37:48,289 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1688.648071" rank="1" score="0.783" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.566" text="つ"/></data><data likelihood="-1691.650635" rank="2" score="0.7165" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.433" text="た"/></data></listenText> (speechin)
+2015-02-14 19:37:48,290 eSEAT0 INFO #1: いれいさー つ (0.783000)
+2015-02-14 19:37:48,291 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:48,291 eSEAT0 INFO #2: いれいさー た (0.716500)
+2015-02-14 19:37:48,291 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:48,291 eSEAT0 INFO no command found
+2015-02-14 19:37:48,291 eSEAT0 INFO got input from speechin
+2015-02-14 19:37:48,292 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:37:48,292 eSEAT0 INFO no command found
+2015-02-14 19:37:49,391 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2148.975098" rank="1" score="0.8275" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.655" text="つ"/></data><data likelihood="-2153.357666" rank="2" score="0.672" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.344" text="た"/></data></listenText> (speechin)
+2015-02-14 19:37:49,393 eSEAT0 INFO #1: いれいさー つ (0.827500)
+2015-02-14 19:37:49,393 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:37:49,393 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:37:49,393 eSEAT0 INFO #2: いれいさー た (0.672000)
+2015-02-14 19:37:49,393 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:49,393 eSEAT0 INFO no command found
+2015-02-14 19:37:49,394 eSEAT0 INFO got input from speechin
+2015-02-14 19:37:49,394 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:37:49,394 eSEAT0 INFO no command found
+2015-02-14 19:37:54,064 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2226.638672" rank="1" score="0.9135" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.827" text="た"/></data><data likelihood="-2240.601074" rank="2" score="0.583" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.166" text="つ"/></data><data likelihood="-2276.159668" rank="3" score="0.5015" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.003" text="いまなんじ"/></data><data likelihood="-2287.359375" rank="4" score="0.5005" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.001" text="おはよう"/></data><data likelihood="-2311.119873" rank="5" score="0.5" text="いれいさー さようなら"><word score="1.000" text="いれいさー"/><word score="0.000" text="さようなら"/></data></listenText> (speechin)
+2015-02-14 19:37:54,066 eSEAT0 INFO #1: いれいさー た (0.913500)
+2015-02-14 19:37:54,066 eSEAT0 INFO looking up...speechin: いれいさー た
+2015-02-14 19:37:54,067 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:37:54,067 eSEAT0 INFO #2: いれいさー つ (0.583000)
+2015-02-14 19:37:54,067 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:54,067 eSEAT0 INFO #3: いれいさー いまなんじ (0.501500)
+2015-02-14 19:37:54,067 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:54,067 eSEAT0 INFO #4: いれいさー おはよう (0.500500)
+2015-02-14 19:37:54,067 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:54,067 eSEAT0 INFO #5: いれいさー さようなら (0.500000)
+2015-02-14 19:37:54,067 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:54,067 eSEAT0 INFO no command found
+2015-02-14 19:37:54,067 eSEAT0 INFO got input from speechin
+2015-02-14 19:37:54,067 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:37:54,068 eSEAT0 INFO no command found
+2015-02-14 19:37:55,038 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1696.671509" rank="1" score="0.8625" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.725" text="つ"/></data><data likelihood="-1705.129272" rank="2" score="0.637" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.274" text="た"/></data><data likelihood="-1763.240601" rank="3" score="0.5005" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.001" text="おはよう"/></data></listenText> (speechin)
+2015-02-14 19:37:55,039 eSEAT0 INFO #1: いれいさー つ (0.862500)
+2015-02-14 19:37:55,040 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:37:55,040 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:37:55,040 eSEAT0 INFO #2: いれいさー た (0.637000)
+2015-02-14 19:37:55,040 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:55,040 eSEAT0 INFO #3: いれいさー おはよう (0.500500)
+2015-02-14 19:37:55,040 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:37:55,040 eSEAT0 INFO no command found
+2015-02-14 19:37:55,040 eSEAT0 INFO got input from speechin
+2015-02-14 19:37:55,040 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:37:55,040 eSEAT0 INFO no command found
+2015-02-14 19:38:00,972 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1761.145874" rank="1" score="0.8455" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.691" text="た"/></data><data likelihood="-1768.186523" rank="2" score="0.6535" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.307" text="つ"/></data><data likelihood="-1818.027222" rank="3" score="0.501" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.002" text="おはよう"/></data></listenText> (speechin)
+2015-02-14 19:38:00,973 eSEAT0 INFO #1: いれいさー た (0.845500)
+2015-02-14 19:38:00,973 eSEAT0 INFO looking up...speechin: いれいさー た
+2015-02-14 19:38:00,973 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:38:00,973 eSEAT0 INFO #2: いれいさー つ (0.653500)
+2015-02-14 19:38:00,973 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:00,974 eSEAT0 INFO #3: いれいさー おはよう (0.501000)
+2015-02-14 19:38:00,974 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:00,974 eSEAT0 INFO no command found
+2015-02-14 19:38:00,975 eSEAT0 INFO got input from speechin
+2015-02-14 19:38:00,975 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:38:00,975 eSEAT0 INFO no command found
+2015-02-14 19:38:02,744 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1390.621094" rank="1" score="0.8505" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.701" text="つ"/></data><data likelihood="-1396.845093" rank="2" score="0.6495" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.299" text="た"/></data></listenText> (speechin)
+2015-02-14 19:38:02,746 eSEAT0 INFO #1: いれいさー つ (0.850500)
+2015-02-14 19:38:02,747 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:38:02,747 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:38:02,747 eSEAT0 INFO #2: いれいさー た (0.649500)
+2015-02-14 19:38:02,747 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:02,747 eSEAT0 INFO no command found
+2015-02-14 19:38:02,747 eSEAT0 INFO got input from speechin
+2015-02-14 19:38:02,747 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:38:02,747 eSEAT0 INFO no command found
+2015-02-14 19:38:05,607 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-3078.095947" rank="1" score="0.88" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.760" text="つ"/></data><data likelihood="-3088.757568" rank="2" score="0.6115" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.223" text="た"/></data><data likelihood="-3122.415527" rank="3" score="0.5025" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.005" text="いまなんじ"/></data><data likelihood="-3125.793457" rank="4" score="0.502" text="いれいさー さようなら"><word score="1.000" text="いれいさー"/><word score="0.004" text="さようなら"/></data><data likelihood="-3130.331299" rank="5" score="0.501" text="いれいさー こんにちは"><word score="1.000" text="いれいさー"/><word score="0.002" text="こんにちは"/></data></listenText> (speechin)
+2015-02-14 19:38:05,609 eSEAT0 INFO #1: いれいさー つ (0.880000)
+2015-02-14 19:38:05,609 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:38:05,609 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:38:05,609 eSEAT0 INFO #2: いれいさー た (0.611500)
+2015-02-14 19:38:05,609 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:05,610 eSEAT0 INFO #3: いれいさー いまなんじ (0.502500)
+2015-02-14 19:38:05,610 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:05,610 eSEAT0 INFO #4: いれいさー さようなら (0.502000)
+2015-02-14 19:38:05,610 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:05,611 eSEAT0 INFO #5: いれいさー こんにちは (0.501000)
+2015-02-14 19:38:05,611 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:05,611 eSEAT0 INFO no command found
+2015-02-14 19:38:05,611 eSEAT0 INFO got input from speechin
+2015-02-14 19:38:05,611 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:38:05,611 eSEAT0 INFO no command found
+2015-02-14 19:38:06,026 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1596.364868" rank="1" score="0.7905" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.581" text="た"/></data><data likelihood="-1598.173584" rank="2" score="0.709" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.418" text="つ"/></data></listenText> (speechin)
+2015-02-14 19:38:06,027 eSEAT0 INFO #1: いれいさー た (0.790500)
+2015-02-14 19:38:06,027 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:06,027 eSEAT0 INFO #2: いれいさー つ (0.709000)
+2015-02-14 19:38:06,028 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:06,028 eSEAT0 INFO no command found
+2015-02-14 19:38:06,028 eSEAT0 INFO got input from speechin
+2015-02-14 19:38:06,028 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:38:06,028 eSEAT0 INFO no command found
+2015-02-14 19:38:11,092 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-4885.834961" rank="1" score="0.8545" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.709" text="つ"/></data><data likelihood="-4893.256348" rank="2" score="0.643" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.286" text="た"/></data><data likelihood="-4940.723145" rank="3" score="0.5005" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.001" text="いまなんじ"/></data><data likelihood="-4943.411621" rank="4" score="0.5005" text="いれいさー こんにちは"><word score="1.000" text="いれいさー"/><word score="0.001" text="こんにちは"/></data><data likelihood="-4946.983887" rank="5" score="0.5005" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.001" text="おはよう"/></data></listenText> (speechin)
+2015-02-14 19:38:11,094 eSEAT0 INFO #1: いれいさー つ (0.854500)
+2015-02-14 19:38:11,094 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:38:11,094 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:38:11,094 eSEAT0 INFO #2: いれいさー た (0.643000)
+2015-02-14 19:38:11,094 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:11,094 eSEAT0 INFO #3: いれいさー いまなんじ (0.500500)
+2015-02-14 19:38:11,095 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:11,095 eSEAT0 INFO #4: いれいさー こんにちは (0.500500)
+2015-02-14 19:38:11,095 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:11,095 eSEAT0 INFO #5: いれいさー おはよう (0.500500)
+2015-02-14 19:38:11,095 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:11,095 eSEAT0 INFO no command found
+2015-02-14 19:38:11,095 eSEAT0 INFO got input from speechin
+2015-02-14 19:38:11,095 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:38:11,095 eSEAT0 INFO no command found
+2015-02-14 19:38:15,554 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-993.829956" rank="1" score="0.7975" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.595" text="た"/></data><data likelihood="-997.156860" rank="2" score="0.7025" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.405" text="つ"/></data></listenText> (speechin)
+2015-02-14 19:38:15,555 eSEAT0 INFO #1: いれいさー た (0.797500)
+2015-02-14 19:38:15,555 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:15,555 eSEAT0 INFO #2: いれいさー つ (0.702500)
+2015-02-14 19:38:15,555 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:15,555 eSEAT0 INFO no command found
+2015-02-14 19:38:15,555 eSEAT0 INFO got input from speechin
+2015-02-14 19:38:15,555 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:38:15,556 eSEAT0 INFO no command found
+2015-02-14 19:38:16,857 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2651.258057" rank="1" score="0.8135" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.627" text="つ"/></data><data likelihood="-2654.810791" rank="2" score="0.684" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.368" text="た"/></data><data likelihood="-2699.606689" rank="3" score="0.501" text="いれいさー こんにちは"><word score="1.000" text="いれいさー"/><word score="0.002" text="こんにちは"/></data><data likelihood="-2705.093750" rank="4" score="0.5005" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.001" text="いまなんじ"/></data></listenText> (speechin)
+2015-02-14 19:38:16,862 eSEAT0 INFO #1: いれいさー つ (0.813500)
+2015-02-14 19:38:16,863 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:38:16,863 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:38:16,863 eSEAT0 INFO #2: いれいさー た (0.684000)
+2015-02-14 19:38:16,863 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:16,863 eSEAT0 INFO #3: いれいさー こんにちは (0.501000)
+2015-02-14 19:38:16,863 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:16,863 eSEAT0 INFO #4: いれいさー いまなんじ (0.500500)
+2015-02-14 19:38:16,863 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:16,863 eSEAT0 INFO no command found
+2015-02-14 19:38:16,863 eSEAT0 INFO got input from speechin
+2015-02-14 19:38:16,863 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:38:16,863 eSEAT0 INFO no command found
+2015-02-14 19:38:21,293 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2232.324463" rank="1" score="0.785" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.570" text="た"/></data><data likelihood="-2234.814941" rank="2" score="0.714" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.428" text="つ"/></data></listenText> (speechin)
+2015-02-14 19:38:21,295 eSEAT0 INFO #1: いれいさー た (0.785000)
+2015-02-14 19:38:21,295 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:21,295 eSEAT0 INFO #2: いれいさー つ (0.714000)
+2015-02-14 19:38:21,295 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:21,295 eSEAT0 INFO no command found
+2015-02-14 19:38:21,295 eSEAT0 INFO got input from speechin
+2015-02-14 19:38:21,296 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:38:21,296 eSEAT0 INFO no command found
+2015-02-14 19:38:22,407 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-3126.206299" rank="1" score="0.7915" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.583" text="つ"/></data><data likelihood="-3127.199951" rank="2" score="0.705" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.410" text="た"/></data><data likelihood="-3172.522217" rank="3" score="0.501" text="いれいさー こんにちは"><word score="1.000" text="いれいさー"/><word score="0.002" text="こんにちは"/></data><data likelihood="-3179.351807" rank="4" score="0.501" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.002" text="おはよう"/></data><data likelihood="-3180.487061" rank="5" score="0.5005" text="いれいさー さようなら"><word score="1.000" text="いれいさー"/><word score="0.001" text="さようなら"/></data></listenText> (speechin)
+2015-02-14 19:38:22,408 eSEAT0 INFO #1: いれいさー つ (0.791500)
+2015-02-14 19:38:22,408 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:22,408 eSEAT0 INFO #2: いれいさー た (0.705000)
+2015-02-14 19:38:22,408 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:22,408 eSEAT0 INFO #3: いれいさー こんにちは (0.501000)
+2015-02-14 19:38:22,408 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:22,408 eSEAT0 INFO #4: いれいさー おはよう (0.501000)
+2015-02-14 19:38:22,408 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:22,408 eSEAT0 INFO #5: いれいさー さようなら (0.500500)
+2015-02-14 19:38:22,408 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:22,409 eSEAT0 INFO no command found
+2015-02-14 19:38:22,409 eSEAT0 INFO got input from speechin
+2015-02-14 19:38:22,409 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:38:22,409 eSEAT0 INFO no command found
+2015-02-14 19:38:27,030 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1963.437744" rank="1" score="0.8045" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.609" text="た"/></data><data likelihood="-1967.084229" rank="2" score="0.694" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.388" text="つ"/></data><data likelihood="-2015.846191" rank="3" score="0.5005" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.001" text="いまなんじ"/></data><data likelihood="-2025.889648" rank="4" score="0.5" text="いれいさー さようなら"><word score="1.000" text="いれいさー"/><word score="0.000" text="さようなら"/></data><data likelihood="-2034.286621" rank="5" score="0.5" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.000" text="おはよう"/></data></listenText> (speechin)
+2015-02-14 19:38:27,035 eSEAT0 INFO #1: いれいさー た (0.804500)
+2015-02-14 19:38:27,035 eSEAT0 INFO looking up...speechin: いれいさー た
+2015-02-14 19:38:27,035 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:38:27,035 eSEAT0 INFO #2: いれいさー つ (0.694000)
+2015-02-14 19:38:27,035 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:27,035 eSEAT0 INFO #3: いれいさー いまなんじ (0.500500)
+2015-02-14 19:38:27,035 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:27,035 eSEAT0 INFO #4: いれいさー さようなら (0.500000)
+2015-02-14 19:38:27,035 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:27,036 eSEAT0 INFO #5: いれいさー おはよう (0.500000)
+2015-02-14 19:38:27,036 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:27,036 eSEAT0 INFO no command found
+2015-02-14 19:38:27,036 eSEAT0 INFO got input from speechin
+2015-02-14 19:38:27,036 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:38:27,036 eSEAT0 INFO no command found
+2015-02-14 19:38:42,411 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1113.959839" rank="1" score="0.8135" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.627" text="つ"/></data><data likelihood="-1118.476929" rank="2" score="0.6865" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.373" text="た"/></data></listenText> (speechin)
+2015-02-14 19:38:42,412 eSEAT0 INFO #1: いれいさー つ (0.813500)
+2015-02-14 19:38:42,412 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:38:42,412 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:38:42,412 eSEAT0 INFO #2: いれいさー た (0.686500)
+2015-02-14 19:38:42,412 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:42,412 eSEAT0 INFO no command found
+2015-02-14 19:38:42,413 eSEAT0 INFO got input from speechin
+2015-02-14 19:38:42,413 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:38:42,413 eSEAT0 INFO no command found
+2015-02-14 19:38:53,840 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2760.462646" rank="1" score="0.854" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.708" text="つ"/></data><data likelihood="-2768.245605" rank="2" score="0.6445" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.289" text="た"/></data><data likelihood="-2821.849854" rank="3" score="0.5005" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.001" text="おはよう"/></data><data likelihood="-2822.976318" rank="4" score="0.5005" text="いれいさー こんにちは"><word score="1.000" text="いれいさー"/><word score="0.001" text="こんにちは"/></data><data likelihood="-2823.133057" rank="5" score="0.5005" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.001" text="いまなんじ"/></data></listenText> (speechin)
+2015-02-14 19:38:53,842 eSEAT0 INFO #1: いれいさー つ (0.854000)
+2015-02-14 19:38:53,842 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:38:53,842 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:38:53,842 eSEAT0 INFO #2: いれいさー た (0.644500)
+2015-02-14 19:38:53,842 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:53,843 eSEAT0 INFO #3: いれいさー おはよう (0.500500)
+2015-02-14 19:38:53,843 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:53,843 eSEAT0 INFO #4: いれいさー こんにちは (0.500500)
+2015-02-14 19:38:53,843 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:53,843 eSEAT0 INFO #5: いれいさー いまなんじ (0.500500)
+2015-02-14 19:38:53,844 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:53,844 eSEAT0 INFO no command found
+2015-02-14 19:38:53,844 eSEAT0 INFO got input from speechin
+2015-02-14 19:38:53,844 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:38:53,844 eSEAT0 INFO no command found
+2015-02-14 19:38:54,431 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1009.006348" rank="1" score="0.8665" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.733" text="つ"/></data><data likelihood="-1017.812317" rank="2" score="0.633" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.266" text="た"/></data></listenText> (speechin)
+2015-02-14 19:38:54,432 eSEAT0 INFO #1: いれいさー つ (0.866500)
+2015-02-14 19:38:54,432 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:38:54,432 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:38:54,432 eSEAT0 INFO #2: いれいさー た (0.633000)
+2015-02-14 19:38:54,432 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:54,432 eSEAT0 INFO no command found
+2015-02-14 19:38:54,432 eSEAT0 INFO got input from speechin
+2015-02-14 19:38:54,432 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:38:54,432 eSEAT0 INFO no command found
+2015-02-14 19:38:58,815 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1061.007690" rank="1" score="0.791" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.582" text="つ"/></data><data likelihood="-1062.674316" rank="2" score="0.709" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.418" text="た"/></data></listenText> (speechin)
+2015-02-14 19:38:58,817 eSEAT0 INFO #1: いれいさー つ (0.791000)
+2015-02-14 19:38:58,817 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:58,818 eSEAT0 INFO #2: いれいさー た (0.709000)
+2015-02-14 19:38:58,818 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:38:58,818 eSEAT0 INFO no command found
+2015-02-14 19:38:58,818 eSEAT0 INFO got input from speechin
+2015-02-14 19:38:58,818 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:38:58,818 eSEAT0 INFO no command found
+2015-02-14 19:39:00,029 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2181.099854" rank="1" score="0.846" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.692" text="つ"/></data><data likelihood="-2186.734131" rank="2" score="0.651" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.302" text="た"/></data><data likelihood="-2235.023682" rank="3" score="0.5005" text="いれいさー さようなら"><word score="1.000" text="いれいさー"/><word score="0.001" text="さようなら"/></data><data likelihood="-2236.214111" rank="4" score="0.5005" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.001" text="いまなんじ"/></data><data likelihood="-2237.343506" rank="5" score="0.501" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.002" text="おはよう"/></data></listenText> (speechin)
+2015-02-14 19:39:00,034 eSEAT0 INFO #1: いれいさー つ (0.846000)
+2015-02-14 19:39:00,034 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:39:00,034 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:39:00,034 eSEAT0 INFO #2: いれいさー た (0.651000)
+2015-02-14 19:39:00,034 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:00,035 eSEAT0 INFO #3: いれいさー さようなら (0.500500)
+2015-02-14 19:39:00,035 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:00,035 eSEAT0 INFO #4: いれいさー いまなんじ (0.500500)
+2015-02-14 19:39:00,035 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:00,035 eSEAT0 INFO #5: いれいさー おはよう (0.501000)
+2015-02-14 19:39:00,035 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:00,036 eSEAT0 INFO no command found
+2015-02-14 19:39:00,036 eSEAT0 INFO got input from speechin
+2015-02-14 19:39:00,036 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:39:00,036 eSEAT0 INFO no command found
+2015-02-14 19:39:08,216 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2876.631836" rank="1" score="0.897" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.794" text="つ"/></data><data likelihood="-2888.516602" rank="2" score="0.601" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.202" text="た"/></data><data likelihood="-2933.833008" rank="3" score="0.5005" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.001" text="いまなんじ"/></data><data likelihood="-2944.910645" rank="4" score="0.5005" text="いれいさー こんにちは"><word score="1.000" text="いれいさー"/><word score="0.001" text="こんにちは"/></data><data likelihood="-2946.785156" rank="5" score="0.5005" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.001" text="おはよう"/></data></listenText> (speechin)
+2015-02-14 19:39:08,218 eSEAT0 INFO #1: いれいさー つ (0.897000)
+2015-02-14 19:39:08,218 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:39:08,218 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:39:08,218 eSEAT0 INFO #2: いれいさー た (0.601000)
+2015-02-14 19:39:08,219 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:08,219 eSEAT0 INFO #3: いれいさー いまなんじ (0.500500)
+2015-02-14 19:39:08,219 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:08,219 eSEAT0 INFO #4: いれいさー こんにちは (0.500500)
+2015-02-14 19:39:08,219 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:08,219 eSEAT0 INFO #5: いれいさー おはよう (0.500500)
+2015-02-14 19:39:08,219 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:08,219 eSEAT0 INFO no command found
+2015-02-14 19:39:08,219 eSEAT0 INFO got input from speechin
+2015-02-14 19:39:08,219 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:39:08,219 eSEAT0 INFO no command found
+2015-02-14 19:39:14,359 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-6269.205566" rank="1" score="0.8445" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.689" text="つ"/></data><data likelihood="-6276.875488" rank="2" score="0.6355" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.271" text="た"/></data><data likelihood="-6297.054199" rank="3" score="0.5165" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.033" text="おはよう"/></data><data likelihood="-6315.639160" rank="4" score="0.5015" text="いれいさー こんにちは"><word score="1.000" text="いれいさー"/><word score="0.003" text="こんにちは"/></data><data likelihood="-6322.999512" rank="5" score="0.5005" text="いれいさー さようなら"><word score="1.000" text="いれいさー"/><word score="0.001" text="さようなら"/></data></listenText> (speechin)
+2015-02-14 19:39:14,361 eSEAT0 INFO #1: いれいさー つ (0.844500)
+2015-02-14 19:39:14,362 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:39:14,362 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:39:14,362 eSEAT0 INFO #2: いれいさー た (0.635500)
+2015-02-14 19:39:14,362 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:14,362 eSEAT0 INFO #3: いれいさー おはよう (0.516500)
+2015-02-14 19:39:14,362 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:14,362 eSEAT0 INFO #4: いれいさー こんにちは (0.501500)
+2015-02-14 19:39:14,362 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:14,363 eSEAT0 INFO #5: いれいさー さようなら (0.500500)
+2015-02-14 19:39:14,363 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:14,363 eSEAT0 INFO no command found
+2015-02-14 19:39:14,363 eSEAT0 INFO got input from speechin
+2015-02-14 19:39:14,363 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:39:14,363 eSEAT0 INFO no command found
+2015-02-14 19:39:25,153 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2006.067627" rank="1" score="0.75" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.500" text="た"/></data><data likelihood="-2006.095947" rank="2" score="0.7495" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.499" text="つ"/></data><data likelihood="-2064.508545" rank="3" score="0.5005" text="いれいさー さようなら"><word score="1.000" text="いれいさー"/><word score="0.001" text="さようなら"/></data></listenText> (speechin)
+2015-02-14 19:39:25,156 eSEAT0 INFO #1: いれいさー た (0.750000)
+2015-02-14 19:39:25,157 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:25,157 eSEAT0 INFO #2: いれいさー つ (0.749500)
+2015-02-14 19:39:25,157 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:25,158 eSEAT0 INFO #3: いれいさー さようなら (0.500500)
+2015-02-14 19:39:25,158 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:25,158 eSEAT0 INFO no command found
+2015-02-14 19:39:25,159 eSEAT0 INFO got input from speechin
+2015-02-14 19:39:25,159 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:39:25,159 eSEAT0 INFO no command found
+2015-02-14 19:39:25,937 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1874.741699" rank="1" score="0.8535" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.707" text="つ"/></data><data likelihood="-1882.458130" rank="2" score="0.6455" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.291" text="た"/></data><data likelihood="-1936.616577" rank="3" score="0.501" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.002" text="おはよう"/></data><data likelihood="-1944.415405" rank="4" score="0.5" text="いれいさー さようなら"><word score="1.000" text="いれいさー"/><word score="0.000" text="さようなら"/></data><data likelihood="-1948.474854" rank="5" score="0.5" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.000" text="いまなんじ"/></data></listenText> (speechin)
+2015-02-14 19:39:25,939 eSEAT0 INFO #1: いれいさー つ (0.853500)
+2015-02-14 19:39:25,940 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:39:25,940 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:39:25,940 eSEAT0 INFO #2: いれいさー た (0.645500)
+2015-02-14 19:39:25,940 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:25,940 eSEAT0 INFO #3: いれいさー おはよう (0.501000)
+2015-02-14 19:39:25,940 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:25,941 eSEAT0 INFO #4: いれいさー さようなら (0.500000)
+2015-02-14 19:39:25,941 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:25,941 eSEAT0 INFO #5: いれいさー いまなんじ (0.500000)
+2015-02-14 19:39:25,941 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:25,941 eSEAT0 INFO no command found
+2015-02-14 19:39:25,941 eSEAT0 INFO got input from speechin
+2015-02-14 19:39:25,941 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:39:25,941 eSEAT0 INFO no command found
+2015-02-14 19:39:26,757 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1972.405151" rank="1" score="0.7605" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.521" text="た"/></data><data likelihood="-1973.417603" rank="2" score="0.738" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.476" text="つ"/></data><data likelihood="-2017.923706" rank="3" score="0.5015" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.003" text="おはよう"/></data><data likelihood="-2042.998291" rank="4" score="0.5" text="いれいさー さようなら"><word score="1.000" text="いれいさー"/><word score="0.000" text="さようなら"/></data><data likelihood="-2043.037476" rank="5" score="0.5" text="いれいさー こんにちは"><word score="1.000" text="いれいさー"/><word score="0.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-14 19:39:26,758 eSEAT0 INFO #1: いれいさー た (0.760500)
+2015-02-14 19:39:26,758 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:26,758 eSEAT0 INFO #2: いれいさー つ (0.738000)
+2015-02-14 19:39:26,758 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:26,758 eSEAT0 INFO #3: いれいさー おはよう (0.501500)
+2015-02-14 19:39:26,759 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:26,759 eSEAT0 INFO #4: いれいさー さようなら (0.500000)
+2015-02-14 19:39:26,759 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:26,759 eSEAT0 INFO #5: いれいさー こんにちは (0.500000)
+2015-02-14 19:39:26,759 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:26,759 eSEAT0 INFO no command found
+2015-02-14 19:39:26,759 eSEAT0 INFO got input from speechin
+2015-02-14 19:39:26,759 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:39:26,759 eSEAT0 INFO no command found
+2015-02-14 19:39:27,048 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1006.630798" rank="1" score="0.9" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.800" text="つ"/></data><data likelihood="-1018.680481" rank="2" score="0.6" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.200" text="た"/></data></listenText> (speechin)
+2015-02-14 19:39:27,049 eSEAT0 INFO #1: いれいさー つ (0.900000)
+2015-02-14 19:39:27,049 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:39:27,049 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:39:27,049 eSEAT0 INFO #2: いれいさー た (0.600000)
+2015-02-14 19:39:27,049 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:27,049 eSEAT0 INFO no command found
+2015-02-14 19:39:27,049 eSEAT0 INFO got input from speechin
+2015-02-14 19:39:27,050 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:39:27,050 eSEAT0 INFO no command found
+2015-02-14 19:39:27,838 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1406.718628" rank="1" score="0.9265" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.853" text="つ"/></data><data likelihood="-1422.638184" rank="2" score="0.573" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.146" text="た"/></data><data likelihood="-1468.556641" rank="3" score="0.5005" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.001" text="おはよう"/></data></listenText> (speechin)
+2015-02-14 19:39:27,840 eSEAT0 INFO #1: いれいさー つ (0.926500)
+2015-02-14 19:39:27,840 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:39:27,840 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:39:27,841 eSEAT0 INFO #2: いれいさー た (0.573000)
+2015-02-14 19:39:27,841 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:27,841 eSEAT0 INFO #3: いれいさー おはよう (0.500500)
+2015-02-14 19:39:27,841 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:39:27,841 eSEAT0 INFO no command found
+2015-02-14 19:39:27,841 eSEAT0 INFO got input from speechin
+2015-02-14 19:39:27,841 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:39:27,841 eSEAT0 INFO no command found
+2015-02-14 19:40:18,004 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-4676.132812" rank="1" score="0.8775" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.755" text="た"/></data><data likelihood="-4687.423340" rank="2" score="0.611" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.222" text="つ"/></data><data likelihood="-4714.697754" rank="3" score="0.5045" text="いれいさー こんにちは"><word score="1.000" text="いれいさー"/><word score="0.009" text="こんにちは"/></data><data likelihood="-4721.721191" rank="4" score="0.505" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.010" text="おはよう"/></data><data likelihood="-4729.058594" rank="5" score="0.5005" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.001" text="いまなんじ"/></data></listenText> (speechin)
+2015-02-14 19:40:18,006 eSEAT0 INFO #1: いれいさー た (0.877500)
+2015-02-14 19:40:18,007 eSEAT0 INFO looking up...speechin: いれいさー た
+2015-02-14 19:40:18,007 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:40:18,007 eSEAT0 INFO #2: いれいさー つ (0.611000)
+2015-02-14 19:40:18,007 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:18,007 eSEAT0 INFO #3: いれいさー こんにちは (0.504500)
+2015-02-14 19:40:18,007 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:18,007 eSEAT0 INFO #4: いれいさー おはよう (0.505000)
+2015-02-14 19:40:18,007 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:18,007 eSEAT0 INFO #5: いれいさー いまなんじ (0.500500)
+2015-02-14 19:40:18,008 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:18,008 eSEAT0 INFO no command found
+2015-02-14 19:40:18,008 eSEAT0 INFO got input from speechin
+2015-02-14 19:40:18,008 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:40:18,008 eSEAT0 INFO no command found
+2015-02-14 19:40:20,600 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2713.402832" rank="1" score="0.8105" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.621" text="つ"/></data><data likelihood="-2718.019531" rank="2" score="0.6825" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.365" text="た"/></data><data likelihood="-2749.331543" rank="3" score="0.505" text="いれいさー こんにちは"><word score="1.000" text="いれいさー"/><word score="0.010" text="こんにちは"/></data><data likelihood="-2765.287842" rank="4" score="0.501" text="いれいさー さようなら"><word score="1.000" text="いれいさー"/><word score="0.002" text="さようなら"/></data><data likelihood="-2771.017822" rank="5" score="0.5005" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.001" text="おはよう"/></data></listenText> (speechin)
+2015-02-14 19:40:20,602 eSEAT0 INFO #1: いれいさー つ (0.810500)
+2015-02-14 19:40:20,603 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:40:20,603 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:40:20,603 eSEAT0 INFO #2: いれいさー た (0.682500)
+2015-02-14 19:40:20,604 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:20,604 eSEAT0 INFO #3: いれいさー こんにちは (0.505000)
+2015-02-14 19:40:20,604 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:20,604 eSEAT0 INFO #4: いれいさー さようなら (0.501000)
+2015-02-14 19:40:20,604 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:20,604 eSEAT0 INFO #5: いれいさー おはよう (0.500500)
+2015-02-14 19:40:20,604 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:20,604 eSEAT0 INFO no command found
+2015-02-14 19:40:20,604 eSEAT0 INFO got input from speechin
+2015-02-14 19:40:20,604 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:40:20,604 eSEAT0 INFO no command found
+2015-02-14 19:40:21,190 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2197.782471" rank="1" score="0.802" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.604" text="つ"/></data><data likelihood="-2201.552979" rank="2" score="0.696" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.392" text="た"/></data><data likelihood="-2252.727295" rank="3" score="0.5005" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.001" text="いまなんじ"/></data><data likelihood="-2254.826660" rank="4" score="0.5005" text="いれいさー さようなら"><word score="1.000" text="いれいさー"/><word score="0.001" text="さようなら"/></data><data likelihood="-2260.520508" rank="5" score="0.5005" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.001" text="おはよう"/></data></listenText> (speechin)
+2015-02-14 19:40:21,192 eSEAT0 INFO #1: いれいさー つ (0.802000)
+2015-02-14 19:40:21,192 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:40:21,192 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:40:21,192 eSEAT0 INFO #2: いれいさー た (0.696000)
+2015-02-14 19:40:21,193 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:21,193 eSEAT0 INFO #3: いれいさー いまなんじ (0.500500)
+2015-02-14 19:40:21,194 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:21,194 eSEAT0 INFO #4: いれいさー さようなら (0.500500)
+2015-02-14 19:40:21,194 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:21,194 eSEAT0 INFO #5: いれいさー おはよう (0.500500)
+2015-02-14 19:40:21,194 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:21,194 eSEAT0 INFO no command found
+2015-02-14 19:40:21,194 eSEAT0 INFO got input from speechin
+2015-02-14 19:40:21,194 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:40:21,195 eSEAT0 INFO no command found
+2015-02-14 19:40:22,571 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1087.785156" rank="1" score="0.867" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.734" text="つ"/></data><data likelihood="-1096.593872" rank="2" score="0.633" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.266" text="た"/></data></listenText> (speechin)
+2015-02-14 19:40:22,572 eSEAT0 INFO #1: いれいさー つ (0.867000)
+2015-02-14 19:40:22,573 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:40:22,573 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:40:22,573 eSEAT0 INFO #2: いれいさー た (0.633000)
+2015-02-14 19:40:22,573 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:22,573 eSEAT0 INFO no command found
+2015-02-14 19:40:22,573 eSEAT0 INFO got input from speechin
+2015-02-14 19:40:22,573 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:40:22,574 eSEAT0 INFO no command found
+2015-02-14 19:40:22,781 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1097.764648" rank="1" score="0.814" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.628" text="た"/></data><data likelihood="-1102.303223" rank="2" score="0.686" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.372" text="つ"/></data></listenText> (speechin)
+2015-02-14 19:40:22,782 eSEAT0 INFO #1: いれいさー た (0.814000)
+2015-02-14 19:40:22,782 eSEAT0 INFO looking up...speechin: いれいさー た
+2015-02-14 19:40:22,782 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:40:22,782 eSEAT0 INFO #2: いれいさー つ (0.686000)
+2015-02-14 19:40:22,782 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:22,782 eSEAT0 INFO no command found
+2015-02-14 19:40:22,782 eSEAT0 INFO got input from speechin
+2015-02-14 19:40:22,782 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:40:22,782 eSEAT0 INFO no command found
+2015-02-14 19:40:24,869 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1566.042236" rank="1" score="0.7675" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.535" text="た"/></data><data likelihood="-1567.368530" rank="2" score="0.7295" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.459" text="つ"/></data></listenText> (speechin)
+2015-02-14 19:40:24,870 eSEAT0 INFO #1: いれいさー た (0.767500)
+2015-02-14 19:40:24,871 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:24,871 eSEAT0 INFO #2: いれいさー つ (0.729500)
+2015-02-14 19:40:24,871 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:24,871 eSEAT0 INFO no command found
+2015-02-14 19:40:24,871 eSEAT0 INFO got input from speechin
+2015-02-14 19:40:24,871 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:40:24,872 eSEAT0 INFO no command found
+2015-02-14 19:40:31,123 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2381.891602" rank="1" score="0.828" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.656" text="つ"/></data><data likelihood="-2387.644531" rank="2" score="0.669" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.338" text="た"/></data><data likelihood="-2431.123779" rank="3" score="0.501" text="いれいさー こんにちは"><word score="1.000" text="いれいさー"/><word score="0.002" text="こんにちは"/></data><data likelihood="-2439.491943" rank="4" score="0.5005" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.001" text="いまなんじ"/></data></listenText> (speechin)
+2015-02-14 19:40:31,124 eSEAT0 INFO #1: いれいさー つ (0.828000)
+2015-02-14 19:40:31,124 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:40:31,124 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:40:31,124 eSEAT0 INFO #2: いれいさー た (0.669000)
+2015-02-14 19:40:31,124 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:31,124 eSEAT0 INFO #3: いれいさー こんにちは (0.501000)
+2015-02-14 19:40:31,124 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:31,124 eSEAT0 INFO #4: いれいさー いまなんじ (0.500500)
+2015-02-14 19:40:31,124 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:31,124 eSEAT0 INFO no command found
+2015-02-14 19:40:31,124 eSEAT0 INFO got input from speechin
+2015-02-14 19:40:31,125 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:40:31,125 eSEAT0 INFO no command found
+2015-02-14 19:40:31,382 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1317.475830" rank="1" score="0.8565" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.713" text="つ"/></data><data likelihood="-1325.424316" rank="2" score="0.643" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.286" text="た"/></data><data likelihood="-1381.207275" rank="3" score="0.5005" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.001" text="おはよう"/></data></listenText> (speechin)
+2015-02-14 19:40:31,383 eSEAT0 INFO #1: いれいさー つ (0.856500)
+2015-02-14 19:40:31,383 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:40:31,383 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:40:31,383 eSEAT0 INFO #2: いれいさー た (0.643000)
+2015-02-14 19:40:31,384 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:31,384 eSEAT0 INFO #3: いれいさー おはよう (0.500500)
+2015-02-14 19:40:31,384 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:31,384 eSEAT0 INFO no command found
+2015-02-14 19:40:31,384 eSEAT0 INFO got input from speechin
+2015-02-14 19:40:31,384 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:40:31,385 eSEAT0 INFO no command found
+2015-02-14 19:40:31,618 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-998.319153" rank="1" score="0.781" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.562" text="た"/></data><data likelihood="-1000.475952" rank="2" score="0.719" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.438" text="つ"/></data></listenText> (speechin)
+2015-02-14 19:40:31,619 eSEAT0 INFO #1: いれいさー た (0.781000)
+2015-02-14 19:40:31,619 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:31,619 eSEAT0 INFO #2: いれいさー つ (0.719000)
+2015-02-14 19:40:31,619 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:31,619 eSEAT0 INFO no command found
+2015-02-14 19:40:31,620 eSEAT0 INFO got input from speechin
+2015-02-14 19:40:31,620 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:40:31,620 eSEAT0 INFO no command found
+2015-02-14 19:40:31,857 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1142.224976" rank="1" score="0.859" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.718" text="つ"/></data><data likelihood="-1150.343506" rank="2" score="0.641" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.282" text="た"/></data></listenText> (speechin)
+2015-02-14 19:40:31,858 eSEAT0 INFO #1: いれいさー つ (0.859000)
+2015-02-14 19:40:31,859 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:40:31,859 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:40:31,859 eSEAT0 INFO #2: いれいさー た (0.641000)
+2015-02-14 19:40:31,859 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:31,859 eSEAT0 INFO no command found
+2015-02-14 19:40:31,859 eSEAT0 INFO got input from speechin
+2015-02-14 19:40:31,859 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:40:31,859 eSEAT0 INFO no command found
+2015-02-14 19:40:36,340 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2312.472900" rank="1" score="0.8755" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.751" text="つ"/></data><data likelihood="-2322.353027" rank="2" score="0.6235" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.247" text="た"/></data><data likelihood="-2370.017822" rank="3" score="0.5005" text="いれいさー こんにちは"><word score="1.000" text="いれいさー"/><word score="0.001" text="こんにちは"/></data></listenText> (speechin)
+2015-02-14 19:40:36,342 eSEAT0 INFO #1: いれいさー つ (0.875500)
+2015-02-14 19:40:36,343 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:40:36,343 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:40:36,343 eSEAT0 INFO #2: いれいさー た (0.623500)
+2015-02-14 19:40:36,343 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:36,343 eSEAT0 INFO #3: いれいさー こんにちは (0.500500)
+2015-02-14 19:40:36,344 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:36,344 eSEAT0 INFO no command found
+2015-02-14 19:40:36,344 eSEAT0 INFO got input from speechin
+2015-02-14 19:40:36,344 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:40:36,344 eSEAT0 INFO no command found
+2015-02-14 19:40:52,901 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1801.674316" rank="1" score="0.9005" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.801" text="た"/></data><data likelihood="-1813.171875" rank="2" score="0.599" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.198" text="つ"/></data></listenText> (speechin)
+2015-02-14 19:40:52,902 eSEAT0 INFO #1: いれいさー た (0.900500)
+2015-02-14 19:40:52,902 eSEAT0 INFO looking up...speechin: いれいさー た
+2015-02-14 19:40:52,902 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:40:52,902 eSEAT0 INFO #2: いれいさー つ (0.599000)
+2015-02-14 19:40:52,902 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:52,902 eSEAT0 INFO no command found
+2015-02-14 19:40:52,902 eSEAT0 INFO got input from speechin
+2015-02-14 19:40:52,902 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:40:52,902 eSEAT0 INFO no command found
+2015-02-14 19:40:56,345 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-995.392090" rank="1" score="0.8805" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.761" text="つ"/></data><data likelihood="-1005.203125" rank="2" score="0.6195" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.239" text="た"/></data></listenText> (speechin)
+2015-02-14 19:40:56,347 eSEAT0 INFO #1: いれいさー つ (0.880500)
+2015-02-14 19:40:56,347 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:40:56,347 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:40:56,347 eSEAT0 INFO #2: いれいさー た (0.619500)
+2015-02-14 19:40:56,347 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:56,347 eSEAT0 INFO no command found
+2015-02-14 19:40:56,347 eSEAT0 INFO got input from speechin
+2015-02-14 19:40:56,347 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:40:56,347 eSEAT0 INFO no command found
+2015-02-14 19:40:57,919 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2114.388672" rank="1" score="0.8495" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.699" text="つ"/></data><data likelihood="-2121.815430" rank="2" score="0.6485" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.297" text="た"/></data><data likelihood="-2171.390381" rank="3" score="0.5005" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.001" text="いまなんじ"/></data><data likelihood="-2185.525391" rank="4" score="0.5" text="いれいさー こんにちは"><word score="1.000" text="いれいさー"/><word score="0.000" text="こんにちは"/></data><data likelihood="-2187.979980" rank="5" score="0.5" text="いれいさー さようなら"><word score="1.000" text="いれいさー"/><word score="0.000" text="さようなら"/></data></listenText> (speechin)
+2015-02-14 19:40:57,920 eSEAT0 INFO #1: いれいさー つ (0.849500)
+2015-02-14 19:40:57,921 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:40:57,921 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:40:57,923 eSEAT0 INFO #2: いれいさー た (0.648500)
+2015-02-14 19:40:57,923 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:57,923 eSEAT0 INFO #3: いれいさー いまなんじ (0.500500)
+2015-02-14 19:40:57,924 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:57,924 eSEAT0 INFO #4: いれいさー こんにちは (0.500000)
+2015-02-14 19:40:57,924 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:57,924 eSEAT0 INFO #5: いれいさー さようなら (0.500000)
+2015-02-14 19:40:57,924 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:57,925 eSEAT0 INFO no command found
+2015-02-14 19:40:57,925 eSEAT0 INFO got input from speechin
+2015-02-14 19:40:57,925 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:40:57,925 eSEAT0 INFO no command found
+2015-02-14 19:40:58,648 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1967.575562" rank="1" score="0.768" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.536" text="つ"/></data><data likelihood="-1968.842651" rank="2" score="0.7315" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.463" text="た"/></data></listenText> (speechin)
+2015-02-14 19:40:58,649 eSEAT0 INFO #1: いれいさー つ (0.768000)
+2015-02-14 19:40:58,649 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:58,649 eSEAT0 INFO #2: いれいさー た (0.731500)
+2015-02-14 19:40:58,649 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:58,649 eSEAT0 INFO no command found
+2015-02-14 19:40:58,650 eSEAT0 INFO got input from speechin
+2015-02-14 19:40:58,650 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:40:58,650 eSEAT0 INFO no command found
+2015-02-14 19:40:59,764 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-992.829773" rank="1" score="0.9435" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.887" text="た"/></data><data likelihood="-1010.737122" rank="2" score="0.5565" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.113" text="つ"/></data></listenText> (speechin)
+2015-02-14 19:40:59,766 eSEAT0 INFO #1: いれいさー た (0.943500)
+2015-02-14 19:40:59,766 eSEAT0 INFO looking up...speechin: いれいさー た
+2015-02-14 19:40:59,766 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:40:59,766 eSEAT0 INFO #2: いれいさー つ (0.556500)
+2015-02-14 19:40:59,766 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:59,767 eSEAT0 INFO no command found
+2015-02-14 19:40:59,767 eSEAT0 INFO got input from speechin
+2015-02-14 19:40:59,767 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:40:59,767 eSEAT0 INFO no command found
+2015-02-14 19:40:59,885 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1041.424927" rank="1" score="0.845" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.690" text="つ"/></data><data likelihood="-1048.367920" rank="2" score="0.655" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.310" text="た"/></data></listenText> (speechin)
+2015-02-14 19:40:59,886 eSEAT0 INFO #1: いれいさー つ (0.845000)
+2015-02-14 19:40:59,886 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:40:59,886 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:40:59,887 eSEAT0 INFO #2: いれいさー た (0.655000)
+2015-02-14 19:40:59,887 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:40:59,887 eSEAT0 INFO no command found
+2015-02-14 19:40:59,887 eSEAT0 INFO got input from speechin
+2015-02-14 19:40:59,887 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:40:59,887 eSEAT0 INFO no command found
+2015-02-14 19:41:03,369 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1597.426025" rank="1" score="0.8935" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.787" text="つ"/></data><data likelihood="-1608.537354" rank="2" score="0.6055" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.211" text="た"/></data><data likelihood="-1665.147217" rank="3" score="0.5" text="いれいさー さようなら"><word score="1.000" text="いれいさー"/><word score="0.000" text="さようなら"/></data><data likelihood="-1671.285889" rank="4" score="0.5005" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.001" text="おはよう"/></data><data likelihood="-1678.195679" rank="5" score="0.5" text="いれいさー こんにちは"><word score="1.000" text="いれいさー"/><word score="0.000" text="こんにちは"/></data></listenText> (speechin)
+2015-02-14 19:41:03,370 eSEAT0 INFO #1: いれいさー つ (0.893500)
+2015-02-14 19:41:03,370 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:41:03,371 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:41:03,371 eSEAT0 INFO #2: いれいさー た (0.605500)
+2015-02-14 19:41:03,371 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:03,371 eSEAT0 INFO #3: いれいさー さようなら (0.500000)
+2015-02-14 19:41:03,371 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:03,371 eSEAT0 INFO #4: いれいさー おはよう (0.500500)
+2015-02-14 19:41:03,371 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:03,371 eSEAT0 INFO #5: いれいさー こんにちは (0.500000)
+2015-02-14 19:41:03,371 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:03,371 eSEAT0 INFO no command found
+2015-02-14 19:41:03,371 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:03,371 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:03,371 eSEAT0 INFO no command found
+2015-02-14 19:41:07,817 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2277.997070" rank="1" score="0.8405" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.681" text="つ"/></data><data likelihood="-2285.843750" rank="2" score="0.6225" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.245" text="た"/></data><data likelihood="-2305.507324" rank="3" score="0.513" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.026" text="いまなんじ"/></data><data likelihood="-2311.503174" rank="4" score="0.5065" text="いれいさー こんにちは"><word score="1.000" text="いれいさー"/><word score="0.013" text="こんにちは"/></data><data likelihood="-2317.017822" rank="5" score="0.5035" text="いれいさー さようなら"><word score="1.000" text="いれいさー"/><word score="0.007" text="さようなら"/></data></listenText> (speechin)
+2015-02-14 19:41:07,818 eSEAT0 INFO #1: いれいさー つ (0.840500)
+2015-02-14 19:41:07,818 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:41:07,818 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:41:07,818 eSEAT0 INFO #2: いれいさー た (0.622500)
+2015-02-14 19:41:07,818 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:07,818 eSEAT0 INFO #3: いれいさー いまなんじ (0.513000)
+2015-02-14 19:41:07,818 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:07,819 eSEAT0 INFO #4: いれいさー こんにちは (0.506500)
+2015-02-14 19:41:07,819 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:07,819 eSEAT0 INFO #5: いれいさー さようなら (0.503500)
+2015-02-14 19:41:07,819 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:07,819 eSEAT0 INFO no command found
+2015-02-14 19:41:07,819 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:07,819 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:07,819 eSEAT0 INFO no command found
+2015-02-14 19:41:08,467 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1634.692505" rank="1" score="0.7975" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.595" text="つ"/></data><data likelihood="-1637.938721" rank="2" score="0.7015" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.403" text="た"/></data><data likelihood="-1686.952759" rank="3" score="0.501" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.002" text="おはよう"/></data></listenText> (speechin)
+2015-02-14 19:41:08,472 eSEAT0 INFO #1: いれいさー つ (0.797500)
+2015-02-14 19:41:08,473 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:08,474 eSEAT0 INFO #2: いれいさー た (0.701500)
+2015-02-14 19:41:08,474 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:08,474 eSEAT0 INFO #3: いれいさー おはよう (0.501000)
+2015-02-14 19:41:08,475 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:08,475 eSEAT0 INFO no command found
+2015-02-14 19:41:08,475 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:08,475 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:08,475 eSEAT0 INFO no command found
+2015-02-14 19:41:09,719 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1612.232300" rank="1" score="0.8775" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.755" text="つ"/></data><data likelihood="-1622.154663" rank="2" score="0.6205" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.241" text="た"/></data><data likelihood="-1665.997437" rank="3" score="0.5015" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.003" text="おはよう"/></data></listenText> (speechin)
+2015-02-14 19:41:09,721 eSEAT0 INFO #1: いれいさー つ (0.877500)
+2015-02-14 19:41:09,721 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:41:09,721 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:41:09,721 eSEAT0 INFO #2: いれいさー た (0.620500)
+2015-02-14 19:41:09,721 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:09,721 eSEAT0 INFO #3: いれいさー おはよう (0.501500)
+2015-02-14 19:41:09,721 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:09,723 eSEAT0 INFO no command found
+2015-02-14 19:41:09,723 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:09,723 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:09,723 eSEAT0 INFO no command found
+2015-02-14 19:41:15,767 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1827.822388" rank="1" score="0.819" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.638" text="つ"/></data><data likelihood="-1832.767944" rank="2" score="0.6805" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.361" text="た"/></data></listenText> (speechin)
+2015-02-14 19:41:15,768 eSEAT0 INFO #1: いれいさー つ (0.819000)
+2015-02-14 19:41:15,768 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:41:15,768 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:41:15,768 eSEAT0 INFO #2: いれいさー た (0.680500)
+2015-02-14 19:41:15,768 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:15,768 eSEAT0 INFO no command found
+2015-02-14 19:41:15,768 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:15,769 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:15,769 eSEAT0 INFO no command found
+2015-02-14 19:41:18,480 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2616.465088" rank="1" score="0.788" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.576" text="つ"/></data><data likelihood="-2619.141602" rank="2" score="0.7115" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.423" text="た"/></data><data likelihood="-2687.947998" rank="3" score="0.5" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.000" text="いまなんじ"/></data></listenText> (speechin)
+2015-02-14 19:41:18,481 eSEAT0 INFO #1: いれいさー つ (0.788000)
+2015-02-14 19:41:18,481 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:18,481 eSEAT0 INFO #2: いれいさー た (0.711500)
+2015-02-14 19:41:18,482 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:18,482 eSEAT0 INFO #3: いれいさー いまなんじ (0.500000)
+2015-02-14 19:41:18,482 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:18,482 eSEAT0 INFO no command found
+2015-02-14 19:41:18,482 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:18,482 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:18,482 eSEAT0 INFO no command found
+2015-02-14 19:41:26,503 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1167.957886" rank="1" score="0.8635" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.727" text="つ"/></data><data likelihood="-1176.239502" rank="2" score="0.6365" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.273" text="た"/></data></listenText> (speechin)
+2015-02-14 19:41:26,504 eSEAT0 INFO #1: いれいさー つ (0.863500)
+2015-02-14 19:41:26,504 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:41:26,504 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:41:26,504 eSEAT0 INFO #2: いれいさー た (0.636500)
+2015-02-14 19:41:26,504 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:26,504 eSEAT0 INFO no command found
+2015-02-14 19:41:26,505 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:26,505 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:26,505 eSEAT0 INFO no command found
+2015-02-14 19:41:26,708 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1162.934692" rank="1" score="0.7865" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.573" text="つ"/></data><data likelihood="-1165.501343" rank="2" score="0.713" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.426" text="た"/></data></listenText> (speechin)
+2015-02-14 19:41:26,710 eSEAT0 INFO #1: いれいさー つ (0.786500)
+2015-02-14 19:41:26,710 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:26,711 eSEAT0 INFO #2: いれいさー た (0.713000)
+2015-02-14 19:41:26,711 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:26,711 eSEAT0 INFO no command found
+2015-02-14 19:41:26,711 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:26,711 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:26,711 eSEAT0 INFO no command found
+2015-02-14 19:41:26,909 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1033.951660" rank="1" score="0.7745" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.549" text="つ"/></data><data likelihood="-1034.853394" rank="2" score="0.7255" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.451" text="た"/></data></listenText> (speechin)
+2015-02-14 19:41:26,910 eSEAT0 INFO #1: いれいさー つ (0.774500)
+2015-02-14 19:41:26,910 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:26,910 eSEAT0 INFO #2: いれいさー た (0.725500)
+2015-02-14 19:41:26,910 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:26,910 eSEAT0 INFO no command found
+2015-02-14 19:41:26,910 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:26,910 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:26,910 eSEAT0 INFO no command found
+2015-02-14 19:41:27,036 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-911.174011" rank="1" score="0.757" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.514" text="つ"/></data><data likelihood="-912.021240" rank="2" score="0.743" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.486" text="た"/></data></listenText> (speechin)
+2015-02-14 19:41:27,037 eSEAT0 INFO #1: いれいさー つ (0.757000)
+2015-02-14 19:41:27,037 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:27,037 eSEAT0 INFO #2: いれいさー た (0.743000)
+2015-02-14 19:41:27,037 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:27,038 eSEAT0 INFO no command found
+2015-02-14 19:41:27,038 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:27,038 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:27,038 eSEAT0 INFO no command found
+2015-02-14 19:41:27,334 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1296.316528" rank="1" score="0.8385" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.677" text="つ"/></data><data likelihood="-1302.739136" rank="2" score="0.6615" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.323" text="た"/></data></listenText> (speechin)
+2015-02-14 19:41:27,335 eSEAT0 INFO #1: いれいさー つ (0.838500)
+2015-02-14 19:41:27,335 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:41:27,336 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:41:27,336 eSEAT0 INFO #2: いれいさー た (0.661500)
+2015-02-14 19:41:27,336 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:27,336 eSEAT0 INFO no command found
+2015-02-14 19:41:27,336 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:27,336 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:27,337 eSEAT0 INFO no command found
+2015-02-14 19:41:27,452 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-978.722778" rank="1" score="0.802" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.604" text="つ"/></data><data likelihood="-981.092041" rank="2" score="0.698" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.396" text="た"/></data></listenText> (speechin)
+2015-02-14 19:41:27,453 eSEAT0 INFO #1: いれいさー つ (0.802000)
+2015-02-14 19:41:27,453 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:41:27,453 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:41:27,453 eSEAT0 INFO #2: いれいさー た (0.698000)
+2015-02-14 19:41:27,453 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:27,453 eSEAT0 INFO no command found
+2015-02-14 19:41:27,455 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:27,457 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:27,457 eSEAT0 INFO no command found
+2015-02-14 19:41:30,986 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1114.319824" rank="1" score="0.767" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.534" text="つ"/></data><data likelihood="-1115.530762" rank="2" score="0.7325" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.465" text="た"/></data></listenText> (speechin)
+2015-02-14 19:41:30,990 eSEAT0 INFO #1: いれいさー つ (0.767000)
+2015-02-14 19:41:30,990 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:30,990 eSEAT0 INFO #2: いれいさー た (0.732500)
+2015-02-14 19:41:30,990 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:30,990 eSEAT0 INFO no command found
+2015-02-14 19:41:30,990 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:30,990 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:30,990 eSEAT0 INFO no command found
+2015-02-14 19:41:32,435 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1618.286621" rank="1" score="0.7985" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.597" text="つ"/></data><data likelihood="-1621.718994" rank="2" score="0.701" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.402" text="た"/></data></listenText> (speechin)
+2015-02-14 19:41:32,437 eSEAT0 INFO #1: いれいさー つ (0.798500)
+2015-02-14 19:41:32,437 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:32,437 eSEAT0 INFO #2: いれいさー た (0.701000)
+2015-02-14 19:41:32,437 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:32,437 eSEAT0 INFO no command found
+2015-02-14 19:41:32,437 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:32,437 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:32,437 eSEAT0 INFO no command found
+2015-02-14 19:41:35,542 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1161.110107" rank="1" score="0.8465" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.693" text="つ"/></data><data likelihood="-1168.196045" rank="2" score="0.6535" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.307" text="た"/></data></listenText> (speechin)
+2015-02-14 19:41:35,543 eSEAT0 INFO #1: いれいさー つ (0.846500)
+2015-02-14 19:41:35,543 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:41:35,544 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:41:35,544 eSEAT0 INFO #2: いれいさー た (0.653500)
+2015-02-14 19:41:35,545 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:35,545 eSEAT0 INFO no command found
+2015-02-14 19:41:35,545 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:35,545 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:35,545 eSEAT0 INFO no command found
+2015-02-14 19:41:36,400 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2429.328857" rank="1" score="0.795" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.590" text="つ"/></data><data likelihood="-2431.571533" rank="2" score="0.7035" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.407" text="た"/></data></listenText> (speechin)
+2015-02-14 19:41:36,401 eSEAT0 INFO #1: いれいさー つ (0.795000)
+2015-02-14 19:41:36,401 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:36,401 eSEAT0 INFO #2: いれいさー た (0.703500)
+2015-02-14 19:41:36,401 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:36,401 eSEAT0 INFO no command found
+2015-02-14 19:41:36,401 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:36,401 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:36,401 eSEAT0 INFO no command found
+2015-02-14 19:41:38,788 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1689.911377" rank="1" score="0.7475" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.495" text="つ"/></data><data likelihood="-1689.986084" rank="2" score="0.7525" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.505" text="た"/></data></listenText> (speechin)
+2015-02-14 19:41:38,789 eSEAT0 INFO #1: いれいさー つ (0.747500)
+2015-02-14 19:41:38,790 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:38,790 eSEAT0 INFO #2: いれいさー た (0.752500)
+2015-02-14 19:41:38,790 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:38,791 eSEAT0 INFO no command found
+2015-02-14 19:41:38,791 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:38,791 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:38,791 eSEAT0 INFO no command found
+2015-02-14 19:41:38,986 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1170.280273" rank="1" score="0.8025" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.605" text="つ"/></data><data likelihood="-1174.657227" rank="2" score="0.697" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.394" text="た"/></data></listenText> (speechin)
+2015-02-14 19:41:38,988 eSEAT0 INFO #1: いれいさー つ (0.802500)
+2015-02-14 19:41:38,988 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:41:38,988 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:41:38,988 eSEAT0 INFO #2: いれいさー た (0.697000)
+2015-02-14 19:41:38,989 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:38,989 eSEAT0 INFO no command found
+2015-02-14 19:41:38,989 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:38,989 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:38,989 eSEAT0 INFO no command found
+2015-02-14 19:41:39,186 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1147.076782" rank="1" score="0.7815" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.563" text="つ"/></data><data likelihood="-1149.265503" rank="2" score="0.7185" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.437" text="た"/></data></listenText> (speechin)
+2015-02-14 19:41:39,187 eSEAT0 INFO #1: いれいさー つ (0.781500)
+2015-02-14 19:41:39,187 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:39,187 eSEAT0 INFO #2: いれいさー た (0.718500)
+2015-02-14 19:41:39,187 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:39,187 eSEAT0 INFO no command found
+2015-02-14 19:41:39,187 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:39,187 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:39,187 eSEAT0 INFO no command found
+2015-02-14 19:41:44,155 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1877.322388" rank="1" score="0.833" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.666" text="つ"/></data><data likelihood="-1884.785156" rank="2" score="0.6665" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.333" text="た"/></data></listenText> (speechin)
+2015-02-14 19:41:44,156 eSEAT0 INFO #1: いれいさー つ (0.833000)
+2015-02-14 19:41:44,156 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:41:44,156 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:41:44,156 eSEAT0 INFO #2: いれいさー た (0.666500)
+2015-02-14 19:41:44,156 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:44,156 eSEAT0 INFO no command found
+2015-02-14 19:41:44,157 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:44,157 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:44,157 eSEAT0 INFO no command found
+2015-02-14 19:41:48,337 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1701.028320" rank="1" score="0.845" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.690" text="つ"/></data><data likelihood="-1707.364624" rank="2" score="0.654" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.308" text="た"/></data></listenText> (speechin)
+2015-02-14 19:41:48,338 eSEAT0 INFO #1: いれいさー つ (0.845000)
+2015-02-14 19:41:48,338 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:41:48,338 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:41:48,338 eSEAT0 INFO #2: いれいさー た (0.654000)
+2015-02-14 19:41:48,338 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:48,338 eSEAT0 INFO no command found
+2015-02-14 19:41:48,339 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:48,339 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:48,339 eSEAT0 INFO no command found
+2015-02-14 19:41:49,805 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-4056.663330" rank="1" score="0.8585" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.717" text="つ"/></data><data likelihood="-4067.240479" rank="2" score="0.598" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.196" text="た"/></data><data likelihood="-4081.895508" rank="3" score="0.5165" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.033" text="いまなんじ"/></data><data likelihood="-4089.152344" rank="4" score="0.508" text="いれいさー こんにちは"><word score="1.000" text="いれいさー"/><word score="0.016" text="こんにちは"/></data><data likelihood="-4100.213867" rank="5" score="0.5025" text="いれいさー さようなら"><word score="1.000" text="いれいさー"/><word score="0.005" text="さようなら"/></data></listenText> (speechin)
+2015-02-14 19:41:49,807 eSEAT0 INFO #1: いれいさー つ (0.858500)
+2015-02-14 19:41:49,807 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:41:49,807 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:41:49,807 eSEAT0 INFO #2: いれいさー た (0.598000)
+2015-02-14 19:41:49,808 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:49,808 eSEAT0 INFO #3: いれいさー いまなんじ (0.516500)
+2015-02-14 19:41:49,808 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:49,808 eSEAT0 INFO #4: いれいさー こんにちは (0.508000)
+2015-02-14 19:41:49,808 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:49,808 eSEAT0 INFO #5: いれいさー さようなら (0.502500)
+2015-02-14 19:41:49,809 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:49,809 eSEAT0 INFO no command found
+2015-02-14 19:41:49,809 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:49,809 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:49,809 eSEAT0 INFO no command found
+2015-02-14 19:41:50,028 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1168.896729" rank="1" score="0.8775" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.755" text="つ"/></data><data likelihood="-1178.255615" rank="2" score="0.622" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.244" text="た"/></data></listenText> (speechin)
+2015-02-14 19:41:50,029 eSEAT0 INFO #1: いれいさー つ (0.877500)
+2015-02-14 19:41:50,029 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:41:50,030 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:41:50,030 eSEAT0 INFO #2: いれいさー た (0.622000)
+2015-02-14 19:41:50,030 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:50,030 eSEAT0 INFO no command found
+2015-02-14 19:41:50,030 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:50,030 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:50,030 eSEAT0 INFO no command found
+2015-02-14 19:41:50,895 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1043.272339" rank="1" score="0.835" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.670" text="つ"/></data><data likelihood="-1051.359741" rank="2" score="0.665" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.330" text="た"/></data></listenText> (speechin)
+2015-02-14 19:41:50,896 eSEAT0 INFO #1: いれいさー つ (0.835000)
+2015-02-14 19:41:50,897 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:41:50,897 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:41:50,897 eSEAT0 INFO #2: いれいさー た (0.665000)
+2015-02-14 19:41:50,897 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:50,897 eSEAT0 INFO no command found
+2015-02-14 19:41:50,897 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:50,897 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:50,897 eSEAT0 INFO no command found
+2015-02-14 19:41:52,219 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-4177.958496" rank="1" score="0.8625" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.725" text="つ"/></data><data likelihood="-4186.552734" rank="2" score="0.6305" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.261" text="た"/></data><data likelihood="-4218.575195" rank="3" score="0.504" text="いれいさー こんにちは"><word score="1.000" text="いれいさー"/><word score="0.008" text="こんにちは"/></data><data likelihood="-4228.108887" rank="4" score="0.5015" text="いれいさー さようなら"><word score="1.000" text="いれいさー"/><word score="0.003" text="さようなら"/></data><data likelihood="-4233.146484" rank="5" score="0.5005" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.001" text="おはよう"/></data></listenText> (speechin)
+2015-02-14 19:41:52,220 eSEAT0 INFO #1: いれいさー つ (0.862500)
+2015-02-14 19:41:52,220 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:41:52,220 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:41:52,220 eSEAT0 INFO #2: いれいさー た (0.630500)
+2015-02-14 19:41:52,220 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:52,220 eSEAT0 INFO #3: いれいさー こんにちは (0.504000)
+2015-02-14 19:41:52,220 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:52,220 eSEAT0 INFO #4: いれいさー さようなら (0.501500)
+2015-02-14 19:41:52,220 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:52,220 eSEAT0 INFO #5: いれいさー おはよう (0.500500)
+2015-02-14 19:41:52,220 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:52,220 eSEAT0 INFO no command found
+2015-02-14 19:41:52,220 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:52,220 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:52,221 eSEAT0 INFO no command found
+2015-02-14 19:41:58,665 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1738.285645" rank="1" score="0.8235" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.647" text="つ"/></data><data likelihood="-1743.680054" rank="2" score="0.676" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.352" text="た"/></data></listenText> (speechin)
+2015-02-14 19:41:58,666 eSEAT0 INFO #1: いれいさー つ (0.823500)
+2015-02-14 19:41:58,666 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:41:58,666 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:41:58,666 eSEAT0 INFO #2: いれいさー た (0.676000)
+2015-02-14 19:41:58,666 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:58,666 eSEAT0 INFO no command found
+2015-02-14 19:41:58,668 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:58,668 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:58,668 eSEAT0 INFO no command found
+2015-02-14 19:41:58,928 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1020.669312" rank="1" score="0.8815" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.763" text="つ"/></data><data likelihood="-1030.182495" rank="2" score="0.6185" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.237" text="た"/></data></listenText> (speechin)
+2015-02-14 19:41:58,928 eSEAT0 INFO #1: いれいさー つ (0.881500)
+2015-02-14 19:41:58,928 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:41:58,928 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:41:58,929 eSEAT0 INFO #2: いれいさー た (0.618500)
+2015-02-14 19:41:58,929 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:41:58,929 eSEAT0 INFO no command found
+2015-02-14 19:41:58,929 eSEAT0 INFO got input from speechin
+2015-02-14 19:41:58,929 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:41:58,929 eSEAT0 INFO no command found
+2015-02-14 19:42:18,482 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-972.172852" rank="1" score="0.916" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.832" text="つ"/></data><data likelihood="-986.057434" rank="2" score="0.584" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.168" text="た"/></data></listenText> (speechin)
+2015-02-14 19:42:18,483 eSEAT0 INFO #1: いれいさー つ (0.916000)
+2015-02-14 19:42:18,483 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:42:18,484 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:42:18,484 eSEAT0 INFO #2: いれいさー た (0.584000)
+2015-02-14 19:42:18,484 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:42:18,484 eSEAT0 INFO no command found
+2015-02-14 19:42:18,484 eSEAT0 INFO got input from speechin
+2015-02-14 19:42:18,484 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:42:18,484 eSEAT0 INFO no command found
+2015-02-14 19:42:21,177 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1980.642212" rank="1" score="0.9145" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.829" text="た"/></data><data likelihood="-1994.505981" rank="2" score="0.585" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.170" text="つ"/></data></listenText> (speechin)
+2015-02-14 19:42:21,178 eSEAT0 INFO #1: いれいさー た (0.914500)
+2015-02-14 19:42:21,178 eSEAT0 INFO looking up...speechin: いれいさー た
+2015-02-14 19:42:21,178 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:42:21,178 eSEAT0 INFO #2: いれいさー つ (0.585000)
+2015-02-14 19:42:21,178 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:42:21,178 eSEAT0 INFO no command found
+2015-02-14 19:42:21,178 eSEAT0 INFO got input from speechin
+2015-02-14 19:42:21,178 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:42:21,178 eSEAT0 INFO no command found
+2015-02-14 19:42:21,428 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1062.268799" rank="1" score="0.803" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.606" text="つ"/></data><data likelihood="-1065.927002" rank="2" score="0.6965" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.393" text="た"/></data></listenText> (speechin)
+2015-02-14 19:42:21,429 eSEAT0 INFO #1: いれいさー つ (0.803000)
+2015-02-14 19:42:21,429 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:42:21,429 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:42:21,429 eSEAT0 INFO #2: いれいさー た (0.696500)
+2015-02-14 19:42:21,429 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:42:21,429 eSEAT0 INFO no command found
+2015-02-14 19:42:21,429 eSEAT0 INFO got input from speechin
+2015-02-14 19:42:21,429 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:42:21,429 eSEAT0 INFO no command found
+2015-02-14 19:42:22,512 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-953.739807" rank="1" score="0.882" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.764" text="つ"/></data><data likelihood="-963.692688" rank="2" score="0.618" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.236" text="た"/></data></listenText> (speechin)
+2015-02-14 19:42:22,512 eSEAT0 INFO #1: いれいさー つ (0.882000)
+2015-02-14 19:42:22,512 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:42:22,512 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:42:22,513 eSEAT0 INFO #2: いれいさー た (0.618000)
+2015-02-14 19:42:22,513 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:42:22,513 eSEAT0 INFO no command found
+2015-02-14 19:42:22,513 eSEAT0 INFO got input from speechin
+2015-02-14 19:42:22,513 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:42:22,513 eSEAT0 INFO no command found
+2015-02-14 19:42:23,093 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-996.219543" rank="1" score="0.792" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.584" text="た"/></data><data likelihood="-997.819519" rank="2" score="0.708" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.416" text="つ"/></data></listenText> (speechin)
+2015-02-14 19:42:23,094 eSEAT0 INFO #1: いれいさー た (0.792000)
+2015-02-14 19:42:23,094 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:42:23,094 eSEAT0 INFO #2: いれいさー つ (0.708000)
+2015-02-14 19:42:23,095 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:42:23,095 eSEAT0 INFO no command found
+2015-02-14 19:42:23,095 eSEAT0 INFO got input from speechin
+2015-02-14 19:42:23,095 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:42:23,095 eSEAT0 INFO no command found
+2015-02-14 19:42:23,710 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1661.981445" rank="1" score="0.9365" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.873" text="つ"/></data><data likelihood="-1678.624268" rank="2" score="0.563" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.126" text="た"/></data></listenText> (speechin)
+2015-02-14 19:42:23,711 eSEAT0 INFO #1: いれいさー つ (0.936500)
+2015-02-14 19:42:23,711 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:42:23,712 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:42:23,712 eSEAT0 INFO #2: いれいさー た (0.563000)
+2015-02-14 19:42:23,712 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:42:23,712 eSEAT0 INFO no command found
+2015-02-14 19:42:23,712 eSEAT0 INFO got input from speechin
+2015-02-14 19:42:23,712 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:42:23,719 eSEAT0 INFO no command found
+2015-02-14 19:42:24,528 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1277.204102" rank="1" score="0.7865" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.573" text="つ"/></data><data likelihood="-1279.771729" rank="2" score="0.713" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.426" text="た"/></data></listenText> (speechin)
+2015-02-14 19:42:24,529 eSEAT0 INFO #1: いれいさー つ (0.786500)
+2015-02-14 19:42:24,529 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:42:24,530 eSEAT0 INFO #2: いれいさー た (0.713000)
+2015-02-14 19:42:24,530 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:42:24,530 eSEAT0 INFO no command found
+2015-02-14 19:42:24,530 eSEAT0 INFO got input from speechin
+2015-02-14 19:42:24,530 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:42:24,530 eSEAT0 INFO no command found
+2015-02-14 19:42:26,333 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1589.107544" rank="1" score="0.896" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.792" text="つ"/></data><data likelihood="-1601.666748" rank="2" score="0.6035" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.207" text="た"/></data><data likelihood="-1649.864746" rank="3" score="0.5005" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.001" text="おはよう"/></data></listenText> (speechin)
+2015-02-14 19:42:26,333 eSEAT0 INFO #1: いれいさー つ (0.896000)
+2015-02-14 19:42:26,334 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:42:26,334 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:42:26,335 eSEAT0 INFO #2: いれいさー た (0.603500)
+2015-02-14 19:42:26,335 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:42:26,335 eSEAT0 INFO #3: いれいさー おはよう (0.500500)
+2015-02-14 19:42:26,335 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:42:26,335 eSEAT0 INFO no command found
+2015-02-14 19:42:26,335 eSEAT0 INFO got input from speechin
+2015-02-14 19:42:26,335 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:42:26,335 eSEAT0 INFO no command found
+2015-02-14 19:42:26,751 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-1528.108154" rank="1" score="0.786" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.572" text="つ"/></data><data likelihood="-1530.623535" rank="2" score="0.7135" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.427" text="た"/></data></listenText> (speechin)
+2015-02-14 19:42:26,751 eSEAT0 INFO #1: いれいさー つ (0.786000)
+2015-02-14 19:42:26,751 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:42:26,751 eSEAT0 INFO #2: いれいさー た (0.713500)
+2015-02-14 19:42:26,752 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:42:26,752 eSEAT0 INFO no command found
+2015-02-14 19:42:26,752 eSEAT0 INFO got input from speechin
+2015-02-14 19:42:26,752 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:42:26,752 eSEAT0 INFO no command found
+2015-02-14 19:42:27,560 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-990.605835" rank="1" score="0.7925" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.585" text="た"/></data><data likelihood="-993.571533" rank="2" score="0.7075" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.415" text="つ"/></data></listenText> (speechin)
+2015-02-14 19:42:27,561 eSEAT0 INFO #1: いれいさー た (0.792500)
+2015-02-14 19:42:27,561 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:42:27,561 eSEAT0 INFO #2: いれいさー つ (0.707500)
+2015-02-14 19:42:27,561 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:42:27,561 eSEAT0 INFO no command found
+2015-02-14 19:42:27,561 eSEAT0 INFO got input from speechin
+2015-02-14 19:42:27,561 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:42:27,561 eSEAT0 INFO no command found
+2015-02-14 19:42:28,253 eSEAT0 INFO got input <?xml version="1.0" encoding="utf-8"?><listenText><data likelihood="-2330.713379" rank="1" score="0.8205" text="いれいさー つ"><word score="1.000" text="いれいさー"/><word score="0.641" text="つ"/></data><data likelihood="-2335.788574" rank="2" score="0.6785" text="いれいさー た"><word score="1.000" text="いれいさー"/><word score="0.357" text="た"/></data><data likelihood="-2391.779541" rank="3" score="0.5005" text="いれいさー おはよう"><word score="1.000" text="いれいさー"/><word score="0.001" text="おはよう"/></data><data likelihood="-2398.998291" rank="4" score="0.5" text="いれいさー さようなら"><word score="1.000" text="いれいさー"/><word score="0.000" text="さようなら"/></data><data likelihood="-2400.636475" rank="5" score="0.5005" text="いれいさー いまなんじ"><word score="1.000" text="いれいさー"/><word score="0.001" text="いまなんじ"/></data></listenText> (speechin)
+2015-02-14 19:42:28,254 eSEAT0 INFO #1: いれいさー つ (0.820500)
+2015-02-14 19:42:28,254 eSEAT0 INFO looking up...speechin: いれいさー つ
+2015-02-14 19:42:28,254 eSEAT0 INFO [rejected] no matching phrases
+2015-02-14 19:42:28,254 eSEAT0 INFO #2: いれいさー た (0.678500)
+2015-02-14 19:42:28,255 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:42:28,255 eSEAT0 INFO #3: いれいさー おはよう (0.500500)
+2015-02-14 19:42:28,255 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:42:28,255 eSEAT0 INFO #4: いれいさー さようなら (0.500000)
+2015-02-14 19:42:28,255 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:42:28,255 eSEAT0 INFO #5: いれいさー いまなんじ (0.500500)
+2015-02-14 19:42:28,255 eSEAT0 INFO [rejected] score under limit
+2015-02-14 19:42:28,255 eSEAT0 INFO no command found
+2015-02-14 19:42:28,255 eSEAT0 INFO got input from speechin
+2015-02-14 19:42:28,255 eSEAT0 INFO looking up...speechin: ondata
+2015-02-14 19:42:28,255 eSEAT0 INFO no command found
+2015-02-14 19:42:35,199 ec_worker WARNING ExecutionContext is already stopped.
+2015-02-14 19:42:35,199 ec_base ERROR Invoking on_shutdown() for each RTC failed.

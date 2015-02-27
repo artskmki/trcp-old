@@ -37,7 +37,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #define FINDOBJECT_VERSION_COMPARE(major, minor, patch)  (major>=0 || (major==0 && minor>=5) || (major==0 && minor==5 && patch >=0))
 
-#define FINDOBJECT_NONFREE 1
+#define FINDOBJECT_NONFREE 0
 
 #endif /* VERSION_H_ */
 

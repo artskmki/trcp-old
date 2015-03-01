@@ -23,7 +23,7 @@
 import rospy
 import cv2
 import cv2.cv as cv
-from trcp_vision.ros2opencv2 import ROS2OpenCV2
+from rbx1_vision.ros2opencv2 import ROS2OpenCV2
 import numpy as np
 
 class GoodFeatures(ROS2OpenCV2):
@@ -58,31 +58,37 @@ class GoodFeatures(ROS2OpenCV2):
         self.mask = None
         
     def process_image(self, cv_image):
-        # If the user has not selected a region, just return the image
-        if not self.detect_box:
-            return cv_image
-
-        # Create a greyscale version of the image
-        grey = cv2.cvtColor(cv_image, cv2.COLOR_BGR2GRAY)
-        
-        # Equalize the histogram to reduce lighting effects
-        grey = cv2.equalizeHist(grey)
-
-        # Get the good feature keypoints in the selected region
-        keypoints = self.get_keypoints(grey, self.detect_box)
-        
-        # If we have points, display them
-        if keypoints is not None and len(keypoints) > 0:
-            for x, y in keypoints:
-                cv2.circle(self.marker_image, (x, y), self.feature_size, (0, 255, 0, 0), cv.CV_FILLED, 8, 0)
-        
-        # Process any special keyboard commands
-        if 32 <= self.keystroke and self.keystroke < 128:
-            cc = chr(self.keystroke).lower()
-            if cc == 'c':
-                # Clear the current keypoints
-                keypoints = list()
-                self.detect_box = None
+        try:
+            # If the user has not selected a region, just return the image
+            if not self.detect_box:
+                return cv_image
+    
+            # Create a greyscale version of the image
+            grey = cv2.cvtColor(cv_image, cv2.COLOR_BGR2GRAY)
+            
+            # Equalize the histogram to reduce lighting effects
+            grey = cv2.equalizeHist(grey)
+    
+            # Get the good feature keypoints in the selected region
+            keypoints = self.get_keypoints(grey, self.detect_box)
+            
+            # If we have points, display them
+            if keypoints is not None and len(keypoints) > 0:
+                for x, y in keypoints:
+                    cv2.circle(self.marker_image, (x, y), self.feature_size, (0, 255, 0, 0), cv.CV_FILLED, 8, 0)
+            
+            # Process any special keyboard commands
+            if self.keystroke != -1:
+                try:
+                    cc = chr(self.keystroke & 255).lower()
+                    if cc == 'c':
+                        # Clear the current keypoints
+                        keypoints = list()
+                        self.detect_box = None
+                except:
+                    pass
+        except:
+            pass
                                 
         return cv_image
 

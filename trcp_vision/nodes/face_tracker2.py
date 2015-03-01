@@ -27,8 +27,8 @@ import cv2
 import cv2.cv as cv
 import numpy as np
 from math import isnan, isinf
-from trcp_vision.face_detector import FaceDetector
-from trcp_vision.lk_tracker import LKTracker
+from rbx1_vision.face_detector import FaceDetector
+from rbx1_vision.lk_tracker import LKTracker
 
 class FaceTracker(FaceDetector, LKTracker):
     def __init__(self, node_name):
@@ -109,14 +109,18 @@ class FaceTracker(FaceDetector, LKTracker):
             self.prev_grey = self.grey
               
             # Process any special keyboard commands for this module
-            if 32 <= self.keystroke and self.keystroke < 128:
-                cc = chr(self.keystroke).lower()
-                if cc == 'c':
-                    self.keypoints = []
-                    self.track_box = None
-                    self.detect_box = None
-                elif cc == 'd':
-                    self.show_add_drop = not self.show_add_drop
+            if self.keystroke != -1:
+                try:
+                    cc = chr(self.keystroke & 255).lower()
+                    print cc
+                    if cc == 'c':
+                        self.keypoints = []
+                        self.track_box = None
+                        self.detect_box = None
+                    elif cc == 'd':
+                        self.show_add_drop = not self.show_add_drop
+                except:
+                    pass
                         
         except AttributeError:
             pass
@@ -203,9 +207,9 @@ class FaceTracker(FaceDetector, LKTracker):
         n_xy = len(self.keypoints)
         n_z = n_xy
         
-        if self.use_depth_for_tracking:
-            if self.depth_image is None:
-                return ((0, 0, 0), 0, 0, -1)
+#         if self.use_depth_for_tracking:
+#             if self.depth_image is None:
+#                 return ((0, 0, 0), 0, 0, -1)
         
         # If there are no keypoints left to track, start over
         if n_xy == 0:
@@ -220,7 +224,7 @@ class FaceTracker(FaceDetector, LKTracker):
         mean_y = sum_y / n_xy
         mean_z = 0
         
-        if self.use_depth_for_tracking:
+        if self.use_depth_for_tracking and not self.depth_image is None:
             for point in self.keypoints:                              
                 try:
                     z = self.depth_image[point[1], point[0]]
@@ -228,7 +232,11 @@ class FaceTracker(FaceDetector, LKTracker):
                     n_z = n_z - 1
                     continue        
                 
-                sum_z = sum_z + z
+                if not isnan(z):
+                    sum_z = sum_z + z
+                else:
+                    n_z = n_z - 1
+                    continue
             
             try:
                 mean_z = sum_z / n_z
@@ -271,7 +279,7 @@ class FaceTracker(FaceDetector, LKTracker):
                 n_xy = n_xy - 1
                                 
         # Now do the same for depth
-        if self.use_depth_for_tracking:
+        if self.use_depth_for_tracking and not self.depth_image is None:
             sse = 0
             for point in keypoints_z:
                 try:
@@ -312,7 +320,7 @@ class FaceTracker(FaceDetector, LKTracker):
             score = -1
         else:
             score = 1
-
+            
         return ((mean_x, mean_y, mean_z), mse_xy, mse_z, score)
     
 if __name__ == '__main__':

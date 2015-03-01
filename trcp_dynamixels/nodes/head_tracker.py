@@ -81,7 +81,7 @@ class HeadTracker():
         
         # Monitor the joint states of the pan and tilt servos
         self.joint_state = JointState()
-        rospy.Subscriber('joint_states', JointState, self.update_joint_state)
+        rospy.Subscriber('joint_states', JointState, self.update_joint_state, queue_size=1)
         
         # Wait until we actually have joint state values
         while self.joint_state == JointState():
@@ -116,14 +116,16 @@ class HeadTracker():
 
         # Subscribe to camera_info topics and set the callback
         self.image_width = self.image_height = 0
-        rospy.Subscriber('camera_info', CameraInfo, self.get_camera_info)
+        rospy.Subscriber('camera_info', CameraInfo, self.get_camera_info, queue_size=1)
         
         # Wait until we actually have the camera data
         while self.image_width == 0 or self.image_height == 0:
+         #  comment by OKADA,H.  
+         #   rospy.loginfo(self.image)
             rospy.sleep(1)
             
         # Subscribe to roi topics and set the callback
-        rospy.Subscriber('roi', RegionOfInterest, self.set_joint_cmd)
+        self.roi_subscriber = rospy.Subscriber('roi', RegionOfInterest, self.set_joint_cmd, queue_size=1)
         
         rospy.loginfo("Ready to track target.")
                 
@@ -280,7 +282,7 @@ class HeadTracker():
             self.servo_speed[joint](self.default_joint_speed)
 
             # The position controllers
-            self.servo_position[joint] = rospy.Publisher('/' + joint + '/command', Float64)
+            self.servo_position[joint] = rospy.Publisher('/' + joint + '/command', Float64, queue_size=5)
             
             # A service to enable/disable servo torque
             torque_enable = '/' + joint + '/torque_enable'
@@ -318,7 +320,16 @@ class HeadTracker():
     def shutdown(self):
         rospy.loginfo("Shutting down head tracking node.")
         
+        # Turn off updates from the /roi subscriber
+        try:
+            self.roi_subscriber.unregister()
+        except:
+            pass
+        
+        # Center the servos
         self.center_head_servos()
+        
+        rospy.sleep(2)
         
         # Relax all servos to give them a rest.
         rospy.loginfo("Relaxing pan and tilt servos.")

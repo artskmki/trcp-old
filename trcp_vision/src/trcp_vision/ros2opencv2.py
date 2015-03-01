@@ -52,11 +52,11 @@ class ROS2OpenCV2(object):
         self.show_features = rospy.get_param("~show_features", True)
         self.show_boxes = rospy.get_param("~show_boxes", True)
         self.flip_image = rospy.get_param("~flip_image", False)
-        self.feature_size = rospy.get_param("~feature_size", False)
+        self.feature_size = rospy.get_param("~feature_size", 1)
 
         # Initialize the Region of Interest and its publisher
         self.ROI = RegionOfInterest()
-        self.roi_pub = rospy.Publisher("/roi", RegionOfInterest)
+        self.roi_pub = rospy.Publisher("/roi", RegionOfInterest, queue_size=1)
         
         # Initialize a number of global variables
         self.frame = None
@@ -91,9 +91,7 @@ class ROS2OpenCV2(object):
         cv.NamedWindow(self.cv_window_name, cv.CV_WINDOW_NORMAL)
         if self.resize_window_height > 0 and self.resize_window_width > 0:
             cv.ResizeWindow(self.cv_window_name, self.resize_window_width, self.resize_window_height)
-        else:
-            cv.ResizeWindow(self.cv_window_name, 640, 480)
-        
+
         # Create the cv_bridge object
         self.bridge = CvBridge()
         
@@ -102,8 +100,8 @@ class ROS2OpenCV2(object):
         
         # Subscribe to the image and depth topics and set the appropriate callbacks
         # The image topic names can be remapped in the appropriate launch file
-        self.image_sub = rospy.Subscriber("input_rgb_image", Image, self.image_callback)
-        self.depth_sub = rospy.Subscriber("input_depth_image", Image, self.depth_callback)
+        self.image_sub = rospy.Subscriber("input_rgb_image", Image, self.image_callback, queue_size=1)
+        self.depth_sub = rospy.Subscriber("input_depth_image", Image, self.depth_callback, queue_size=1)
                                     
     def on_mouse_click(self, event, x, y, flags, param):
         # This function allows the user to selection a ROI using the mouse
@@ -246,19 +244,23 @@ class ROS2OpenCV2(object):
         cv2.imshow(self.node_name, self.display_image)
         
         # Process any keyboard commands
-        if 32 <= self.keystroke and self.keystroke < 128:
-            cc = chr(self.keystroke).lower()
-            if cc == 'n':
-                self.night_mode = not self.night_mode
-            elif cc == 'f':
-                self.show_features = not self.show_features
-            elif cc == 'b':
-                self.show_boxes = not self.show_boxes
-            elif cc == 't':
-                self.show_text = not self.show_text
-            elif cc == 'q':
-                # The has press the q key, so exit
-                rospy.signal_shutdown("User hit q key to quit.")
+        self.keystroke = cv2.waitKey(5)
+        if self.keystroke != -1:
+            try:
+                cc = chr(self.keystroke & 255).lower()
+                if cc == 'n':
+                    self.night_mode = not self.night_mode
+                elif cc == 'f':
+                    self.show_features = not self.show_features
+                elif cc == 'b':
+                    self.show_boxes = not self.show_boxes
+                elif cc == 't':
+                    self.show_text = not self.show_text
+                elif cc == 'q':
+                    # The has press the q key, so exit
+                    rospy.signal_shutdown("User hit q key to quit.")
+            except:
+                pass
                 
     def depth_callback(self, data):
         # Convert the ROS image to OpenCV format using a cv_bridge helper function
@@ -278,7 +280,7 @@ class ROS2OpenCV2(object):
     def convert_image(self, ros_image):
         # Use cv_bridge() to convert the ROS image to OpenCV format
         try:
-            cv_image = self.bridge.imgmsg_to_cv(ros_image, "bgr8")       
+            cv_image = self.bridge.imgmsg_to_cv2(ros_image, "bgr8")       
             return np.array(cv_image, dtype=np.uint8)
         except CvBridgeError, e:
             print e
@@ -286,9 +288,9 @@ class ROS2OpenCV2(object):
     def convert_depth_image(self, ros_image):
         # Use cv_bridge() to convert the ROS image to OpenCV format
         try:
-            depth_image = self.bridge.imgmsg_to_cv(ros_image, "32FC1")
+            depth_image = self.bridge.imgmsg_to_cv2(ros_image, "passthrough")
             
-            # Convert to a numpy array since this is what OpenCV 2.3 uses
+            # Convert to a numpy array since this is what OpenCV uses
             depth_image = np.array(depth_image, dtype=np.float32)
             
             return depth_image

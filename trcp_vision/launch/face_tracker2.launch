@@ -3,7 +3,7 @@
 
     <remap from="input_rgb_image" to="/camera/rgb/image_color" />
     <remap from="input_depth_image" to="/camera/depth/image_raw" />
-    <remap from="roi" to="/roi_face" />
+<!--    <remap from="roi" to="/roi_face" /> -->
 
 
     <rosparam>

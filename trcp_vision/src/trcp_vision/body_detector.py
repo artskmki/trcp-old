@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-""" body_detector.py - Version 1.1 2014-12-20
+""" body_detector.py - Version 1.1 2013-12-20
 
     Based on the OpenCV facedetect.py demo code
     
@@ -25,7 +25,7 @@
 import rospy
 import cv2
 import cv2.cv as cv
-from trcp_vision.ros2opencv2 import ROS2OpenCV2
+from rbx1_vision.ros2opencv2 import ROS2OpenCV2
 
 class BodyDetector(ROS2OpenCV2):
     def __init__(self, node_name):
@@ -42,7 +42,7 @@ class BodyDetector(ROS2OpenCV2):
         self.cascade_2 = cv2.CascadeClassifier(cascade_2)
         self.cascade_3 = cv2.CascadeClassifier(cascade_3)
         
-        # Set cascade parameters that tend to work well for faces.
+        # Set cascade parameters that tend to work well for bodies.
         # Can be overridden in launch file
         self.haar_scaleFactor = rospy.get_param("~haar_scaleFactor", 1.3)
         self.haar_minNeighbors = rospy.get_param("~haar_minNeighbors", 3)
@@ -69,37 +69,39 @@ class BodyDetector(ROS2OpenCV2):
         self.hit_rate = 0
 
     def process_image(self, cv_image):
-        # Create a greyscale version of the image
-        grey = cv2.cvtColor(cv_image, cv2.COLOR_BGR2GRAY)
-        
-        # Equalize the histogram to reduce lighting effects
-        grey = cv2.equalizeHist(grey)
+        try:
+            # Create a greyscale version of the image
+            grey = cv2.cvtColor(cv_image, cv2.COLOR_BGR2GRAY)
             
-        # Attempt to detect a body 
-        self.detect_box = self.detect_body(grey)
-        
-        # Did we find one?
-        if self.detect_box is not None:
-            self.hits += 1
-        else:
-            self.misses += 1
-        
-        # Keep tabs on the hit rate so far
-        self.hit_rate = float(self.hits) / (self.hits + self.misses)
+            # Equalize the histogram to reduce lighting effects
+            grey = cv2.equalizeHist(grey)
+                
+            # Attempt to detect a body 
+            self.detect_box = self.detect_body(grey)
+            
+            # Did we find one?
+            if self.detect_box is not None:
+                self.hits += 1
+            else:
+                self.misses += 1
+            
+            # Keep tabs on the hit rate so far
+            self.hit_rate = float(self.hits) / (self.hits + self.misses)
+        except:
+            pass
                     
         return cv_image
 
-
     def detect_body(self, input_image):
-        # First check fullbody template 
+        # First check one of the frontal templates
         if self.cascade_1:
             bodies = self.cascade_1.detectMultiScale(input_image, **self.haar_params)
                                          
-        # If that fails, check the halfbody 
+        # If that fails, check the profile template
         if len(bodies) == 0 and self.cascade_3:
             bodies = self.cascade_3.detectMultiScale(input_image, **self.haar_params)
 
-        # If that also fails, check a the lowerbody template
+        # If that also fails, check a the other frontal template
         if len(bodies) == 0 and self.cascade_2:
             bodies = self.cascade_2.detectMultiScale(input_image, **self.haar_params)
 
@@ -127,6 +129,7 @@ class BodyDetector(ROS2OpenCV2):
                         font_body, font_scale, cv.RGB(255, 255, 0))
         
         return body_box
+
         
 def trunc(f, n):
     '''Truncates/pads a float f to n decimal places without rounding'''

@@ -2,7 +2,7 @@
     <param name="/use_sim_time" value="false" />
 
     <!-- Load the URDF/Xacro model of our robot -->
-    <param name="robot_description" command="$(find xacro)/xacro.py '$(find rbx1_description)/urdf/turtlebot_with_head.xacro'" />
+    <param name="robot_description" command="$(find xacro)/xacro.py '$(find trcp_description)/urdf/turtlebot_with_head.xacro'" />
 
     <!-- Publish the robot state -->
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher">
@@ -15,7 +15,7 @@
       <rosparam>
          namespace: turtlebot_dynamixel_manager
          serial_ports:
-            dynamixel_ax12:
+            dynamixel_mx106:
                port_name: /dev/ttyUSB0
                baud_rate: 1000000
                min_motor_id:  1
@@ -25,13 +25,13 @@
    </node>
    
     <!-- Load the joint controller configuration from a YAML file -->
-    <rosparam file="$(find rbx1_dynamixels)/config/dynamixel_params.yaml" command="load"/>
+    <rosparam file="$(find trcp_dynamixels)/config/dynamixel_pan_tilt_params.yaml" command="load"/>
 
    <!-- Start the head pan and tilt controllers -->
    <node name="dynamixel_controller_spawner_ax12" pkg="dynamixel_controllers"
    type="controller_spawner.py"
         args="--manager=turtlebot_dynamixel_manager
-              --port=dynamixel_ax12
+              --port=dynamixel_mx106
               --type=simple
         head_pan_joint
         head_tilt_joint"

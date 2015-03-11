@@ -8,7 +8,7 @@
    <param name="max_ang" value="1.7"/>
    <param name="cluster" value="1"/>
    <param name="frame_id" value="/base_laser_link"/>
-   <remap from="scan" to="base_scan" />
+<!--   <remap from="scan" to="base_scan" /> -->
    </node>
 
 <!--

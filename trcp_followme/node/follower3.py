@@ -1,33 +1,4 @@
 #!/usr/bin/env python
-
-"""
-    follower2.py - Version 1.1 2013-12-20
-    
-    Follow a "person" by tracking the nearest object in x-y-z space.
-    
-    Relies on PCL ROS nodelets in the launch file to pre-filter the
-    cloud on the x, y and z dimensions.
-    
-    Based on the follower application by Tony Pratkanis at:
-    
-    http://ros.org/wiki/turtlebot_follower
-    
-    Created for the Pi Robot Project: http://www.pirobot.org
-    Copyright (c) 2012 Patrick Goebel.  All rights reserved.
-
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.
-    
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details at:
-    
-    http://www.gnu.org/licenses/gpl.html
-"""
-
 import rospy
 from roslib import message
 from sensor_msgs import point_cloud2
@@ -44,9 +15,6 @@ class Follower():
         # Set the shutdown function (stop the robot)
         rospy.on_shutdown(self.shutdown)
         
-
-
-
 
         # Set the default TTS voice to use
         self.voice = rospy.get_param("~voice", "voice_don_diphone")

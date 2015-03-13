@@ -5,8 +5,10 @@ import people_msgs
 from people_msgs.msg import PositionMeasurementArray 
 
 def callback(data):
-    rospy.loginfo(data.people[0].pos)
-
+    rospy.loginfo(len(data.people))
+    for l in data.people:
+        rospy.loginfo(l.reliability)
+        rospy.loginfo(l.pos)
 
 def leg():
     rospy.init_node('leg', anonymous=True)

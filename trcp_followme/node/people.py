@@ -9,7 +9,7 @@ def callback(data):
     for p in data.people:
       rospy.loginfo(p.reliability)
       if p.reliability > 0.7:
-          rospy.loginfo(p.pos)
+          rospy.loginfo(p.pos.x)
         
 
 

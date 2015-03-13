@@ -1,0 +1,65 @@
+#!/usr/bin/env python
+import rospy
+from roslib import message
+from sensor_msgs import point_cloud2
+from sensor_msgs.msg import PointCloud2
+from geometry_msgs.msg import Twist
+from math import copysign
+from sound_play.libsoundplay import SoundClient
+import sys
+import people_msgs
+from people_msgs.msg import PositionMeasurementArray 
+
+class Follower():
+    def __init__(self):
+        rospy.init_node("follower")
+
+        # set shutdown function (stop the robot)
+        rospy.on_shutdown(self.shutdown)
+
+        # Initialize the movement command
+        self.move_cmd = Twist()
+        # Publisher to control the robot's movement
+        self.cmd_vel_pub = rospy.Publisher('/cmd_vel', Twist)
+
+        # Subscribe to the point cloud
+        self.people_subscriber = rospy.Subscriber('/people_tracker_measurements', PositionMeasurementArray, self.set_cmd_vel, queue_size=1)
+
+        rospy.loginfo("Subscribing to people...")
+
+        # Wait for the people topic to become available
+        rospy.wait_for_message('/people_tracker_measurements', PositionMeasurementArray)
+        rospy.loginfo("Ready to follow!")
+
+    def set_cmd_vel(self, data):
+        rospy.loginfo( len(data.people))
+        for p in data.people:
+          rospy.loginfo(p.reliability)
+          if p.reliability > 0.7:
+              rospy.loginfo(p.pos)
+
+              
+              
+    def shutdo # 
+        rospy.loginfo("Stopping the robot...")
+
+        # Unregister the subscriber to stop cmd_vel publishing
+        self.people_subscriber.unregister()
+        rospy.sleep(1)
+
+        # Send an emtpy Twist message to stop the robot
+        self.cmd_vel_pub.publish(Twist())
+        rospy.sleep(1)
+
+
+
+
+
+if __name__ == '__main__':
+    try:
+        Follower()
+        rospy.spin()
+    except rospy.ROSInterruptException:
+        rospy.loginfo("Follower node terminated.")
+
+

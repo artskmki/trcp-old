@@ -5,7 +5,7 @@ import smach
 import smach_ros
 from smach import State, StateMachine
 from smach_ros import SimpleActionState, IntrospectionServer
-from geometry_msgs.msg import Twist
+from geometry_msgs.msg import * 
 import easygui
 import datetime
 from collections import OrderedDict
@@ -142,6 +142,27 @@ class main():
        # Create and start the SMACH introspection server
         intro_server = IntrospectionServer('clean_house', sm_basic_f, '/SM_ROOT')
         intro_server.start()
+
+
+
+        pub = rospy.Publisher('initialpose', PoseWithCovarianceStamped)
+        #rospy.init_node('initial_pose'); #, log_level=roslib.msg.Log.INFO)
+        rospy.loginfo("Setting Pose")
+
+
+
+
+        p   = PoseWithCovarianceStamped();
+        msg = PoseWithCovariance();
+        msg.pose = Pose(Point(0.0, -1.5, 0.000), Quaternion(0.000, 0.000, 0.0, 1.0));
+        msg.covariance = [0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.06853];
+        p.pose = msg;
+        p.header.stamp = rospy.Time.now()
+        p.header.frame_id="map"
+
+        rospy.sleep(5.0)
+
+
 
         # Execute the state machine
         sm_outcome = sm_basic_f.execute()

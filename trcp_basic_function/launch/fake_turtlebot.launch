@@ -26,22 +26,23 @@
   <node pkg="tf" type="static_transform_publisher" name="odom_right_wheel_broadcaster" args="0 0 0 0 0 0 /base_link /right_wheel_link 100" />
   
   <!-- Run the map server with a blank map -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find rbx2_nav)/maps/$(arg map)" />
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find trcp_navigation)/maps/$(arg map)" />
   
   <!-- The move_base node -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" clear_params="true" output="screen">
-     <rosparam file="$(find rbx2_nav)/config/fake/costmap_common_params.yaml" command="load" ns="global_costmap" />
-     <rosparam file="$(find rbx2_nav)/config/fake/costmap_common_params.yaml" command="load" ns="local_costmap" />
-     <rosparam file="$(find rbx2_nav)/config/fake/local_costmap_params.yaml" command="load" />
-     <rosparam file="$(find rbx2_nav)/config/fake/global_costmap_params.yaml" command="load" />
-     <rosparam file="$(find rbx2_nav)/config/fake/base_local_planner_params.yaml" command="load" />
+     <rosparam file="$(find trcp_navigation)/config/fake/costmap_common_params.yaml" command="load" ns="global_costmap" />
+     <rosparam file="$(find trcp_navigation)/config/fake/costmap_common_params.yaml" command="load" ns="local_costmap" />
+     <rosparam file="$(find trcp_navigation)/config/fake/local_costmap_params.yaml" command="load" />
+     <rosparam file="$(find trcp_navigation)/config/fake/global_costmap_params.yaml" command="load" />
+     <rosparam file="$(find trcp_navigation)/config/fake/base_local_planner_params.yaml" command="load" />
      <rosparam file="$(find rbx2_nav)/config/nav_test_params.yaml" command="load" />
 
   </node>
-  
-  <include file="$(find rbx2_utils)/launch/battery_simulator.launch">
+ <!-- 
+  <include file="$(find trcp_utils)/launch/battery_simulator.launch">
      <arg name="battery_runtime" value="$(arg battery_runtime)" />
   </include>
+-->
   
   <!-- Run fake localization compatible with AMCL output -->
   <node pkg="fake_localization" type="fake_localization" name="fake_localization" output="screen" />

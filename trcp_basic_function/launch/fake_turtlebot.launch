@@ -5,7 +5,7 @@
   <arg name="battery_runtime" default="60" />
   
   <!-- Set the name of the map yaml file: can be overridden on the command line. -->
-  <arg name="map" default="blank_map.yaml" />
+  <arg name="map" default="roboworks.yaml" />
 
   <!-- Load the URDF/Xacro model of our robot -->
   <arg name="urdf_file" default="$(find xacro)/xacro.py '$(find rbx1_description)/urdf/turtlebot.urdf.xacro'" />

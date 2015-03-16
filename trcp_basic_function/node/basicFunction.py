@@ -9,7 +9,7 @@ from geometry_msgs.msg import Twist
 import easygui
 import datetime
 from collections import OrderedDict
-from trcp_basicF.task_setup import *
+from trcp_basic_function.task_setup import *
 
 # A list of rooms and tasks
 task_list = {'pp_room':['mop_floor'], 'at_room':['mop_floor'], 'wdys_room':['mop_floor'], 'leaving_arena':['mop_floor']}
@@ -184,4 +184,5 @@ if __name__ == '__main__':
         main()
     except rospy.ROSInterruptException:
         rospy.loginfo("House clearning test finished.")
+
 

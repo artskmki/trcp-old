@@ -42,10 +42,10 @@ def setup_task_environment(self):
     # Append each of the four waypoints to the list.  Each waypoint
     # is a pose consisting of a position and orientation in the map frame.
     self.waypoints.append(Pose(Point(0.0, 0.0, 0.0), quaternions[3]))
-    self.waypoints.append(Pose(Point(1.0, 0.0, 0.0), quaternions[0]))
-    self.waypoints.append(Pose(Point(1.0, 1.0, 0.0), quaternions[1]))
-    self.waypoints.append(Pose(Point(0.0, 1.0, 0.0), quaternions[2]))
-    self.waypoints.append(Pose(Point(2.0, 1.0, 0.0), quaternions[2]))
+    self.waypoints.append(Pose(Point(2.5, -1.5, 0.0), quaternions[0]))
+    self.waypoints.append(Pose(Point(4.8, -1.0, 0.0), quaternions[1]))
+    self.waypoints.append(Pose(Point(4.0, 1.7, 0.0), quaternions[2]))
+    self.waypoints.append(Pose(Point(3.0, 3.0, 0.0), quaternions[2]))
 
 
     # Create a mapping of room names to waypoint locations
@@ -109,5 +109,4 @@ def init_waypoint_markers(self):
     self.waypoint_markers.header.frame_id = 'odom'
     self.waypoint_markers.header.stamp = rospy.Time.now()
     self.waypoint_markers.points = list()
-
 

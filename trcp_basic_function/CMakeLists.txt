@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(trcp_basicF)
+project(trcp_basic_function)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -84,7 +84,7 @@ catkin_python_setup()
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES trcp_basicF
+#  LIBRARIES trcp_basic_function
 #  CATKIN_DEPENDS cv_bridge image_transport roscpp rospy sensor_msgs std_msgs
 #  DEPENDS system_lib
 )
@@ -101,19 +101,19 @@ include_directories(
 )
 
 ## Declare a cpp library
-# add_library(trcp_basicF
-#   src/${PROJECT_NAME}/trcp_basicF.cpp
+# add_library(trcp_basic_function
+#   src/${PROJECT_NAME}/trcp_basic_function.cpp
 # )
 
 ## Declare a cpp executable
-# add_executable(trcp_basicF_node src/trcp_basicF_node.cpp)
+# add_executable(trcp_basic_function_node src/trcp_basic_function_node.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
-# add_dependencies(trcp_basicF_node trcp_basicF_generate_messages_cpp)
+# add_dependencies(trcp_basic_function_node trcp_basic_function_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(trcp_basicF_node
+# target_link_libraries(trcp_basic_function_node
 #   ${catkin_LIBRARIES}
 # )
 
@@ -132,7 +132,7 @@ include_directories(
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS trcp_basicF trcp_basicF_node
+# install(TARGETS trcp_basic_function trcp_basic_function_node
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -157,7 +157,7 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_trcp_basicF.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_trcp_basic_function.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

@@ -41,19 +41,21 @@ def setup_task_environment(self):
 
     # Append each of the four waypoints to the list.  Each waypoint
     # is a pose consisting of a position and orientation in the map frame.
-    self.waypoints.append(Pose(Point(0.0, 0.0, 0.0), quaternions[3]))
+    self.waypoints.append(Pose(Point(0.0, -1.0, 0.0), quaternions[0]))
+    self.waypoints.append(Pose(Point(0.0, 0.0, 0.0), quaternions[0]))
     self.waypoints.append(Pose(Point(2.5, -1.5, 0.0), quaternions[0]))
-    self.waypoints.append(Pose(Point(4.8, -1.0, 0.0), quaternions[1]))
-    self.waypoints.append(Pose(Point(4.0, 1.7, 0.0), quaternions[2]))
-    self.waypoints.append(Pose(Point(3.0, 3.0, 0.0), quaternions[2]))
+    self.waypoints.append(Pose(Point(4.8, -1.0, 0.0), quaternions[0]))
+    self.waypoints.append(Pose(Point(4.0, 1.7, 0.0), quaternions[0]))
+    self.waypoints.append(Pose(Point(3.0, 3.0, 0.0), quaternions[0]))
 
 
     # Create a mapping of room names to waypoint locations
-    room_locations = (('hallway', self.waypoints[0]),
-                      ('pp_room', self.waypoints[1]),
-                      ('at_room', self.waypoints[2]),
-                      ('wdys_room', self.waypoints[3]),
-                      ('leaving_arena', self.waypoints[4]))
+    room_locations = (('ready_pos', self.waypoints[0]),
+                      ('enter_pos', self.waypoints[1]),
+                      ('pp_room', self.waypoints[2]),
+                      ('at_room', self.waypoints[3]),
+                      ('wdys_room', self.waypoints[4]),
+                      ('leaving_arena', self.waypoints[5]))
 
     # Store the mapping as an ordered dictionary 
     # so we can visit the rooms in sequence

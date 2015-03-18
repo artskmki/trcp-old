@@ -3,6 +3,11 @@
 import rospy
 import smach
 import smach_ros
+import sensor_msgs
+import sensor_msgs.msg
+import hokuyo_node
+import math
+from sensor_msgs.msg import LaserScan
 from smach import State, StateMachine
 from smach_ros import SimpleActionState, IntrospectionServer
 from geometry_msgs.msg import * 
@@ -10,11 +15,92 @@ import easygui
 import datetime
 from collections import OrderedDict
 from trcp_basic_function.task_setup import *
+#from trcp_utils.kobuki import *
+from kobuki_msgs.msg import ButtonEvent
+import numpy as np
+
+ranges=[]
+meanDist=0.0
+maxDist=-100.0
+minDist= 100.0
+def scanLaser(data):
+    global ranges
+    ranges=data.ranges
+    mid_index = len(data.ranges) // 2
+    dists = [val for val in ranges[mid_index-10:mid_index+10]
+           if not math.isnan(val)]
+    global meanDist
+    meanDist =  np.mean(dists)
+    global maxDist
+    maxDist = np.max(dists)
+    global minDist
+    minDist = np.min(dists)
+    
+  #  print meanDist
+#    print maxDist
+#    print minDist
+    
+
+
+
+# for KOBUKI hardware
+btn=False
+button0 = { ButtonEvent.Button0:0, ButtonEvent.Button1:1, ButtonEvent.Button2:2, }
+button1 = { ButtonEvent.RELEASED:'Released', ButtonEvent.PRESSED:'Pressed ', }
+buttonS = [ 'Released',  'Released',  'Released', ]
+def ButtonEventCallback(data):
+  buttonS[button0[data.button]]=button1[data.state]
+  print "push button"
+  global btn
+  btn = True
+
 
 # A list of rooms and tasks
-task_list = {'pp_room':['mop_floor'], 'at_room':['mop_floor'], 'wdys_room':['mop_floor'], 'leaving_arena':['mop_floor']}
+task_list = {'ready_pos':['ready_task'], 'pp_room':['mop_floor'], 'at_room':['mop_floor'], 'wdys_room':['mop_floor'], 'leaving_arena':['mop_floor']}
 
-class MopFloor(State):
+class ReadyTask(State):
+    def __init__(self, room, timer):
+        State.__init__(self, outcomes=['succeeded','aborted','preempted'])
+        self.task = 'ready_task'
+        self.room = room
+        self.timer = timer
+        self.cmd_vel_pub = rospy.Publisher('cmd_vel', Twist)
+
+    def execute(self, userdata):        
+        rospy.loginfo('Wait Button on in the ' + str(self.room))
+        while True:
+            if btn == True:
+                break
+
+        rospy.loginfo("Setting Initial Pose")
+        pub = rospy.Publisher('initialpose', PoseWithCovarianceStamped)
+        p   = PoseWithCovarianceStamped();
+        msg = PoseWithCovariance();
+        msg.pose = Pose(Point(0.0, -1.0, 0.000), Quaternion(0.000, 0.000, 0.0, 1.0));
+        msg.covariance = [0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.06853];
+        p.pose = msg;
+        p.header.stamp = rospy.Time.now()
+        p.header.frame_id="map"
+        rospy.sleep(2.0)
+        rospy.loginfo("Setting Pose")
+        pub.publish(p);
+
+        rospy.loginfo('Wait door open in the ' + str(self.room))
+        while True:
+            if meanDist > 1.0:
+                print "door is now open!!"
+                break
+
+        self.cmd_vel_pub.publish(Twist())
+        message = "Done wait door open " + str(self.room) + "!"
+        rospy.loginfo(message)
+        easygui.msgbox(message, title="Succeeded")
+
+        update_task_list(self.room, self.task)
+
+        return 'succeeded'
+
+class PickPlace(State):
     def __init__(self, room, timer):
         State.__init__(self, outcomes=['succeeded','aborted','preempted'])
 
@@ -24,7 +110,7 @@ class MopFloor(State):
         self.cmd_vel_pub = rospy.Publisher('cmd_vel', Twist)
 
     def execute(self, userdata):
-        rospy.loginfo('Mopping the floor in the ' + str(self.room))
+        rospy.loginfo('Pick and Place in the ' + str(self.room))
         cmd_vel_msg = Twist()
         cmd_vel_msg.linear.x = 0.05
         cmd_vel_msg.angular.z = 1.2
@@ -37,7 +123,7 @@ class MopFloor(State):
             rospy.sleep(1)
 
         self.cmd_vel_pub.publish(Twist())
-        message = "Done mopping the " + str(self.room) + "!"
+        message = "Done pick and place the " + str(self.room) + "!"
         rospy.loginfo(message)
         easygui.msgbox(message, title="Succeeded")
 
@@ -46,6 +132,99 @@ class MopFloor(State):
         return 'succeeded'
 
 
+class AvoidThat(State):
+    def __init__(self, room, timer):
+        State.__init__(self, outcomes=['succeeded','aborted','preempted'])
+
+        self.task = 'mop_floor'
+        self.room = room
+        self.timer = timer
+        self.cmd_vel_pub = rospy.Publisher('cmd_vel', Twist)
+
+    def execute(self, userdata):
+        rospy.loginfo('Avoid That in the ' + str(self.room))
+        cmd_vel_msg = Twist()
+        cmd_vel_msg.linear.x = 0.05
+        cmd_vel_msg.angular.z = 1.2
+        counter = self.timer
+        while counter > 0:
+            self.cmd_vel_pub.publish(cmd_vel_msg)
+            cmd_vel_msg.linear.x *= -1
+            rospy.loginfo(counter)
+            counter -= 1
+            rospy.sleep(1)
+
+        self.cmd_vel_pub.publish(Twist())
+        message = "Done avoid that the " + str(self.room) + "!"
+        rospy.loginfo(message)
+        easygui.msgbox(message, title="Succeeded")
+
+        update_task_list(self.room, self.task)
+
+        return 'succeeded'
+
+
+class WhatDys(State):
+    def __init__(self, room, timer):
+        State.__init__(self, outcomes=['succeeded','aborted','preempted'])
+
+        self.task = 'mop_floor'
+        self.room = room
+        self.timer = timer
+        self.cmd_vel_pub = rospy.Publisher('cmd_vel', Twist)
+
+    def execute(self, userdata):
+        rospy.loginfo('What did you say in the ' + str(self.room))
+        cmd_vel_msg = Twist()
+        cmd_vel_msg.linear.x = 0.05
+        cmd_vel_msg.angular.z = 1.2
+        counter = self.timer
+        while counter > 0:
+            self.cmd_vel_pub.publish(cmd_vel_msg)
+            cmd_vel_msg.linear.x *= -1
+            rospy.loginfo(counter)
+            counter -= 1
+            rospy.sleep(1)
+
+        self.cmd_vel_pub.publish(Twist())
+        message = "Done what did you say the " + str(self.room) + "!"
+        rospy.loginfo(message)
+        easygui.msgbox(message, title="Succeeded")
+
+        update_task_list(self.room, self.task)
+
+        return 'succeeded'
+
+class LeavingArena(State):
+    def __init__(self, room, timer):
+        State.__init__(self, outcomes=['succeeded','aborted','preempted'])
+
+        self.task = 'mop_floor'
+        self.room = room
+        self.timer = timer
+        self.cmd_vel_pub = rospy.Publisher('cmd_vel', Twist)
+
+    def execute(self, userdata):
+        rospy.loginfo('Leaving Arena in the ' + str(self.room))
+        cmd_vel_msg = Twist()
+        cmd_vel_msg.linear.x = 0.05
+        cmd_vel_msg.angular.z = 1.2
+        counter = self.timer
+        while counter > 0:
+            self.cmd_vel_pub.publish(cmd_vel_msg)
+            cmd_vel_msg.linear.x *= -1
+            rospy.loginfo(counter)
+            counter -= 1
+            rospy.sleep(1)
+
+        self.cmd_vel_pub.publish(Twist())
+        message = "Done leaving arena the " + str(self.room) + "!"
+        rospy.loginfo(message)
+        easygui.msgbox(message, title="Succeeded")
+
+        update_task_list(self.room, self.task)
+
+        return 'succeeded'
 
 def update_task_list(room, task):
     task_list[room].remove(task)
@@ -59,9 +238,16 @@ class main():
         # Set the shutdown function (stop the robot)
         rospy.on_shutdown(self.shutdown)
 
+
+
+        # Initialize Kobuki hardware
+        rospy.Subscriber("/mobile_base/events/button", ButtonEvent, ButtonEventCallback )
+
+
         # Initialize a number of parameters and variables
         setup_task_environment(self)
 
+        
         # Turn the room locations into SMACH move_base action states
         nav_states = {}
 
@@ -69,47 +255,47 @@ class main():
             nav_goal = MoveBaseGoal()
             nav_goal.target_pose.header.frame_id = 'map'
             nav_goal.target_pose.pose = self.room_locations[room]
-            move_base_state = SimpleActionState('move_base', MoveBaseAction, goal=nav_goal, result_cb=self.move_base_result_cb,
+            move_base_state = SimpleActionState('move_base', MoveBaseAction, goal=nav_goal,
+                                                result_cb=self.move_base_result_cb,
                                                 exec_timeout=rospy.Duration(15.0),
                                                 server_wait_timeout=rospy.Duration(10.0))
             nav_states[room] = move_base_state
 
+
+        # Create a state machine for the Ready subtask(s)
+        sm_ready_pos = StateMachine(outcomes=['succeeded','aborted','preempted'])
+        # Then add the subtask(s)
+        with sm_ready_pos:
+            StateMachine.add('READY_TASK', ReadyTask('ready_pos', 5),
+                             transitions={'succeeded':'','aborted':'','preempted':''})
+            
         # Create a state machine for the pp room subtask(s)
         sm_pp_room = StateMachine(outcomes=['succeeded','aborted','preempted'])
         # Then add the subtask(s)
         with sm_pp_room:
-            StateMachine.add('MOP_FLOOR', MopFloor('pp_room', 5), transitions={'succeeded':'','aborted':'','preempted':''})
-
-
+            StateMachine.add('PICK_PLACE', PickPlace('pp_room', 5),
+                             transitions={'succeeded':'','aborted':'','preempted':''})
 
         # Create a state machine for the at room subtask(s)
         sm_at_room = StateMachine(outcomes=['succeeded','aborted','preempted'])
         # Then add the subtask(s)
         with sm_at_room:
-            StateMachine.add('MOP_FLOOR', MopFloor('at_room', 5), transitions={'succeeded':'','aborted':'','preempted':''})
-
-
+            StateMachine.add('AVOID_THAT', AvoidThat('at_room', 5),
+                             transitions={'succeeded':'','aborted':'','preempted':''})
 
         # Create a state machine for the wdys room subtask(s)
         sm_wdys_room = StateMachine(outcomes=['succeeded','aborted','preempted'])
         # Then add the subtask(s)
         with sm_wdys_room:
-            StateMachine.add('MOP_FLOOR', MopFloor('wdys_room', 5), transitions={'succeeded':'','aborted':'','preempted':''})
-
-
+            StateMachine.add('WHAT_DYS', WhatDys('wdys_room', 5),
+                             transitions={'succeeded':'','aborted':'','preempted':''})
 
         # Create a state machine for the wdys room subtask(s)
         sm_leaving_arena = StateMachine(outcomes=['succeeded','aborted','preempted'])
         # Then add the subtask(s)
         with sm_leaving_arena:
-            StateMachine.add('MOP_FLOOR', MopFloor('leaving_arena', 5), transitions={'succeeded':'','aborted':'','preempted':''})
-
-
-        # Create a state machine for the hallway subtask(s)
-        sm_hallway = StateMachine(outcomes=['succeeded','aborted','preempted'])
-        # Then add the subtasks
-        with sm_hallway:
-            StateMachine.add('MOP_FLOOR', MopFloor('hallway', 5), transitions={'succeeded':'','aborted':'','preempted':''})
+            StateMachine.add('LEAVING_ARENA', LeavingArena('leaving_arena', 5),
+                             transitions={'succeeded':'','aborted':'','preempted':''})
 
 
         # Initialize the overall state machine
@@ -117,50 +303,44 @@ class main():
         # Build the basic f state machine from the nav states 
         # and task states
         with sm_basic_f:
-            StateMachine.add('START', nav_states['hallway'], transitions={'succeeded':'PP_ROOM','aborted':'PP_ROOM','preempted':'PP_ROOM'})
+            StateMachine.add('READY_TASK', sm_ready_pos,
+                             transitions={'succeeded':'ENTER','aborted':'ENTER','preempted':'ENTER'})
+            StateMachine.add('ENTER', nav_states['enter_pos'],
+                             transitions={'succeeded':'PP_ROOM','aborted':'PP_ROOM','preempted':'PP_ROOM'})
 
-            StateMachine.add('PP_ROOM', nav_states['pp_room'], transitions={'succeeded':'PP_ROOM_TASKS','aborted':'AT_ROOM','preempted':'AT_ROOM'})
+            StateMachine.add('PP_ROOM', nav_states['pp_room'],
+                             transitions={'succeeded':'PP_ROOM_TASKS','aborted':'AT_ROOM','preempted':'AT_ROOM'})
 
             # When the tasks are done, continue on to the AT_ROOM 
-            StateMachine.add('PP_ROOM_TASKS', sm_pp_room, transitions={'succeeded':'AT_ROOM','aborted':'AT_ROOM','preempted':'AT_ROOM'})
+            StateMachine.add('PP_ROOM_TASKS', sm_pp_room,
+                             transitions={'succeeded':'AT_ROOM','aborted':'AT_ROOM','preempted':'AT_ROOM'})
 
-            StateMachine.add('AT_ROOM', nav_states['at_room'], transitions={'succeeded':'AT_ROOM_TASKS','aborted':'WDYS_ROOM','preempted':'WDYS_ROOM'})
+            StateMachine.add('AT_ROOM', nav_states['at_room'],
+                             transitions={'succeeded':'AT_ROOM_TASKS','aborted':'WDYS_ROOM','preempted':'WDYS_ROOM'})
 
             # When the tasks are done, continue on to the wdys_room
-            StateMachine.add('AT_ROOM_TASKS', sm_at_room, transitions={'succeeded':'WDYS_ROOM','aborted':'WDYS_ROOM','preempted':'WDYS_ROOM'})
+            StateMachine.add('AT_ROOM_TASKS', sm_at_room,
+                             transitions={'succeeded':'WDYS_ROOM','aborted':'WDYS_ROOM','preempted':'WDYS_ROOM'})
 
             StateMachine.add('WDYS_ROOM', nav_states['wdys_room'], transitions={'succeeded':'WDYS_ROOM_TASKS','aborted':'LEAVING_ARENA','preempted':'LEAVING_ARENA'})
 
             # When the tasks are done, leaving to the arean
-            StateMachine.add('WDYS_ROOM_TASKS', sm_wdys_room, transitions={'succeeded':'LEAVING_ARENA','aborted':'LEAVING_ARENA','preempted':'LEAVING_ARENA'})
+            StateMachine.add('WDYS_ROOM_TASKS', sm_wdys_room,
+                             transitions={'succeeded':'LEAVING_ARENA','aborted':'LEAVING_ARENA','preempted':'LEAVING_ARENA'})
 
-            StateMachine.add('LEAVING_ARENA', nav_states['leaving_arena'], transitions={'succeeded':'LEAVING_ARENA_TASKS','aborted':'','preempted':''})
+            StateMachine.add('LEAVING_ARENA', nav_states['leaving_arena'],
+                             transitions={'succeeded':'LEAVING_ARENA_TASKS','aborted':'','preempted':''})
 
             # When the tasks are done, stop
-            StateMachine.add('LEAVING_ARENA_TASKS', sm_leaving_arena, transitions={'succeeded':'','aborted':'','preempted':''})
+            StateMachine.add('LEAVING_ARENA_TASKS', sm_leaving_arena,
+                             transitions={'succeeded':'','aborted':'','preempted':''})
 
-       # Create and start the SMACH introspection server
+        # Create and start the SMACH introspection server
         intro_server = IntrospectionServer('clean_house', sm_basic_f, '/SM_ROOT')
         intro_server.start()
 
 
-
-        pub = rospy.Publisher('initialpose', PoseWithCovarianceStamped)
-        #rospy.init_node('initial_pose'); #, log_level=roslib.msg.Log.INFO)
-        rospy.loginfo("Setting Pose")
-
-
-
-
-        p   = PoseWithCovarianceStamped();
-        msg = PoseWithCovariance();
-        msg.pose = Pose(Point(0.0, -1.5, 0.000), Quaternion(0.000, 0.000, 0.0, 1.0));
-        msg.covariance = [0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.06853];
-        p.pose = msg;
-        p.header.stamp = rospy.Time.now()
-        p.header.frame_id="map"
-
-        rospy.sleep(5.0)
+        rospy.Subscriber("/scan",LaserScan,scanLaser, queue_size=1)
 
 
 

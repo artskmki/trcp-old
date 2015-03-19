@@ -1,0 +1,12 @@
+Mar 19 11:00:58.261 INFO: manager: 1.1.0
+Mar 19 11:00:58.261 INFO: manager: Copyright (C) 2003-2010
+Mar 19 11:00:58.261 INFO: manager:   Noriaki Ando
+Mar 19 11:00:58.261 INFO: manager:   Intelligent Systems Research Institute, AIST
+Mar 19 11:00:58.261 INFO: manager: Manager starting.
+Mar 19 11:00:58.261 INFO: manager: Starting local logging.
+Mar 19 11:00:58.269 WARNING: NamingOnCorba: No endpoint for the CORBA naming service (localhost) was found.
+Mar 19 11:00:58.269 INFO: NamingManager: NameServer connection succeeded: corba/localhost
+Mar 19 11:00:58.270 INFO: ManagerServant: Master manager not found
+Mar 19 11:00:58.352 INFO: PortAudioInput0: PortAudioInput : Audio input component using portaudio library
+Mar 19 11:00:58.352 INFO: PortAudioInput0:  Copyright (C) 2010-2011 Yosuke Matsusaka and AIST-OpenHRI development team
+Mar 19 11:00:58.352 INFO: PortAudioInput0:  Version 2.01

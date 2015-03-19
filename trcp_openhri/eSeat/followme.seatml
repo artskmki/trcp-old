@@ -29,6 +29,11 @@ print "Exit OPEN state!!!"
       <message sendto="speechout">追跡を開始します</message>
       <message sendto="command">1</message>
     </rule>
+    <rule>
+      <key source="speechin">いれいさー へやからでて</key>
+      <message sendto="speechout">部屋から出ます</message>
+      <message sendto="command">2</message>
+    </rule>
 
     <rule>
       <key source="speechin">いれいさー こんにちは</key>

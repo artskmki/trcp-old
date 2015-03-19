@@ -1,0 +1,12 @@
+Mar 19 11:45:56.630 INFO: manager: 1.1.0
+Mar 19 11:45:56.631 INFO: manager: Copyright (C) 2003-2010
+Mar 19 11:45:56.631 INFO: manager:   Noriaki Ando
+Mar 19 11:45:56.631 INFO: manager:   Intelligent Systems Research Institute, AIST
+Mar 19 11:45:56.631 INFO: manager: Manager starting.
+Mar 19 11:45:56.631 INFO: manager: Starting local logging.
+Mar 19 11:45:56.710 WARNING: NamingOnCorba: No endpoint for the CORBA naming service (localhost) was found.
+Mar 19 11:45:56.710 INFO: NamingManager: NameServer connection succeeded: corba/localhost
+Mar 19 11:45:56.717 INFO: ManagerServant: Master manager not found
+Mar 19 11:45:56.719 INFO: PulseAudioOutput0: PulseAudioOutput : Audio output component using pulseaudio api
+Mar 19 11:45:56.719 INFO: PulseAudioOutput0:  Copyright (C) 2010-2011 Yosuke Matsusaka and AIST-OpenHRI development team
+Mar 19 11:45:56.719 INFO: PulseAudioOutput0:  Version 2.01

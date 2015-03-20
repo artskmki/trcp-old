@@ -1,0 +1,56 @@
+2015-03-20 09:43:27,656 manager INFO 1.1.0
+2015-03-20 09:43:27,656 manager INFO Copyright (C) 2003-2010
+2015-03-20 09:43:27,656 manager INFO   Noriaki Ando
+2015-03-20 09:43:27,656 manager INFO   Intelligent Systems Research Institute, AIST
+2015-03-20 09:43:27,656 manager INFO Manager starting.
+2015-03-20 09:43:27,656 manager INFO Starting local logging.
+2015-03-20 09:43:27,658 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2015-03-20 09:43:27,664 ManagerServant INFO Master manager not found
+2015-03-20 09:43:27,665 manager WARNING Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/OpenRTM_aist/Manager.py", line 1900, in initManagerServant
+    reffile = file(self._config.getProperty("manager.refstring_path"),'w')
+IOError: [Errno 13] Permission denied: '/var/log/rtcmanager.ref'
+
+2015-03-20 09:43:27,665 LocalServiceAdmin INFO All the local services are enabled.
+2015-03-20 09:43:27,679 ec_base INFO setRate(1000000.000000) done
+2015-03-20 09:43:27,679 ec_base INFO setRate(1.000000) done
+2015-03-20 09:43:27,680 rtobject INFO 1 execution context was created.
+2015-03-20 09:43:27,680 JuliusRTC0 INFO JuliusRTC version 2.00
+2015-03-20 09:43:27,680 JuliusRTC0 INFO Copyright (C) 2010-2011 Yosuke Matsusaka
+2015-03-20 09:43:27,694 JuliusRTC0 INFO This component depends on following softwares and datas:
+2015-03-20 09:43:27,694 JuliusRTC0 INFO 
+2015-03-20 09:43:27,694 JuliusRTC0 INFO   Large Vocabulary Continuous Speech Recognition Engine Julius
+2015-03-20 09:43:27,694 JuliusRTC0 INFO   (http://julius.sourceforge.jp/)
+2015-03-20 09:43:27,694 JuliusRTC0 INFO   Copyright (c) 1997-2000 Information-technology Promotion Agency, Japan
+2015-03-20 09:43:27,694 JuliusRTC0 INFO   Copyright (c) 1991-2008 Kawahara Lab., Kyoto University
+2015-03-20 09:43:27,694 JuliusRTC0 INFO   Copyright (c) 2000-2005 Shikano Lab., Nara Institute of Science and Technology
+2015-03-20 09:43:27,695 JuliusRTC0 INFO   Copyright (c) 2005-2008 Julius project team, Nagoya Institute of Technology
+2015-03-20 09:43:27,695 JuliusRTC0 INFO 
+2015-03-20 09:43:27,695 JuliusRTC0 INFO   VoxForge English Acoustic Model for HTK/Juilus
+2015-03-20 09:43:27,695 JuliusRTC0 INFO   (http://www.voxforge.org/)
+2015-03-20 09:43:27,695 JuliusRTC0 INFO   Copyright (c) 2005-2009 Ken MacLean <contact@voxforge.org>
+2015-03-20 09:43:27,695 JuliusRTC0 INFO   Copyright (c) 2005-2009 Free Software Foundation
+2015-03-20 09:43:27,695 JuliusRTC0 INFO 
+2015-03-20 09:43:27,695 rtobject INFO Initial active configuration set is default.
+2015-03-20 09:43:38,302 ec_base WARNING The component is not responding.
+2015-03-20 09:43:38,303 ec_base ERROR Unknown error: Invalid state transition.
+2015-03-20 09:43:40,319 JuliusRTC0 INFO LISTEN
+2015-03-20 09:43:40,439 JuliusRTC0 INFO register grammar: command2
+2015-03-20 09:43:40,482 JuliusRTC0 INFO LISTEN
+2015-03-20 09:43:40,546 JuliusRTC0 INFO register grammar: command
+2015-03-20 09:43:40,587 JuliusRTC0 INFO LISTEN
+2015-03-20 09:43:40,656 JuliusRTC0 INFO LISTEN
+2015-03-20 09:43:40,757 JuliusRTC0 INFO LISTEN
+2015-03-20 09:44:07,578 JuliusRTC0 INFO STARTREC
+2015-03-20 09:44:07,764 JuliusRTC0 INFO ENDREC
+2015-03-20 09:44:07,785 JuliusRTC0 INFO #1: いれいさー つ (0.77)
+2015-03-20 09:44:07,785 JuliusRTC0 INFO #2: いれいさー た (0.7185)
+2015-03-20 09:44:07,788 JuliusRTC0 INFO LISTEN
+2015-03-20 09:44:12,173 JuliusRTC0 INFO STARTREC
+2015-03-20 09:44:12,758 JuliusRTC0 INFO ENDREC
+2015-03-20 09:44:12,776 JuliusRTC0 INFO #1: いれいさー つ (0.781)
+2015-03-20 09:44:12,777 JuliusRTC0 INFO #2: いれいさー た (0.7095)
+2015-03-20 09:44:12,779 JuliusRTC0 INFO LISTEN
+2015-03-20 09:44:57,442 ec_base ERROR The component is not responding.
+2015-03-20 09:44:58,454 ec_worker WARNING ExecutionContext is already stopped.
+2015-03-20 09:44:58,455 ec_base ERROR Invoking on_shutdown() for each RTC failed.

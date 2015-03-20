@@ -86,6 +86,8 @@ class Follower():
         # Publisher to control the robot's movement
         self.cmd_vel_pub = rospy.Publisher('/cmd_vel', Twist)
 
+        self.f_flag=0
+
         # Subscribe to the point cloud
         self.depth_subscriber = rospy.Subscriber('point_cloud', PointCloud2, self.set_cmd_vel, queue_size=1)
 
@@ -96,52 +98,51 @@ class Follower():
 
 
         # Subscribe to voice command
-        self.f_flag=0
         self.voice_commnad = rospy.Subscriber('hsr_c', Int32, self.get_voice_command, queue_size=1)
 
         rospy.loginfo("Ready to follow!")
         
-    def set_voice_command(self, msg):
+    def get_voice_command(self, msg):
         rospy.loginfo("Get voice command :%s" % msg.data)
         self.f_flag=msg.data
 
 
     def set_cmd_vel(self, msg):
-        if self.f_flag == 0:
-            set_cmd_vel2(msg)
         if self.f_flag == 1:
+            self.set_cmd_vel2(msg)
+        if self.f_flag == 0:
             # Stop the robot 
             move_cmd = Twist()
-            self.cmd_vel.publish(move_cmd)
+            self.cmd_vel_pub.publish(move_cmd)
             rospy.sleep(1)
         if self.f_flag == 2:
-            leaving_elevator()
+            self.leaving_elevator()
 
-    def leaving_elevator(self)
+    def leaving_elevator(self):
         rospy.loginfo("Leaving elevator!")
-        # 一回転して
+
         # Set the angular speed
-        self.move_cmd.angular.z = 1.0 
+        move_cmd = Twist()
+        move_cmd.angular.z = 1.0 
         # Rotate for a time to go 180 degrees
-        for t in range(100):
-            self.cmd_vel.publish(move_cmd)
+        for t in range(45):
+            self.cmd_vel_pub.publish(move_cmd)
             rospy.sleep(0.1)
 
         # Stop the robot 
         move_cmd = Twist()
-        self.cmd_vel.publish(move_cmd)
+        self.cmd_vel_pub.publish(move_cmd)
         rospy.sleep(1)
 
-        # 2メートル進む
         # Publish the movement command
-        self.move_cmd.linear.x = 0.2
-        for t in range(100): 
-            self.cmd_vel_pub.publish(self.move_cmd)
+        move_cmd.linear.x = 0.2
+        for t in range(50): 
+            self.cmd_vel_pub.publish(move_cmd)
             rospy.sleep(0.1)
 
         # Stop the robot 
         move_cmd = Twist()
-        self.cmd_vel.publish(move_cmd)
+        self.cmd_vel_pub.publish(move_cmd)
         rospy.sleep(1)
 
         self.f_flag = 0

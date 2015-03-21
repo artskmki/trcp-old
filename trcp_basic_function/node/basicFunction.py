@@ -47,10 +47,6 @@ def scanLaser(data):
     global minDist
     minDist = np.min(dists)
     
-#  print meanDist
-#    print maxDist
-#    print minDist
-    
 
 
 
@@ -60,10 +56,10 @@ button0 = { ButtonEvent.Button0:0, ButtonEvent.Button1:1, ButtonEvent.Button2:2,
 button1 = { ButtonEvent.RELEASED:'Released', ButtonEvent.PRESSED:'Pressed ', }
 buttonS = [ 'Released',  'Released',  'Released', ]
 def ButtonEventCallback(data):
-  buttonS[button0[data.button]]=button1[data.state]
-  print "push button"
-  global btn
-  btn = True
+    buttonS[button0[data.button]]=button1[data.state]
+    print "push button"
+    global btn
+    btn = True
 
 
 # A list of rooms and tasks
@@ -92,14 +88,6 @@ class ReadyTask(State):
         self.say_pub.publish("こんにちは、私の名前はイレイサーです。よろしくお願いします。")
         rospy.sleep(5.0)
 
-        global qa_n
-        qa_n = 0
-        while True:
-          if qa_n == 3:
-            break
-          rospy.sleep(0.5)
-
-        # 
         rospy.loginfo("Setting Initial Pose")
         pub = rospy.Publisher('initialpose', PoseWithCovarianceStamped)
         p   = PoseWithCovarianceStamped();
@@ -234,21 +222,11 @@ class LeavingArena(State):
 
     def execute(self, userdata):
         rospy.loginfo('Leaving Arena in the ' + str(self.room))
-        cmd_vel_msg = Twist()
-        cmd_vel_msg.linear.x = 0.05
-        cmd_vel_msg.angular.z = 1.2
-        counter = self.timer
-        while counter > 0:
-            self.cmd_vel_pub.publish(cmd_vel_msg)
-            cmd_vel_msg.linear.x *= -1
-            rospy.loginfo(counter)
-            counter -= 1
-            rospy.sleep(1)
 
-        self.cmd_vel_pub.publish(Twist())
+
+
         message = "Done leaving arena the " + str(self.room) + "!"
         rospy.loginfo(message)
-        easygui.msgbox(message, title="Succeeded")
 
         update_task_list(self.room, self.task)
 

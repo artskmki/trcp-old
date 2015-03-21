@@ -7,28 +7,43 @@
     <adaptor name="command" type="rtcout" datatype="TimedLong" />
   </general>
   <state name="OPEN">
-   <onentry>
-      <message sendto="speechout">フォローミータスクの音声対話を開始します。</message>
+    <onentry>
+      <message sendto="speechout">開始の状態はオープンです</message>
       <script sendto="speechout">
 print "Open!!!"
       </script>
     </onentry>
+    </onentry>
+    <onexit>
+      <message sendto="speechout">オープンから抜けます</message>
+      <script sendto="speechout">
+print "Exit OPEN state!!!"
+      </script>
+    </onexit>
     <rule>
       <key source="speechin">いれいさー へやからでて</key>
       <message sendto="speechout">部屋から出ます</message>
       <message sendto="command">2</message>
-      <statetransition>IDLE</statetransition>
-    </rule>
-    <rule> <!-- 雑音を無視するためのルール -->
-      <key source="speechin">つ</key>
-      <message sendto="NoiseDiscarding">input noise</message>
-    </rule>
-    <rule> <!-- 雑音を無視するためのルール -->
-      <key source="speechin">た</key>
-      <message sendto="NoiseDiscarding">input noise</message>
+      <statetransition>IDOL</statetransition>
     </rule>
 
+    <rule> <!-- 雑音を無視するためのルール -->
+      <key>つ</key>
+      <command host="NoiseDiscarding">input noise</command>
+    </rule>
+    <rule> <!-- 雑音を無視するためのルール -->
+      <key>た</key>
+      <command host="NoiseDiscarding">input noise</command>
+    </rule>
   </state>
-  <state name="IDLE">
+  <state name="IDOL">
+    <rule> <!-- 雑音を無視するためのルール -->
+      <key>つ</key>
+      <command host="NoiseDiscarding">input noise</command>
+    </rule>
+    <rule> <!-- 雑音を無視するためのルール -->
+      <key>た</key>
+      <command host="NoiseDiscarding">input noise</command>
+    </rule>
   </state>
 </seatml>

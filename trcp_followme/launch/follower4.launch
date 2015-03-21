@@ -1,6 +1,4 @@
 <launch>
-<node name="soundplay_node" pkg="sound_play" type="soundplay_node.py" output="screen"/>
-
   <node pkg="nodelet" type="nodelet" name="pcl_manager" args="manager" output="screen" />
 
   <!-- Run a VoxelGrid filter on the z axis -->
@@ -40,7 +38,7 @@
     </rosparam>
   </node>
   
-  <node pkg="trcp_followme" name="follower" type="follower3.py" output="screen">
+  <node pkg="trcp_followme" name="follower" type="follower4.py" output="screen">
     <remap from="point_cloud" to="search_cloud" />
     
     <rosparam>

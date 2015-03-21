@@ -140,6 +140,7 @@ class rosRTMfollowme(OpenRTM_aist.DataFlowComponentBase):
 		pub = rospy.Publisher('hsr_c', Int32)	
 		rospy.loginfo('start ROS node')
 		rospy.Subscriber('hsr_s',Int32, callback)
+		rospy.Subscriber('str_in',String, self.str_cb)
 		return RTC.RTC_OK
 	
 
@@ -222,8 +223,6 @@ class rosRTMfollowme(OpenRTM_aist.DataFlowComponentBase):
 		#
 		#
 	def onExecute(self, ec_id):
-#		str = "hello %s" % rospy.get_time()
-#		rospy.loginfo(str)
 		global flg
 		if flg != 0:
 			print("FFFFF")
@@ -313,9 +312,13 @@ class rosRTMfollowme(OpenRTM_aist.DataFlowComponentBase):
 	#	return RTC.RTC_OK
 	
 
+        def str_cb(self, data):
+            rospy.loginfo(rospy.get_name()+"Say: %s" % data.data)
+            str_cmd = RTC.TimedString(RTC.Time(0,0),data.data)
+            self._output_strOut.write(str_cmd)
 
 def callback(data):
-    rospy.loginfo(rospy.get_name()+"GGGGs %s" % data.data)
+    rospy.loginfo(rospy.get_name()+"Int: %s" % data.data)
     global flg
     flg = data.data
 

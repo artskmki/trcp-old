@@ -7,10 +7,8 @@
          version="1.0" mode="voice" root="command">
   <lexicon uri="followme-lex-jp.xml"/>
   <rule id="command">
-    <item>いれいさー</item>
+    <item repeat="0-1">いれいさー</item>
     <one-of>
-      <item>すとっぷ</item>
-      <item>ついてきて</item>
       <item>へやからでて</item>
       <item>た</item> <!-- 雑音を無視するための無意味な単語 -->
       <item>つ</item> <!-- 雑音を無視するための無意味な単語 -->

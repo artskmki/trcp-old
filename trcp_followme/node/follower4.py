@@ -1,13 +1,28 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import rospy
 from roslib import message
 from sensor_msgs import point_cloud2
 from sensor_msgs.msg import PointCloud2
 from geometry_msgs.msg import Twist
 from math import copysign
+from math import pi
 from sound_play.libsoundplay import SoundClient
 import sys
 from std_msgs.msg import *
+from kobuki_msgs.msg import ButtonEvent
+
+
+# for KOBUKI hardware
+btn=False
+button0 = { ButtonEvent.Button0:0, ButtonEvent.Button1:1, ButtonEvent.Button2:2, }
+button1 = { ButtonEvent.RELEASED:'Released', ButtonEvent.PRESSED:'Pressed ', }
+buttonS = [ 'Released',  'Released',  'Released', ]
+def ButtonEventCallback(data):
+  buttonS[button0[data.button]]=button1[data.state]
+  print "push button"
+  global btn
+  btn = True
 
 class Follower():
     def __init__(self):
@@ -15,37 +30,29 @@ class Follower():
         
         # Set the shutdown function (stop the robot)
         rospy.on_shutdown(self.shutdown)
-        
-
-        # Set the default TTS voice to use
-        self.voice = rospy.get_param("~voice", "voice_don_diphone")
-        # Set the wave file path if used
-        self.wavepath = rospy.get_param("~wavepath", "")
-
-        # Create the sound client object
-        self.soundhandle = SoundClient()
-
-        # Wait a moment to let the client connect to the
-        # sound_play server
-        rospy.sleep(1)
-
-        # Make sure any lingering sound_play processes are stopped.
-        self.soundhandle.stopAll()
 
 
-       # Announce that we are ready for input
-        self.soundhandle.playWave(self.wavepath + "/R2D2a.wav")
-        rospy.sleep(1)
-        self.soundhandle.say("Ready", self.voice)
+        # Initialize Kobuki hardware
+        rospy.Subscriber("/mobile_base/events/button"
+                ,ButtonEvent, ButtonEventCallback )
+        # ボタンが押されるまで、スタンバイ
+        rospy.loginfo('Wait Button on')
+        while True:
+            if btn == True:
+                break
 
-        rospy.sleep(5)
-        self.soundhandle.say("Please facing behind me", self.voice)
-        rospy.sleep(2)
-        self.soundhandle.say("Turn back please", self.voice)
-        rospy.sleep(10)
-        self.soundhandle.say("I am ready. I follow you", self.voice)
-        rospy.sleep(2)
-        self.soundhandle.say("Please go ahead", self.voice)
+
+        # 最初の挨拶        
+        say = rospy.Publisher('str_in', String, queue_size=10)
+        say.publish("")
+        rospy.sleep(0.1)
+        say.publish("こんにちは、私の名前はイレイサーです。よろしくお願いします。 私の前に立って、顔を見せてください。")
+        rospy.sleep(10.0)
+        say.publish("後ろを向いて、背中を見せてください。")
+        rospy.sleep(10.0)
+        say.publish("準備ができました。あなたについていきます。歩き始めてください。")
+        rospy.sleep(5.0)
+
 
 
         # The goal distance (in meters) to keep between the robot and the person
@@ -85,6 +92,8 @@ class Follower():
         # Publisher to control the robot's movement
         self.cmd_vel_pub = rospy.Publisher('/cmd_vel', Twist)
 
+        self.f_flag=0
+
         # Subscribe to the point cloud
         self.depth_subscriber = rospy.Subscriber('point_cloud', PointCloud2, self.set_cmd_vel, queue_size=1)
 
@@ -99,10 +108,52 @@ class Follower():
 
         rospy.loginfo("Ready to follow!")
         
-    def set_voice_command(self, msg):
+    def get_voice_command(self, msg):
         rospy.loginfo("Get voice command :%s" % msg.data)
+        self.f_flag=msg.data
+
 
     def set_cmd_vel(self, msg):
+        if self.f_flag == 1:
+            self.set_cmd_vel2(msg)
+        if self.f_flag == 0:
+            # Stop the robot 
+            move_cmd = Twist()
+            self.cmd_vel_pub.publish(move_cmd)
+            rospy.sleep(1)
+        if self.f_flag == 2:
+            self.leaving_elevator()
+
+    def leaving_elevator(self):
+        rospy.loginfo("Leaving elevator!")
+
+        # Set the angular speed
+        move_cmd = Twist()
+        move_cmd.angular.z = 1.0 
+        # Rotate for a time to go 180 degrees
+        for t in range(42):
+            self.cmd_vel_pub.publish(move_cmd)
+            rospy.sleep(0.1)
+
+        # Stop the robot 
+        move_cmd = Twist()
+        self.cmd_vel_pub.publish(move_cmd)
+        rospy.sleep(1)
+
+        # Publish the movement command
+        move_cmd.linear.x = 0.2
+        for t in range(50): 
+            self.cmd_vel_pub.publish(move_cmd)
+            rospy.sleep(0.1)
+
+        # Stop the robot 
+        move_cmd = Twist()
+        self.cmd_vel_pub.publish(move_cmd)
+        rospy.sleep(1)
+
+        self.f_flag = 0
+
+    def set_cmd_vel2(self, msg):
         # Initialize the centroid coordinates point count
         x = y = z = n = 0
         

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<seatml>
+  <general name="sample">
+    <adaptor name="speechin" type="rtcin" datatype="TimedString" />
+    <adaptor name="speechout" type="rtcout" datatype="TimedString" />
+    <adaptor name="speechoutE" type="rtcout" datatype="TimedString" />
+    <adaptor name="command" type="rtcout" datatype="TimedLong" />
+    <adaptor name="qa" type="rtcout" datatype="TimedLong" />
+  </general>
+  <state name="OPEN">
+   <onentry>
+      <message sendto="speechout">ベーシックファンクショナリティータスクの音声対話を開始します。</message>
+      <script sendto="speechout">
+print "Open!!!"
+      </script>
+    </onentry>
+    <rule>
+      <key source="speechin">にほんのしゅとはどこですか</key>
+      <message sendto="speechout">それは東京です</message>
+      <message sendto="qa">1</message>
+    </rule>
+    <rule>
+      <key source="speechin">せかいでいちばんおもいどうぶつはなんですか</key>
+      <message sendto="speechout">それはゾウです</message>
+      <message sendto="qa">1</message>
+    </rule>
+    <rule>
+      <key source="speechin">にほんでいちばんたかいやまはどこですか</key>
+      <message sendto="speechout">それは富士山です</message>
+      <message sendto="qa">1</message>
+    </rule>
+    <rule> <!-- 雑音を無視するためのルール -->
+      <key source="speechin">つ</key>
+      <message sendto="NoiseDiscarding">input noise</message>
+    </rule>
+    <rule> <!-- 雑音を無視するためのルール -->
+      <key source="speechin">た</key>
+      <message sendto="NoiseDiscarding">input noise</message>
+    </rule>
+
+  </state>
+  <state name="IDLE">
+  </state>
+</seatml>

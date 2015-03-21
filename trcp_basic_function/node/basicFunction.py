@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 import rospy
 import smach
@@ -7,6 +8,7 @@ import sensor_msgs
 import sensor_msgs.msg
 import hokuyo_node
 import math
+from std_msgs.msg import *
 from sensor_msgs.msg import LaserScan
 from smach import State, StateMachine
 from smach_ros import SimpleActionState, IntrospectionServer
@@ -18,6 +20,15 @@ from trcp_basic_function.task_setup import *
 #from trcp_utils.kobuki import *
 from kobuki_msgs.msg import ButtonEvent
 import numpy as np
+
+
+qa_n=0
+def get_qa_count(data):
+    print data.data
+    global qa_n
+    qa_n +=1
+    rospy.loginfo('qa count: ' + str(qa_n))
+
 
 ranges=[]
 meanDist=0.0
@@ -36,7 +47,7 @@ def scanLaser(data):
     global minDist
     minDist = np.min(dists)
     
-  #  print meanDist
+#  print meanDist
 #    print maxDist
 #    print minDist
     
@@ -66,17 +77,37 @@ class ReadyTask(State):
         self.timer = timer
         self.cmd_vel_pub = rospy.Publisher('cmd_vel', Twist)
 
-    def execute(self, userdata):        
-        rospy.loginfo('Wait Button on in the ' + str(self.room))
-        while True:
-            if btn == True:
-                break
+        self.say_pub = rospy.Publisher('str_in', String, queue_size=10)
+        self.say_pub.publish("")
+        rospy.sleep(0.1)
 
+    def execute(self, userdata):        
+        #
+        rospy.loginfo('Wait Button on in the ' + str(self.room))
+       # while True:
+       #     if btn == True:
+       #         break
+
+        # Greetings
+        self.say_pub.publish("こんにちは、私の名前はイレイサーです。よろしくお願いします。")
+        rospy.sleep(5.0)
+
+        global qa_n
+        qa_n = 0
+        while True:
+          if qa_n == 3:
+            break
+          rospy.sleep(0.5)
+
+        # 
         rospy.loginfo("Setting Initial Pose")
         pub = rospy.Publisher('initialpose', PoseWithCovarianceStamped)
         p   = PoseWithCovarianceStamped();
         msg = PoseWithCovariance();
-        msg.pose = Pose(Point(0.0, -1.0, 0.000), Quaternion(0.000, 0.000, 0.0, 1.0));
+        #q_angle = quaternion_from_euler(0, 0, 0, 'sxyz')
+        #q = Quaternion(*q_angle)
+        #msg.pose = Pose(Point(-1.0, 0.0, 0.000), q);
+        msg.pose = Pose(Point(-1.0, 0.0, 0.000), Quaternion(0.000, 0.000, 0.0, 1.0));
         msg.covariance = [0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.06853];
         p.pose = msg;
         p.header.stamp = rospy.Time.now()
@@ -86,15 +117,28 @@ class ReadyTask(State):
         pub.publish(p);
 
         rospy.loginfo('Wait door open in the ' + str(self.room))
-        while True:
-            if meanDist > 1.0:
-                print "door is now open!!"
-                break
+       # while True:
+       #     if meanDist > 1.0:
+       #         print "door is now open!!"
+       #         break
 
+        # ドアが開いたら、5秒待って, 2m直進する
+        rospy.sleep(5.0)
         self.cmd_vel_pub.publish(Twist())
+        move_cmd = Twist()
+        move_cmd.linear.x = 0.2
+        for t in range(50):
+            self.cmd_vel_pub.publish(move_cmd)
+            rospy.sleep(0.1)
+
+        # Stop the robot
+        move_cmd = Twist()
+        self.cmd_vel_pub.publish(move_cmd)
+        rospy.sleep(1)
+
+
         message = "Done wait door open " + str(self.room) + "!"
         rospy.loginfo(message)
-        easygui.msgbox(message, title="Succeeded")
 
         update_task_list(self.room, self.task)
 
@@ -111,21 +155,17 @@ class PickPlace(State):
 
     def execute(self, userdata):
         rospy.loginfo('Pick and Place in the ' + str(self.room))
-        cmd_vel_msg = Twist()
-        cmd_vel_msg.linear.x = 0.05
-        cmd_vel_msg.angular.z = 1.2
-        counter = self.timer
-        while counter > 0:
-            self.cmd_vel_pub.publish(cmd_vel_msg)
-            cmd_vel_msg.linear.x *= -1
-            rospy.loginfo(counter)
-            counter -= 1
-            rospy.sleep(1)
+        # Greetings
+        self.say_pub.publish("ピックアンドプレースのタスクを開始します")
+        rospy.sleep(5.0)
 
-        self.cmd_vel_pub.publish(Twist())
+        #while True:
+        #    rospy.sleep(1)
+        rospy.sleep(5.0)
+
+
         message = "Done pick and place the " + str(self.room) + "!"
         rospy.loginfo(message)
-        easygui.msgbox(message, title="Succeeded")
 
         update_task_list(self.room, self.task)
 
@@ -143,21 +183,12 @@ class AvoidThat(State):
 
     def execute(self, userdata):
         rospy.loginfo('Avoid That in the ' + str(self.room))
-        cmd_vel_msg = Twist()
-        cmd_vel_msg.linear.x = 0.05
-        cmd_vel_msg.angular.z = 1.2
-        counter = self.timer
-        while counter > 0:
-            self.cmd_vel_pub.publish(cmd_vel_msg)
-            cmd_vel_msg.linear.x *= -1
-            rospy.loginfo(counter)
-            counter -= 1
-            rospy.sleep(1)
+        # Greetings
+        self.say_pub.publish("障害物を避けながら次の部屋に進みます")
+        rospy.sleep(5.0)
 
-        self.cmd_vel_pub.publish(Twist())
         message = "Done avoid that the " + str(self.room) + "!"
         rospy.loginfo(message)
-        easygui.msgbox(message, title="Succeeded")
 
         update_task_list(self.room, self.task)
 
@@ -175,21 +206,18 @@ class WhatDys(State):
 
     def execute(self, userdata):
         rospy.loginfo('What did you say in the ' + str(self.room))
-        cmd_vel_msg = Twist()
-        cmd_vel_msg.linear.x = 0.05
-        cmd_vel_msg.angular.z = 1.2
-        counter = self.timer
-        while counter > 0:
-            self.cmd_vel_pub.publish(cmd_vel_msg)
-            cmd_vel_msg.linear.x *= -1
-            rospy.loginfo(counter)
-            counter -= 1
-            rospy.sleep(1)
-
-        self.cmd_vel_pub.publish(Twist())
-        message = "Done what did you say the " + str(self.room) + "!"
+        # Greetings
+        self.say_pub.publish("何でも質問に答えますよ")
+        rospy.sleep(5.0)
+        
+        self.qa_n = 0
+        while True:
+          if self.qa_n == 3:
+            break 
+          rospy.sleel(0.5)
+ 
+        message = "Done what did you say  the " + str(self.room) + "!"
         rospy.loginfo(message)
-        easygui.msgbox(message, title="Succeeded")
 
         update_task_list(self.room, self.task)
 
@@ -304,8 +332,6 @@ class main():
         # and task states
         with sm_basic_f:
             StateMachine.add('READY_TASK', sm_ready_pos,
-                             transitions={'succeeded':'ENTER','aborted':'ENTER','preempted':'ENTER'})
-            StateMachine.add('ENTER', nav_states['enter_pos'],
                              transitions={'succeeded':'PP_ROOM','aborted':'PP_ROOM','preempted':'PP_ROOM'})
 
             StateMachine.add('PP_ROOM', nav_states['pp_room'],
@@ -341,7 +367,13 @@ class main():
 
 
         rospy.Subscriber("/scan",LaserScan,scanLaser, queue_size=1)
+        
+        # Subscribe to voice command
+        self.voice_commnad = rospy.Subscriber('hsr_c', Int32, self.get_voice_command, queue_size=1)
 
+
+        # Subscribe to qa count 
+        rospy.Subscriber('qa_in', Int32, get_qa_count, queue_size=1)
 
 
         # Execute the state machine
@@ -363,7 +395,14 @@ class main():
 
 
 
+    def get_voice_command(self,data):
+        print data.data
 
+
+    def get_qa_count(self,data):
+        print data.data
+        self.qa_n +=1
+        rospy.loginfo('qa count: ' + str(self.qa_n))
 
 
 

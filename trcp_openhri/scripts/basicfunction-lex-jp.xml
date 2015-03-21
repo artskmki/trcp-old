@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lexicon version="1.0"
+     xmlns="http://www.w3.org/2005/01/pronunciation-lexicon"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.w3.org/2005/01/pronunciation-lexicon
+                         http://www.w3.org/TR/2007/CR-pronunciation-lexicon-20071212/pls.xsd"
+     alphabet="x-KANA" xml:lang="jp">
+  <lexeme>
+    <grapheme>いれいさー</grapheme>
+    <phoneme>{{x-KANA|いれいさー}}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>にほんのしゅとはどこですか</grapheme>
+    <phoneme>{{x-KANA|にほんのしゅとはどこですか}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>せかいでいちばんおもいどうぶつはなんですか</grapheme>
+    <phoneme>{{x-KANA|せかいでいちばんおもいどうぶつはなんですか}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>にほんでいちばんたかいやまはどこですか</grapheme>
+    <phoneme>{{x-KANA|にほんでいちばんたかいやまはどこですか}</phoneme>
+  </lexeme>
+</lexicon>

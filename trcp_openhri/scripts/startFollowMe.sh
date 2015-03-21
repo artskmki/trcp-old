@@ -7,11 +7,8 @@ pulseaudiooutput &
 openjtalkrtc &
 festivalrtc &
 juliusrtc followme.xml &
-#python ConsoleOut.py &
 python rosRTMfollowme.py &
-cd ../eSeat
-#seat sample.seatml &
-python eSEAT.py followme.seatml &
+(cd ../eSeat; ./eSEAT.py followme.seatml)&
 
 sleep 5; 
 

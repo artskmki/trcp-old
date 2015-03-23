@@ -92,7 +92,6 @@ class Follower():
         # Publisher to control the robot's movement
         self.cmd_vel_pub = rospy.Publisher('/cmd_vel', Twist)
 
-        self.f_flag=0
 
         # Subscribe to the point cloud
         self.depth_subscriber = rospy.Subscriber('point_cloud', PointCloud2, self.set_cmd_vel, queue_size=1)
@@ -107,6 +106,7 @@ class Follower():
         self.voice_commnad = rospy.Subscriber('hsr_c', Int32, self.get_voice_command, queue_size=1)
 
         rospy.loginfo("Ready to follow!")
+        self.f_flag=1
         
     def get_voice_command(self, msg):
         rospy.loginfo("Get voice command :%s" % msg.data)

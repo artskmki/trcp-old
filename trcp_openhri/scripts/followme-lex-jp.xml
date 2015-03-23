@@ -13,4 +13,13 @@
     <grapheme>へやからでて</grapheme>
     <phoneme>{{x-KANA|へやからでて}</phoneme>
   </lexeme>
+  <lexeme>
+    <grapheme>こんにちは</grapheme>
+    <phoneme>{{x-KANA|こんにちわ}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>やりなおしして</grapheme>
+    <phoneme>{{x-KANA|やりなおしして}</phoneme>
+  </lexeme>
+
 </lexicon>

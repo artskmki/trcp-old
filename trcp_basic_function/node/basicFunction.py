@@ -80,13 +80,13 @@ class ReadyTask(State):
     def execute(self, userdata):        
         #
         rospy.loginfo('Wait Button on in the ' + str(self.room))
-       # while True:
-       #     if btn == True:
-       #         break
+        while True:
+            if btn == True:
+                break
 
         # Greetings
         self.say_pub.publish("こんにちは、私の名前はイレイサーです。よろしくお願いします。")
-        rospy.sleep(5.0)
+        rospy.sleep(6.0)
 
         rospy.loginfo("Setting Initial Pose")
         pub = rospy.Publisher('initialpose', PoseWithCovarianceStamped)
@@ -94,8 +94,8 @@ class ReadyTask(State):
         msg = PoseWithCovariance();
         #q_angle = quaternion_from_euler(0, 0, 0, 'sxyz')
         #q = Quaternion(*q_angle)
-        #msg.pose = Pose(Point(-1.0, 0.0, 0.000), q);
-        msg.pose = Pose(Point(-1.0, 0.0, 0.000), Quaternion(0.000, 0.000, 0.0, 1.0));
+        #msg.pose = Pose(Point(-2.0, 0.0, 0.000), q);
+        msg.pose = Pose(Point(-2.0, 0.0, 0.000), Quaternion(0.000, 0.000, 0.0, 1.0));
         msg.covariance = [0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.06853];
         p.pose = msg;
         p.header.stamp = rospy.Time.now()

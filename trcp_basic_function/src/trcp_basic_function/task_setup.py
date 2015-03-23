@@ -41,12 +41,12 @@ def setup_task_environment(self):
 
     # Append each of the four waypoints to the list.  Each waypoint
     # is a pose consisting of a position and orientation in the map frame.
-    self.waypoints.append(Pose(Point(0.0, -1.0, 0.0), quaternions[0]))
-    self.waypoints.append(Pose(Point(0.0, 0.0, 0.0), quaternions[0]))
-    self.waypoints.append(Pose(Point(2.5, -1.5, 0.0), quaternions[0]))
-    self.waypoints.append(Pose(Point(4.8, -1.0, 0.0), quaternions[0]))
-    self.waypoints.append(Pose(Point(4.0, 1.7, 0.0), quaternions[0]))
-    self.waypoints.append(Pose(Point(3.0, 3.0, 0.0), quaternions[0]))
+    self.waypoints.append(Pose(Point(-2.0,  0.0, 0.0), quaternions[0]))
+    self.waypoints.append(Pose(Point( 0.0,  0.0, 0.0), quaternions[0]))
+    self.waypoints.append(Pose(Point( 3.5, -1.1, 0.0), quaternions[0]))
+    self.waypoints.append(Pose(Point( 4.0,  1.2, 0.0), quaternions[0]))
+    self.waypoints.append(Pose(Point( 2.3,  2.0, 0.0), quaternions[0]))
+    self.waypoints.append(Pose(Point( 2.4,  3.0, 0.0), quaternions[0]))
 
 
     # Create a mapping of room names to waypoint locations

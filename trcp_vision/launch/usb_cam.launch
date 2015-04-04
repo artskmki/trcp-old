@@ -1,13 +1,13 @@
 <launch>
     <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen">
           <remap from="usb_cam/image_raw" to="/cam/image_raw"/>
-          <param name="video_device" value="/dev/video0" />
+          <param name="video_device" value="/dev/video2" />
           <param name="image_width" value="640" />
           <param name="image_height" value="480" />
           <param name="pixel_format" value="mjpeg" />
           <param name="io_method" value="mmap" />
           <param name="camera_frame_id" value="camera_link" />
-          <param name="framerate" value="10" />
+          <param name="framerate" value="30" />
           <param name="contrast" value="32" />
           <param name="brightness" value="100" />
           <param name="saturation" value="32" />

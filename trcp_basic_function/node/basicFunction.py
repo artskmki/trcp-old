@@ -46,7 +46,7 @@ def scanLaser(data):
     maxDist = np.max(dists)
     global minDist
     minDist = np.min(dists)
-    
+    rospy.loginfo('range:min mean min >'+str(minDist)+' '+str(meanDist)+' '+str(maxDist))
 
 
 
@@ -105,7 +105,7 @@ class ReadyTask(State):
         pub.publish(p);
 
         rospy.loginfo('Wait door open in the ' + str(self.room))
-       # while True:
+        while True:
        #     if meanDist > 1.0:
        #         print "door is now open!!"
        #         break
@@ -239,7 +239,7 @@ def update_task_list(room, task):
 
 class main():
     def __init__(self):
-        rospy.init_node('clean_house', anonymous=False)
+        rospy.init_node('basic_f', anonymous=False)
 
         # Set the shutdown function (stop the robot)
         rospy.on_shutdown(self.shutdown)
@@ -340,7 +340,7 @@ class main():
                              transitions={'succeeded':'','aborted':'','preempted':''})
 
         # Create and start the SMACH introspection server
-        intro_server = IntrospectionServer('clean_house', sm_basic_f, '/SM_ROOT')
+        intro_server = IntrospectionServer('basic_f', sm_basic_f, '/SM_ROOT')
         intro_server.start()
 
 
@@ -389,7 +389,7 @@ class main():
         if status == actionlib.GoalStatus.SUCCEEDED:
             pass
 
-
+    //シャットダウンの処理
     def shutdown(self):
         rospy.loginfo("Stopping the robot...")
         #sm_nav.request_preempt()

@@ -106,11 +106,10 @@ class ReadyTask(State):
 
         rospy.loginfo('Wait door open in the ' + str(self.room))
         while True:
-       #     if meanDist > 1.0:
-       #         print "door is now open!!"
-       #         break
+            if meanDist > 100.0:
+                print "door is now open!!"
+                break
 
-        # ドアが開いたら、5秒待って, 2m直進する
         rospy.sleep(5.0)
         self.cmd_vel_pub.publish(Twist())
         move_cmd = Twist()
@@ -389,7 +388,7 @@ class main():
         if status == actionlib.GoalStatus.SUCCEEDED:
             pass
 
-    //シャットダウンの処理
+    # シャットダウンの処理
     def shutdown(self):
         rospy.loginfo("Stopping the robot...")
         #sm_nav.request_preempt()

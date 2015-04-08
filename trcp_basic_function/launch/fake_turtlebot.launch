@@ -35,7 +35,7 @@
      <rosparam file="$(find trcp_navigation)/config/fake/local_costmap_params.yaml" command="load" />
      <rosparam file="$(find trcp_navigation)/config/fake/global_costmap_params.yaml" command="load" />
      <rosparam file="$(find trcp_navigation)/config/fake/base_local_planner_params.yaml" command="load" />
-     <rosparam file="$(find rbx2_nav)/config/nav_test_params.yaml" command="load" />
+     <rosparam file="$(find trcp_navigation)/config/nav_test_params.yaml" command="load" />
 
   </node>
  <!-- 

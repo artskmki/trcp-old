@@ -1,5 +1,4 @@
 <launch>
-
   <param name="/use_sim_time" value="false" />
 
   <!-- Calibration parameters after calibration of an Kobuki TurtleBot on low-ply carpet -->

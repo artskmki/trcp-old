@@ -2,13 +2,19 @@
 
 import rospy
 import actionlib
+import math
 from actionlib import GoalStatus
 from geometry_msgs.msg import Pose, Point, Quaternion, Twist
 from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal, MoveBaseActionFeedback
 from tf.transformations import quaternion_from_euler
 from visualization_msgs.msg import Marker
-from math import  pi
 from collections import OrderedDict
+
+def quaternion_from_degree(deg):
+  rad=math.radians(deg)
+  q_angle = quaternion_from_euler(0, 0, rad, 'sxyz')
+  q = Quaternion(*q_angle)
+  return q
 
 def setup_task_environment(self):
     # How long do we have to get to each waypoint?
@@ -41,12 +47,12 @@ def setup_task_environment(self):
 
     # Append each of the four waypoints to the list.  Each waypoint
     # is a pose consisting of a position and orientation in the map frame.
-    self.waypoints.append(Pose(Point(-2.0,  0.0, 0.0), quaternions[0]))
-    self.waypoints.append(Pose(Point( 0.0,  0.0, 0.0), quaternions[0]))
-    self.waypoints.append(Pose(Point( 3.5, -1.1, 0.0), quaternions[0]))
-    self.waypoints.append(Pose(Point( 4.0,  1.2, 0.0), quaternions[0]))
-    self.waypoints.append(Pose(Point( 2.3,  2.0, 0.0), quaternions[0]))
-    self.waypoints.append(Pose(Point( 2.4,  3.0, 0.0), quaternions[0]))
+    self.waypoints.append(Pose(Point(-2.0,  0.0, 0.0), quaternion_from_degree(0)))
+    self.waypoints.append(Pose(Point( 0.0,  0.0, 0.0), quaternion_from_degree(0)))
+    self.waypoints.append(Pose(Point( 3.5, -1.1, 0.0), quaternion_from_degree(0)))
+    self.waypoints.append(Pose(Point( 4.0,  1.2, 0.0), quaternion_from_degree(0)))
+    self.waypoints.append(Pose(Point( 2.3,  2.0, 0.0), quaternion_from_degree(0)))
+    self.waypoints.append(Pose(Point( 2.4,  3.0, 0.0), quaternion_from_degree(0)))
 
 
     # Create a mapping of room names to waypoint locations

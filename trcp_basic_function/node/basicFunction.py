@@ -92,10 +92,10 @@ class ReadyTask(State):
         pub = rospy.Publisher('initialpose', PoseWithCovarianceStamped)
         p   = PoseWithCovarianceStamped();
         msg = PoseWithCovariance();
-        #q_angle = quaternion_from_euler(0, 0, 0, 'sxyz')
-        #q = Quaternion(*q_angle)
-        #msg.pose = Pose(Point(-2.0, 0.0, 0.000), q);
-        msg.pose = Pose(Point(-2.0, 0.0, 0.000), Quaternion(0.000, 0.000, 0.0, 1.0));
+        angle = 0
+        q_angle = quaternion_from_euler(0, 0, angle, 'sxyz')
+        q = Quaternion(*q_angle)
+        msg.pose = Pose(Point(-2.0, 0.0, 0.000), q);
         msg.covariance = [0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.06853];
         p.pose = msg;
         p.header.stamp = rospy.Time.now()

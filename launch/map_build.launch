@@ -1,0 +1,22 @@
+<launch>
+  <!-- Launch the turtlebot2 -->
+  <include file="$(find trcp_bringup)/launch/turtlebot_minimal_kobuki.launch">
+  </include>
+
+  <!-- Launch the kinect -->
+  <include file="$(find trcp_bringup)/launch/turtlebot_fake_laser_freenect.launch">
+  </include>
+
+  <!-- Launch the Joystick -->
+  <include file="$(find trcp_navigation)/launch/joystick_teleop.launch">
+  </include>
+
+
+  <!-- Launch the gmapping -->
+  <include file="$(find trcp_navigation)/launch/gmapping.launch">
+  </include>
+
+
+  <!-- Launch the rviz -->
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find trcp_rviz_launchers)/rviz/gmapping.rviz"/>
+</launch>

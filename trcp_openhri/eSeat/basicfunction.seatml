@@ -20,6 +20,11 @@ print "Open!!!"
       <message sendto="qa">1</message>
     </rule>
     <rule>
+      <key source="speechin">ふらんすのしゅとはどこですか</key>
+      <message sendto="speechout">それはパリです</message>
+      <message sendto="qa">1</message>
+    </rule>
+    <rule>
       <key source="speechin">せかいでいちばんおもいどうぶつはなんですか</key>
       <message sendto="speechout">それはゾウです</message>
       <message sendto="qa">1</message>
@@ -29,6 +34,37 @@ print "Open!!!"
       <message sendto="speechout">それは富士山です</message>
       <message sendto="qa">1</message>
     </rule>
+    <rule>
+      <key source="speechin">にほんでいちばんひろいみずうみはどこですか</key>
+      <message sendto="speechout">それは琵琶湖です</message>
+      <message sendto="qa">1</message>
+    </rule>
+    <rule>
+      <key source="speechin">にほんでいちばんながいかわはどこですか</key>
+      <message sendto="speechout">それは信濃川です</message>
+      <message sendto="qa">1</message>
+    </rule>
+    <rule>
+      <key source="speechin">せかいでいちばんおおきなくにはどこですか</key>
+      <message sendto="speechout">それはロシアです</message>
+      <message sendto="qa">1</message>
+    </rule>
+    <rule>
+      <key source="speechin">ぽぱいのがーるふれんどはだれですか</key>
+      <message sendto="speechout">それはオリーブです</message>
+      <message sendto="qa">1</message>
+    </rule>
+    <rule>
+      <key source="speechin">にほんとちゅうごくはどちらがおおきいですか</key>
+      <message sendto="speechout">それは中国です</message>
+      <message sendto="qa">1</message>
+    </rule>
+    <rule>
+      <key source="speechin">うしのあしはなんぼんですか</key>
+      <message sendto="speechout">それはよんほんです</message>
+      <message sendto="qa">1</message>
+    </rule>
+
     <rule> <!-- 雑音を無視するためのルール -->
       <key source="speechin">つ</key>
       <message sendto="NoiseDiscarding">input noise</message>

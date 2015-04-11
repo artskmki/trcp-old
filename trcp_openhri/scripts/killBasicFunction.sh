@@ -4,6 +4,8 @@ host=/localhost/`hostname`.host_cxt
 #exit component
 rtexit $host/PulseAudioInput0.rtc
 rtexit $host/PulseAudioOutput0.rtc
+rtexit $host/EchoSuppressor0.rtc
+#rtexit $host/EchoCanceler0.rtc
 rtexit $host/JuliusRTC0.rtc
 rtexit $host/OpenJTalkRTC0.rtc
 rtexit $host/FestivalRTC0.rtc

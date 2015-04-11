@@ -9,11 +9,21 @@
 
   <!-- Launch the navigation -->
   <include file="$(find trcp_basic_function)/launch/tb_nav.launch">
-    <arg name="map" value="aaaa.yaml" />
+    <arg name="map" value="roboworks.yaml" />
   </include>
 
 
-
-  <!-- Launch the rviz -->
+  <!-- Launch the rviz 
   <node pkg="rviz" type="rviz" name="rviz" args="-d $(find trcp_rviz_launchers)/rviz/gmapping.rviz"/>
+-->
+
+
+  <!-- Start the basic functionarity task -->
+  <node pkg="trcp_basic_function" type="basicFunction.py" name="bf" output="screen">
+    <param name="rest_time" value="10" />
+    <param name="fake_test" value="false" />
+  </node>
+
+
+
 </launch>

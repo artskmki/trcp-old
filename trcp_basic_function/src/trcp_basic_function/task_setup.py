@@ -34,7 +34,7 @@ def setup_task_environment(self):
     quaternions = list()
 
     # First define the corner orientations as Euler angles
-    euler_angles = (pi/2, pi, 3*pi/2, 0)
+    euler_angles = (3.1415/2, 3.1415, 3*3.1415/2, 0)
 
     # Then convert the angles to quaternions
     for angle in euler_angles:

@@ -95,7 +95,7 @@ class ReadyTask(State):
         angle = 0
         q_angle = quaternion_from_euler(0, 0, angle, 'sxyz')
         q = Quaternion(*q_angle)
-        msg.pose = Pose(Point(-2.0, 0.0, 0.000), q);
+        msg.pose = Pose(Point(-1.7, 0.0, 0.000), q);
         msg.covariance = [0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.06853];
         p.pose = msg;
         p.header.stamp = rospy.Time.now()
@@ -106,7 +106,7 @@ class ReadyTask(State):
 
         rospy.loginfo('Wait door open in the ' + str(self.room))
         while True:
-            if meanDist > 100.0:
+            if meanDist > 2.0:
                 print "door is now open!!"
                 break
 
@@ -114,7 +114,7 @@ class ReadyTask(State):
         self.cmd_vel_pub.publish(Twist())
         move_cmd = Twist()
         move_cmd.linear.x = 0.2
-        for t in range(50):
+        for t in range(100):
             self.cmd_vel_pub.publish(move_cmd)
             rospy.sleep(0.1)
 

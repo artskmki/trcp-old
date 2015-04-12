@@ -10,15 +10,31 @@
     <phoneme>{{x-KANA|いれいさー}}</phoneme>
   </lexeme>
   <lexeme>
-    <grapheme>にほんのしゅとはどこですか</grapheme>
-    <phoneme>{{x-KANA|にほんのしゅとはどこですか}</phoneme>
+    <grapheme>は</grapheme>
+    <phoneme>{{x-KANA|わ}</phoneme>
   </lexeme>
   <lexeme>
-    <grapheme>せかいでいちばんおもいどうぶつはなんですか</grapheme>
-    <phoneme>{{x-KANA|せかいでいちばんおもいどうぶつはなんですか}</phoneme>
+    <grapheme>にほん</grapheme>
+    <phoneme>{{x-KANA|にほん}</phoneme>
   </lexeme>
   <lexeme>
-    <grapheme>にほんでいちばんたかいやまはどこですか</grapheme>
-    <phoneme>{{x-KANA|にほんでいちばんたかいやまはどこですか}</phoneme>
+    <grapheme>ふらんす</grapheme>
+    <phoneme>{{x-KANA|ふらんす}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>ぽぱい</grapheme>
+    <phoneme>{{x-KANA|ぽぱい}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>うし</grapheme>
+    <phoneme>{{x-KANA|うし}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>いちばんひろいみずうみ</grapheme>
+    <phoneme>{{x-KANA|いちばんひろいみずうみ}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>がーるふれんど</grapheme>
+    <phoneme>{{x-KANA|がーるふれんど}</phoneme>
   </lexeme>
 </lexicon>

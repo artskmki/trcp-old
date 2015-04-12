@@ -10,7 +10,6 @@
     <one-of>
       <item>にほん</item>
       <item>ふらんす</item>
-      <item>あめりか</item>
       <item>せかい</item>
       <item>ぽぱい</item>
       <item>うし</item>
@@ -23,13 +22,15 @@
     <one-of>
       <item>しゅと</item>
       <item>いちばんたかいやま</item>
+      <item>いちばんひろいみずうみ</item>
       <item>いちばんながいかわ</item>
       <item>いちばんおおきなくに</item>
       <item>いちばんおもいどうぶつ</item>
       <item>がーるふれんど</item>
-      <item>だいとうりょう</item>
       <item>ちゅうごく</item>
       <item>あし</item>
+      <item>た</item> <!-- 雑音を無視するための無意味な単語 -->
+      <item>つ</item> <!-- 雑音を無視するための無意味な単語 -->
     </one-of>
     <item>は</item>
     <one-of>
@@ -43,7 +44,10 @@
       <item> どちらがおおきい</item>
       <item> なんぼんですか</item>
       <item> なんぼん</item>
+      <item>つ</item> <!-- 雑音を無視するための無意味な単語 -->
+      <item>た</item> <!-- 雑音を無視するための無意味な単語 -->
     </one-of>
+
   </rule>
 </grammar>
 

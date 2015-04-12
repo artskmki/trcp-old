@@ -1,4 +1,8 @@
 <launch>
+  <!-- Start the basic functionarity task -->
+  <node pkg="trcp_openhri" type="startBasicFunction.sh" name="bfs" output="screen">
+  </node>
+
   <!-- Launch the turtlebot2 -->
   <include file="$(find trcp_bringup)/launch/turtlebot_minimal_kobuki.launch">
   </include>

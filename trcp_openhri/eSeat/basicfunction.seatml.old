@@ -43,13 +43,6 @@ print "Open!!!"
       <message sendto="speechout">それは信濃川です</message>
       <message sendto="qa">1</message>
     </rule>
-    <rule>
-      <key source="speechin">せかい で いちばんながいかわ は どこですか</key>
-      <key source="speechin">せかい で いちばんながいかわ は どこ</key>
-      <key source="speechin">せかい で いちばんながいかわ は なに</key>
-      <message sendto="speechout">それはミシシッピ川です</message>
-      <message sendto="qa">1</message>
-    </rule>
 
     <rule>
       <key source="speechin">せかい で いちばんおおきなくに は どこですか</key>
@@ -62,13 +55,6 @@ print "Open!!!"
       <key source="speechin">ぽぱい の がーるふれんど は だれですか</key>
       <key source="speechin">ぽぱい の がーるふれんど は だれ</key>
       <message sendto="speechout">おりーぶおいるです</message>
-      <message sendto="qa">1</message>
-    </rule>
-
-    <rule>
-      <key source="speechin">あめりか の だいとうりょう は だれですか</key>
-      <key source="speechin">あめりか の だいとうりょう は だれ</key>
-      <message sendto="speechout">オバマ大統領です</message>
       <message sendto="qa">1</message>
     </rule>
 

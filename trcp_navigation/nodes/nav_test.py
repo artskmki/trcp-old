@@ -1,28 +1,5 @@
 #!/usr/bin/env python
 
-""" nav_test.py - Version 1.1 2013-12-20
-
-    Command a robot to move autonomously among a number of goal locations defined in the map frame.
-    On each round, select a new random sequence of locations, then attempt to move to each location
-    in succession.  Keep track of success rate, time elapsed, and total distance traveled.
-
-    Created for the Pi Robot Project: http://www.pirobot.org
-    Copyright (c) 2012 Patrick Goebel.  All rights reserved.
-
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.5
-    
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details at:
-    
-    http://www.gnu.org/licenses/gpl.html
-      
-"""
-
 import rospy
 import actionlib
 from actionlib_msgs.msg import *

@@ -44,6 +44,7 @@ rtcon $host/eSEAT0.rtc:speechoutE $host/FestivalRTC0.rtc:text
 rtcon $host/OpenJTalkRTC0.rtc:result $host/PulseAudioOutput0.rtc:AudioDataIn
 rtcon $host/FestivalRTC0.rtc:result $host/PulseAudioOutput0.rtc:AudioDataIn
 rtcon $host/eSEAT0.rtc:command $host/rosRTMbasicfunction0.rtc:input_long
+rtcon $host/eSEAT0.rtc:qa $host/rosRTMbasicfunction0.rtc:qa_long
 rtcon $host/rosRTMbasicfunction0.rtc:output_str $host/OpenJTalkRTC0.rtc:text
 
 

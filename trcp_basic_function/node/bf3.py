@@ -21,6 +21,10 @@ from trcp_basic_function.task_setup import *
 from kobuki_msgs.msg import ButtonEvent
 import numpy as np
 
+
+def get_voice_command(self,data):
+    print data.data
+
 qa_n=0
 def get_qa_count(data):
     print data.data
@@ -50,7 +54,7 @@ class BF3Task():
         rospy.Subscriber("/mobile_base/events/button", ButtonEvent, ButtonEventCallback )
 
         # Subscribe to voice command
-        self.voice_commnad = rospy.Subscriber('hsr_c', Int32, self.get_voice_command, queue_size=1)
+        #self.voice_commnad = rospy.Subscriber('hsr_c', Int32, self.get_voice_command, queue_size=1)
 
         # Subscribe to qa count
         rospy.Subscriber('qa_in', Int32, get_qa_count, queue_size=1)
@@ -88,7 +92,7 @@ class BF3Task():
         pub.publish(p);
 
         #
-        rospy.loginfo('Wait Button on in the ' + str(self.room))
+        rospy.loginfo("Wait Button on" )
         while True:
           if btn == True:
             break
@@ -104,7 +108,7 @@ class BF3Task():
 
         rospy.loginfo("Starting BF3 test")
         locations = dict()
-        locations['exit'] = Pose(Point(0.0, 0.0, 0.0), Quaternion(0.000, 0.000, 0.0, 1.0))
+        locations['exit'] = Pose(Point(2.4, 3.0, 0.0), Quaternion(0.000, 0.000, 0.0, 1.0))
         # Set up the goal location
         self.goal = MoveBaseGoal()
         self.goal.target_pose.pose = locations['exit']

@@ -100,9 +100,10 @@ class BF3Task():
         rospy.sleep(5.0)
         # Greetings
         self.say_pub.publish("何でも質問に答えますよ")
-        self.qa_n = 0
+        global qa_n
+        qa_n = 0
         while True:
-          if self.qa_n == 3:
+          if qa_n == 3:
             break
 
 
@@ -116,7 +117,7 @@ class BF3Task():
         self.goal.target_pose.header.stamp = rospy.Time.now()
 
         # Let the user know where the robot is going next
-        rospy.loginfo("Going to: " + str(location))
+        rospy.loginfo("Going to: ")
 
         # Start the robot toward the next location
         self.move_base.send_goal(self.goal)

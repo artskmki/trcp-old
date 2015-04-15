@@ -91,15 +91,19 @@ class BF3Task():
         rospy.loginfo("Setting Pose")
         pub.publish(p);
 
-        #
+
+        # Wait Button on
+        self.say_pub.publish("準備完了です。コブキのボタンを押して下さい。")
         rospy.loginfo("Wait Button on" )
         while True:
           if btn == True:
             break
 
-        rospy.sleep(5.0)
+
+        rospy.sleep(3.0)
         # Greetings
         self.say_pub.publish("何でも質問に答えますよ")
+        rospy.loginfo("Starting BF3 QA test")
         global qa_n
         qa_n = 0
         while True:
@@ -107,7 +111,11 @@ class BF3Task():
             break
 
 
-        rospy.loginfo("Starting BF3 test")
+        rospy.sleep(3.0)
+        # exit 
+        self.say_pub.publish("三つの質問に答えたので退場します。")
+        rospy.loginfo("Going to Exit !!")
+
         locations = dict()
         locations['exit'] = Pose(Point(2.4, 3.0, 0.0), Quaternion(0.000, 0.000, 0.0, 1.0))
         # Set up the goal location
@@ -116,13 +124,10 @@ class BF3Task():
         self.goal.target_pose.header.frame_id = 'map'
         self.goal.target_pose.header.stamp = rospy.Time.now()
 
-        # Let the user know where the robot is going next
-        rospy.loginfo("Going to: ")
-
         # Start the robot toward the next location
         self.move_base.send_goal(self.goal)
 
-        # Allow 5 minutes to get there
+        # Allow 5(5x60=300) minutes to get there
         finished_within_time = self.move_base.wait_for_result(rospy.Duration(300))
         # Check for success or failure
         if not finished_within_time:
@@ -154,5 +159,4 @@ if __name__ == '__main__':
         rospy.spin()
     except rospy.ROSInterruptException:
         rospy.loginfo("BF3 task finished.")
-
 

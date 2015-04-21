@@ -42,13 +42,14 @@ def scanLaser(data):
     mid_index = len(data.ranges) // 2
     dists = [val for val in ranges[mid_index-10:mid_index+10]
            if not math.isnan(val)]
-    global meanDist
-    meanDist =  np.mean(dists)
-    global maxDist
-    maxDist = np.max(dists)
-    global minDist
-    minDist = np.min(dists)
-    rospy.loginfo('range:min mean min >'+str(minDist)+' '+str(meanDist)+' '+str(maxDist))
+    if len(dists) != 0:
+      global meanDist
+      meanDist =  np.mean(dists)
+      global maxDist
+      maxDist = np.max(dists)
+      global minDist
+      minDist = np.min(dists)
+      rospy.loginfo('range:min mean min >'+str(minDist)+' '+str(meanDist)+' '+str(maxDist))
 
 
 # for KOBUKI hardware

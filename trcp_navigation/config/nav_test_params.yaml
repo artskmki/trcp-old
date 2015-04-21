@@ -1,6 +1,6 @@
 TrajectoryPlannerROS:
   yaw_goal_tolerance: 0.25 # 
-  xy_goal_tolerance: 0.1   # 10 cm
+  xy_goal_tolerance: 0.2   # 20 cm
   pdist_scale: 0.8
   gdist_scale: 0.4
   occdist_scale: 0.1
